@@ -1,6 +1,6 @@
 package SourceFiles.UserClasses;
 
-public class User
+public abstract class User
 {
     String lastName;
     String firstName;

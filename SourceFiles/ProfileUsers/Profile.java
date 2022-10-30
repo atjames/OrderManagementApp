@@ -1,5 +1,18 @@
 package SourceFiles.ProfileUsers;
 
-public class Profile
+
+import java.util.Date;
+
+public abstract class Profile
 {
+    int userID;
+    String fullName;
+    String streetAddress;
+    String city;
+    String state;
+    String phone;
+    double balance;
+    double lastPaidAmount;
+    Date lastOrderDate;
+
 }

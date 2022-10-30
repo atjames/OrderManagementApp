@@ -1,5 +1,4 @@
-package UserClasses;
-
+package SourceFiles.UserClasses;
 public class Owner extends User
 {
 
