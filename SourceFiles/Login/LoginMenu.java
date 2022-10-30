@@ -1,5 +1,7 @@
 package Login;
 
-public class LoginMenu
+import javax.swing.*;
+
+public class LoginMenu extends JFrame
 {
 }
