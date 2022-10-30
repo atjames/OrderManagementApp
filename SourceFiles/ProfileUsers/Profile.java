@@ -1,4 +1,4 @@
-package ProfileUsers;
+package SourceFiles.ProfileUsers;
 
 public class Profile
 {
