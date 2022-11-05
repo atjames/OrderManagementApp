@@ -1,4 +1,4 @@
-package SourceFiles.CustomerOrderInvoice;
+package CustomerOrderInvoice;
 
 public class CustomerInvoice
 {

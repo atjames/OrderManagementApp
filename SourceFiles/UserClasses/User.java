@@ -1,4 +1,4 @@
-package SourceFiles.UserClasses;
+package UserClasses;
 
 public abstract class User
 {
