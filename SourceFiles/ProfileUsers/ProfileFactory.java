@@ -1,6 +1,4 @@
-package SourceFiles.ProfileUsers;
-
-import SourceFiles.ProfileUsers.*;
+package ProfileUsers;
 
 public class ProfileFactory {
     public Profile ProfileFactory(String profileType)

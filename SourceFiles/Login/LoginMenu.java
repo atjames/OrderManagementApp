@@ -1,4 +1,4 @@
-package SourceFiles.Login;
+package Login;
 
 import javax.swing.*;
 
