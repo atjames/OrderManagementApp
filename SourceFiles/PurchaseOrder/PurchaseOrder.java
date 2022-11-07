@@ -1,4 +1,4 @@
-package SourceFiles.PurchaseOrder;
+package PurchaseOrder;
 
 public class PurchaseOrder
 {

@@ -1,4 +1,4 @@
-package SourceFiles.ItemProfile;
+package ItemProfile;
 
 import java.util.Date;
 
