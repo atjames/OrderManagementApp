@@ -1,4 +1,4 @@
-package SourceFiles.ProfileUsers;
+package ProfileUsers;
 
 
 import java.util.Date;
