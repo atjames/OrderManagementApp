@@ -1,4 +1,4 @@
-package Main;
+package SourceFiles.Main;
 
 public class Main
 {
