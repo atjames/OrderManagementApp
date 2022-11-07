@@ -11,5 +11,4 @@ public class ItemProfile
      String itemCategory;
      double quantityonHand;
      Date expireDate = new Date();
-
 }
