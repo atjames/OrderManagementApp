@@ -1,5 +1,9 @@
 package Login;
 
+import Main.MainMenu;
+import UserClasses.User;
+import UserClasses.UserAccountArray;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -41,7 +45,21 @@ public class LoginMenu extends JFrame
         confirm.addActionListener(new ActionListener() {
             // Sends user to page that shows all the actions they can perform
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
+                // Test for turning input into usable text
+                String nameInput = textUserID.getText();
+                System.out.println(nameInput);
+                int intNameInput = Integer.parseInt(nameInput);
+
+
+                // These two lines are to test login functionality to the Main Menu.
+                // It also tests to see if the Main Menu only reveals certain buttons to certain user types
+                User testUser = UserAccountArray.searchForUser(intNameInput, "123Forger");
+                MainMenu.setUserType(testUser);
+
+                // Opens the Main Menu
+                new MainMenu();
                 LoginMenu.super.dispose();
             }
         });
