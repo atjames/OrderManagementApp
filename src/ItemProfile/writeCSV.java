@@ -8,11 +8,11 @@ public class writeCSV extends ItemProfile {
 
     public static void write_items(ArrayList<ItemProfile> items){
 
-            try (FileWriter writer = new FileWriter(ItemProfile.file_path, false))
+            try (FileWriter writer = new FileWriter(ItemProfile.file_path, false)) //overwrites the .CSV with the new values
             {
-                writer.write(ItemProfile.CSVHeaderLine);
+                writer.write(ItemProfile.CSVHeaderLine); //writes the header line to the CSV first
 
-                for (ItemProfile item : items)
+                for (ItemProfile item : items) //iterates over arraylist and writes the formatter CSV line
                 {
                     writer.write('\n' + ItemProfileCSV.CSVFormatter(item));
                 }

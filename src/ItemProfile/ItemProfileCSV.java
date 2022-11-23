@@ -7,6 +7,8 @@ public class ItemProfileCSV extends ItemProfile{
         String CSVFormat = item.itemID + "," + item.getItemName() + "," + item.getVendorID() + "," + item.getSellingPrice() + "," + item.getItemCategory() + "," + item.getQuantityonHand()
                 + "," + item.getUnitOfMeasurment() + "," + item.getExpireDate();
 
+        //Formatter for CSV output.
+
         return CSVFormat;
     }
 

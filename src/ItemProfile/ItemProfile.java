@@ -71,7 +71,7 @@ public class ItemProfile
           this.unitOfMeasurment = unitOfMeasurment;
           this.quantityonHand = quantityonHand;
           this.expireDate = formatter.parse(expireDate);
-     }
+     } //basically sets everything at once for condensed setter functions. can maybe move this into a separate class so. might be borderline SOLID principle violation.
 
      public ItemProfile(){
           itemID = "";
