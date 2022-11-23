@@ -88,4 +88,10 @@ public abstract class Profile
 
     Date lastOrderDate;
 
+    public String print(){
+        String output = ("ID: " + this.getUserID() + " Name: " + this.getFullName() + " State: " + this.getState() + " City: " + this.getCity()
+                + " Street: " + this.getStreetAddress() + " Phone: " + this.getPhone() + " Balance: " + this.getBalance());
+        return output;
+    }
+
 }

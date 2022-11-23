@@ -1,10 +1,10 @@
 package ProfileUsers;
 
 public class ProfileFactory {
-    public Profile ProfileFactory(String profileType)
+    public static Profile ProfileFactory(String profileType)
     {
-        if(profileType.equals("Vender")){
-            return new Vender();
+        if(profileType.equals("Vendor")){
+            return new Vendor();
         }
         else if(profileType.equals("Customer")){
             return new Customer();
