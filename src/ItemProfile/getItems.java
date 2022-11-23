@@ -21,7 +21,7 @@ public class getItems extends ItemProfile {
                 reader.readLine(); // skips header line of CSV
                 while ((line = reader.readLine()) != null)
                 {
-                    String[] values = line.split(","); // splits the line of the commas and which stores each value in an array of Strings.
+                    String[] values = line.split(","); // splits the line at the commas and then stores each value in an array of Strings.
                     ItemProfile item = new ItemProfile(); // creating new itemProfile
                     item.createItem(values[0],values[1],values[2],Double.parseDouble(values[3]),values[4],Double.parseDouble(values[5]),values[6],values[7]);
                     //line above takes the CSV value and creates an item.
