@@ -8,7 +8,7 @@ public class writeCSV extends ItemProfile {
 
     public static void write_items(ArrayList<ItemProfile> items){
 
-            try (FileWriter writer = new FileWriter(ItemProfile.file_path, false)) //overwrites the .CSV with the new values
+            try (FileWriter writer = new FileWriter(ItemProfile.RESOURCES_ITEMS_CSV, false)) //overwrites the .CSV with the new values
             {
                 writer.write(ItemProfile.CSVHeaderLine); //writes the header line to the CSV first
 

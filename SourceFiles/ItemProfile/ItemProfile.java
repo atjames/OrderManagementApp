@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class ItemProfile
 {
-     public static final String file_path = "rsrc/items.csv";
+     public static final String RESOURCES_ITEMS_CSV = "Resources/items.csv";
      public static final String CSVHeaderLine = "itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate";
      String itemID;
      String itemName;

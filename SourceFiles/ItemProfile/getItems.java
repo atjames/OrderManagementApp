@@ -8,8 +8,8 @@ import java.text.ParseException;
 import java.util.ArrayList;
 
 
-/* It's important to make sure you are using the correct file path. Make sure you are defining it as rsrc/<file name>.
-   The rsrc folder is marked as the Resource dirc so the project will read files from there without needing to put entire filepath.
+/* It's important to make sure you are using the correct file path. Make sure you are defining it as Resources/<file name>.
+   The Resources folder is marked as the Resource dirc so the project will read files from there without needing to put entire filepath.
 * */
 public class getItems extends ItemProfile {
         public static ArrayList<ItemProfile> get_items() {
@@ -17,7 +17,7 @@ public class getItems extends ItemProfile {
             String line = "";
             ArrayList<ItemProfile> items = new ArrayList<>(); //arraylist of items that we will store items from CSV in
             try {
-                BufferedReader reader = new BufferedReader(new FileReader(ItemProfile.file_path));
+                BufferedReader reader = new BufferedReader(new FileReader(ItemProfile.RESOURCES_ITEMS_CSV));
                 reader.readLine(); // skips header line of CSV
                 while ((line = reader.readLine()) != null)
                 {
