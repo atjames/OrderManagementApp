@@ -35,7 +35,7 @@ public class getItems extends ItemProfile {
                 throw new RuntimeException(e);
             }
 
-            return items; //return the create arraylist
+            return items; //return the created arraylist
         }
 
 }
