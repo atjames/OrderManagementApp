@@ -15,13 +15,13 @@ public class ItemProfile
      double sellingPrice;
      String itemCategory;
 
-     String unitOfMeasurment;
+     String unitOfMeasurement;
      double quantityonHand;
      Date expireDate;
      DateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
 
      public void setItemID(String itemID) {this.itemID = itemID;}
-     public void setUnitOfMeasurment(String unitOfMeasurment){this.unitOfMeasurment = unitOfMeasurment;}
+     public void setUnitOfMeasurement(String unitOfMeasurment){this.unitOfMeasurement = unitOfMeasurment;}
      public void setItemName(String itemName) {this.itemName = itemName;}
      public void setVendorID(String vendorID) {this.vendorID = vendorID;}
      public void setSellingPrice(double sellingPrice) {this.sellingPrice = sellingPrice;}
@@ -38,8 +38,8 @@ public class ItemProfile
           return itemCategory;
      }
 
-     public String getUnitOfMeasurment() {
-          return unitOfMeasurment;
+     public String getUnitOfMeasurement() {
+          return unitOfMeasurement;
      }
      public double getSellingPrice() {
           return sellingPrice;
@@ -68,7 +68,7 @@ public class ItemProfile
           this.vendorID = vendorID;
           this.sellingPrice = sellingPrice;
           this.itemCategory = itemCategory;
-          this.unitOfMeasurment = unitOfMeasurment;
+          this.unitOfMeasurement = unitOfMeasurment;
           this.quantityonHand = quantityonHand;
           this.expireDate = formatter.parse(expireDate);
      } //basically sets everything at once for condensed setter functions. can maybe move this into a separate class so. might be borderline SOLID principle violation.
@@ -79,7 +79,7 @@ public class ItemProfile
           vendorID = "";
           sellingPrice = 0;
           itemCategory = "";
-          unitOfMeasurment = "";
+          unitOfMeasurement = "";
           quantityonHand = 0;
           expireDate = new Date();
      }
