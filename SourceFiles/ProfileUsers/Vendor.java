@@ -39,7 +39,7 @@ public class Vendor extends Profile{
     public Vendor(int num, String fullname, String street, String city, String state, String phone, Date lastorder, Date seasonal) {
         this.userID = num; //auto generated max 6 character
         this.fullName = fullname;//must be unique
-        this.streetAddress = streetAddress;//must be unique
+        this.streetAddress = street;//must be unique
         this.city = city;
         this.state = state;
         this.phone = phone;

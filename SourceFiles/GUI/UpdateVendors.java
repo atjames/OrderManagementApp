@@ -31,6 +31,8 @@ public class UpdateVendors extends  JFrame{
     private JTextField Balance;
     private JButton Return;
     private JComboBox StateList;
+    private JTextField VendorNameField;
+    private JButton Reset;
 
     UpdateVendors(){
         fullNameTextField.setDocument(new JTextFieldMaxSize(20));
@@ -49,22 +51,58 @@ public class UpdateVendors extends  JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 String id = VendorIDtextfield.getText();
-                int i = Integer.parseInt(id);
-
-                if(VendorAccountArray.searchForUser(i) == null){
-                    JOptionPane.showMessageDialog(null, "id: " + id + "\n Vendor not found");
-
-                    new PurchaserView();
-                    UpdateVendors.super.dispose();
+                if(VendorIDtextfield.getText().matches(".*[a-z].*")) {
+                    JOptionPane.showMessageDialog(null, "Please enter valid Vendor ID");
                     return;
                 }
-                fullNameTextField.setText(VendorAccountArray.searchForUser(i).getFullName());
-                streetTextField.setText(VendorAccountArray.searchForUser(i).getStreetAddress());
-                cityTextField.setText(VendorAccountArray.searchForUser(i).getCity());
-                phoneTextField.setText(VendorAccountArray.searchForUser(i).getPhone());
-                Balance.setText(String.valueOf(VendorAccountArray.searchForUser(i).getBalance()));
-                StateList.setSelectedItem(VendorAccountArray.searchForUser(i).getState());
+                if(VendorIDtextfield.getText().equals("") && VendorNameField.getText().equals("")){
+                    JOptionPane.showMessageDialog(null, "Please enter Vendor name or ID");
+                    return;
+                }
+                String ids = VendorIDtextfield.getText();
+                String name = VendorNameField.getText();
+                Vendor v = new Vendor();
+                if(ids.equals("") && !name.equals("")){
+                    System.out.println(name);
+                    v = VendorAccountArray.searchForUser(name);
+                    if(v==null){
+                        JOptionPane.showMessageDialog(null, "Please enter valid Vendor name or ID");
+                        return;
+                    }
+                    VendorIDtextfield.setText(String.valueOf(v.getUserID()));
+                    ids = VendorIDtextfield.getText();
+                }
+                if(!ids.equals("") && name.equals("")){
+                    int i = Integer.parseInt(ids);
+                    if(VendorAccountArray.searchForUser(i) == null){
+                        JOptionPane.showMessageDialog(null, "id: " + ids + "\n Vendor not found");
+                        return;
+                    }
+                    v = VendorAccountArray.searchForUser(i);
+                    VendorNameField.setText(v.getFullName());
+                    name = VendorNameField.getText();
+                }
+                if(!ids.equals("") && !name.equals("")){//search both text fields
+                int i = Integer.parseInt(ids);
+                if(VendorAccountArray.searchForUser(i) == null){
+                    JOptionPane.showMessageDialog(null, "id: " + ids + "\n Vendor not found");
+                    return;
+                }
+                    v = VendorAccountArray.searchForUser(i);
+                    int k = v.getUserID();
 
+                    if(!v.getFullName().equals(name) || k != i){
+                        JOptionPane.showMessageDialog(null, "Vendor ID and name do not match!");
+                    }
+                else {
+                    fullNameTextField.setText(VendorAccountArray.searchForUser(i).getFullName());
+                    streetTextField.setText(VendorAccountArray.searchForUser(i).getStreetAddress());
+                    cityTextField.setText(VendorAccountArray.searchForUser(i).getCity());
+                    phoneTextField.setText(VendorAccountArray.searchForUser(i).getPhone());
+                    Balance.setText(String.valueOf(VendorAccountArray.searchForUser(i).getBalance()));
+                    StateList.setSelectedItem(VendorAccountArray.searchForUser(i).getState());
+                }
+            }
             }
         });
 
@@ -89,7 +127,7 @@ public class UpdateVendors extends  JFrame{
                     JOptionPane.showMessageDialog(null, "Balance is not valid (only enter numbers)");
                     return;
                 }
-                int bal = Integer.parseInt(Balance.getText());
+                double bal = Double.parseDouble((Balance.getText()));
                 //Implement a way to validate input
 
 
@@ -107,5 +145,19 @@ public class UpdateVendors extends  JFrame{
                 UpdateVendors.super.dispose();
             }
         });
+        Reset.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fullNameTextField.setText("");
+                streetTextField.setText("");
+                cityTextField.setText("");
+                phoneTextField.setText("");
+                Balance.setText("");
+                StateList.setSelectedItem(null);
+                VendorIDtextfield.setText("");
+                VendorNameField.setText("");
+            }
+        });
     }
+
 }
