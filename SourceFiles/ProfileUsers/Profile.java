@@ -2,7 +2,10 @@ package ProfileUsers;
 
 
 import java.util.Date;
-
+/*
+class for abstract Profile
+@author Austin Jeffery
+ */
 public abstract class Profile
 {
     int userID;
@@ -13,6 +16,8 @@ public abstract class Profile
     String phone;
     double balance;
     double lastPaidAmount;
+    Date lastOrderDate;//mm/d/yyyy
+
 
     public int getUserID() {
         return userID;
@@ -86,7 +91,7 @@ public abstract class Profile
         this.lastOrderDate = lastOrderDate;
     }
 
-    Date lastOrderDate;
+
 
     public String print(){
         String output = ("ID: " + this.getUserID() + " Name: " + this.getFullName() + " State: " + this.getState() + " City: " + this.getCity()

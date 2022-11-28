@@ -5,7 +5,12 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.text.View;
 
+/*
+Class for the Purchaser view. Once a purchaser logins they have access to these functions
+to add vendors, edit, delete.
+@autho Austin Jeffery
 
+ */
 public class PurchaserView extends javax.swing.JFrame {
 
     private Container c;
@@ -13,6 +18,7 @@ public class PurchaserView extends javax.swing.JFrame {
     private JButton AddVendor;
     private JButton ViewVendors;
     private JButton UpdateVendors;
+    private JButton DeleteVendor;
 
 
     public PurchaserView(){
@@ -36,6 +42,21 @@ public class PurchaserView extends javax.swing.JFrame {
         UpdateVendors.setSize(150,30);
         UpdateVendors.setLocation(540,350);
         c.add(UpdateVendors);
+
+        DeleteVendor = new JButton("Delete Vendors");
+        DeleteVendor.setSize(150,30);
+        DeleteVendor.setLocation(340,150);
+        c.add(DeleteVendor);
+        DeleteVendor.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                c.hide();
+                PurchaserView.super.dispose();
+                new DeleteVendor();
+
+            }
+        });
+
            AddVendor.addActionListener(new ActionListener() {
                @Override
                public void actionPerformed(ActionEvent e) {
