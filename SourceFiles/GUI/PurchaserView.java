@@ -21,6 +21,7 @@ public class PurchaserView extends javax.swing.JFrame {
     private JButton DeleteVendor;
 
 
+
     public PurchaserView(){
             setTitle("Purchaser View");
             setBounds(300, 90, 900, 600);

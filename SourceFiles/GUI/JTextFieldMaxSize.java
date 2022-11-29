@@ -8,6 +8,7 @@ This is used to set a max value for JTextFields
 @author Austin Jeffery
 
  */
+
 public class JTextFieldMaxSize extends PlainDocument{
     private int max;
     JTextFieldMaxSize(int max) {

@@ -80,6 +80,7 @@ public class VendorForm  extends JFrame{
                         VendorForm.super.dispose();
                         return;
                     }
+
                     String lastorderdate = LastOrderDate.getText();
                     String seasonaldate = SeasonalDiscountDate.getText();
                     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");

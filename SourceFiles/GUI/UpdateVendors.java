@@ -145,6 +145,7 @@ public class UpdateVendors extends  JFrame{
                 UpdateVendors.super.dispose();
             }
         });
+
         Reset.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
