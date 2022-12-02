@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+/*
+@author: Andrew James
+ */
+
 public class ItemMenuGUI extends JFrame {
     private JPanel mainPanel;
     private JButton createItemButton;

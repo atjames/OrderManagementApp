@@ -4,6 +4,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
+/*
+@author: Andrew James
+ */
+
 public class writeCSV extends ItemProfile {
 
     public static void write_items(ArrayList<ItemProfile> items){

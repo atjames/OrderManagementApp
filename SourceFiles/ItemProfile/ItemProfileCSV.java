@@ -1,5 +1,10 @@
 package ItemProfile;
 
+/*
+@author: Andrew James
+ */
+
+
 public class ItemProfileCSV extends ItemProfile{
 
     public static String CSVFormatter(ItemProfile item){

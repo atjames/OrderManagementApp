@@ -6,6 +6,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+
+/*
+@author: Andrew James
+ */
+
 public class ItemProfile
 {
      public static final String RESOURCES_ITEMS_CSV = "Resources/items.csv";

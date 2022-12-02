@@ -4,11 +4,12 @@ import org.jdatepicker.JDatePicker;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerDateModel;
+
+
+/*
+@author: Andrew James
+ */
 
 public class CreateItemForm extends JFrame {
     private JPanel createItemFrame;
