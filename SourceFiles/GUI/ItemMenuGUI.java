@@ -1,8 +1,12 @@
 package GUI;
 
+import ItemProfile.writeCSV;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static Main.Main.items;
 
 
 /*
