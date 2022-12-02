@@ -3,12 +3,14 @@ package ItemProfile;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class ItemProfile
 {
      public static final String RESOURCES_ITEMS_CSV = "Resources/items.csv";
      public static final String CSVHeaderLine = "itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate";
+     public static final String PURCHASE_ORDERS = "Resources/items.csv";
      String itemID;
      String itemName;
      String vendorID;
@@ -20,6 +22,9 @@ public class ItemProfile
      Date expireDate;
      DateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
 
+     ArrayList<String> purchaseOrders = new ArrayList<>();
+     ArrayList<String> invoices = new ArrayList<>();
+
      public void setItemID(String itemID) {this.itemID = itemID;}
      public void setUnitOfMeasurement(String unitOfMeasurment){this.unitOfMeasurement = unitOfMeasurment;}
      public void setItemName(String itemName) {this.itemName = itemName;}
@@ -29,6 +34,8 @@ public class ItemProfile
      public void setQuantityonHand(double quantityonHand){this.quantityonHand = quantityonHand;}
      public void setExpireDate(Date expireDate){this.expireDate = expireDate;}
 
+     public void addpurchaseOrder(String purchaseID) {this.purchaseOrders.add(purchaseID);}
+     public void addInvoice(String invoiceID) {this.invoices.add(invoiceID);}
      public String getExpireDate()
      {
           return formatter.format(expireDate);
