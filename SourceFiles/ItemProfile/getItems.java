@@ -33,7 +33,7 @@ public class getItems extends ItemProfile {
                 while ((line = reader.readLine()) != null) {
                     String[] values = line.split(","); // splits the line at the commas and then stores each value in an array of Strings.
                     ItemProfile item = new ItemProfile(); // creating new itemProfile
-                    item.createItem(values[0], values[1], values[2], Double.parseDouble(values[3]), values[4], Double.parseDouble(values[5]), values[6], values[7]);
+                    item.createItem(values[0], values[1], values[2], Double.parseDouble(values[3]), values[4], Double.parseDouble(values[5]), values[6], values[7], Double.parseDouble(values[8]));
                     //line above takes the CSV values and creates an item.
                     items.add(item); //add newly created item to arraylist
                 }
@@ -51,8 +51,6 @@ public class getItems extends ItemProfile {
 
                 for(ItemProfile item: items){
                     if(values[0].matches(item.getItemID())){
-                        System.out.println(values[0]);
-                        System.out.println(values[1]);
                         item.addpurchaseOrder(values[1]);
                     }
                 }

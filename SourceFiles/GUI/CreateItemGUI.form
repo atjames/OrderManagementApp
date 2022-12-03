@@ -100,7 +100,15 @@
         <constraints>
           <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="pound"/>
+            <item value="gallon"/>
+            <item value="dozen"/>
+            <item value="individual"/>
+            <item value="ounce"/>
+          </model>
+        </properties>
       </component>
       <component id="a59d1" class="javax.swing.JTextField" binding="quantity">
         <constraints>
@@ -130,7 +138,19 @@
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <model>
+            <item value="vegetables"/>
+            <item value="fruits"/>
+            <item value="nuts"/>
+            <item value="dairy"/>
+            <item value="meat"/>
+            <item value="snacks"/>
+            <item value="soda"/>
+            <item value="juice"/>
+            <item value="bakery products"/>
+          </model>
+        </properties>
       </component>
       <component id="6177a" class="javax.swing.JLabel">
         <constraints>

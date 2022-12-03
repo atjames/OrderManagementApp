@@ -34,10 +34,6 @@ public class CreateItemGUI extends JFrame {
     String AlphaNumericString = "0123456789";
 
     Date today = new Date();
-    String[] Units = {"pound", "gallon", "dozen", "individual", "ounce"};
-    String[] Categories = {"vegetables", "fruits", "nuts", "dairy", "meat",
-            "snacks", "soda", "juice", "bakery products"};
-
 
     public CreateItemGUI(String title) {
         super(title);
@@ -50,15 +46,6 @@ public class CreateItemGUI extends JFrame {
 
         //setting max size for item name == 20 characters
         itemName.setDocument(new JTextFieldMaxSize(20));
-
-
-        //populating combo boxes
-        for(int i = 0; i < Units.length;i++){
-            UnitsCB.insertItemAt(Units[i],i);
-        }
-        for(int i = 0; i < Categories.length;i++){
-            itemCategoriesCB.insertItemAt(Categories[i],i);
-        }
 
         createItemButton.addActionListener(new ActionListener() {
             @Override
@@ -80,10 +67,10 @@ public class CreateItemGUI extends JFrame {
                 } else if (!sellingPrice.getText().matches("-?\\d+(\\.\\d+)?") || sellingPrice.getText() == null || Double.parseDouble(sellingPrice.getText()) < 0) {
                     JOptionPane.showMessageDialog(null, "Please enter a valid Selling Price");
                     return;
-                } else if (!purchasePrice.getText().matches("-?\\d+(\\.\\d+)?") || sellingPrice.getText() == null || Double.parseDouble(purchasePrice.getText()) < 0) {
+                } else if (!purchasePrice.getText().matches("-?\\d+(\\.\\d+)?") || purchasePrice.getText() == null || Double.parseDouble(purchasePrice.getText()) < 0) {
                     JOptionPane.showMessageDialog(null, "Please enter valid Purchase Price");
                     return;
-                } else if (!quantity.getText().matches("-?\\d+(\\.\\d+)?") || sellingPrice.getText() == null || Double.parseDouble(quantity.getText()) < 0) {
+                } else if (!quantity.getText().matches("-?\\d+(\\.\\d+)?") || quantity.getText() == null || Double.parseDouble(quantity.getText()) < 0) {
                     JOptionPane.showMessageDialog(null, "Please enter a valid Quantity");
                     return;
                 } else if (itemCategoriesCB.getSelectedItem() == null) {
@@ -118,14 +105,13 @@ public class CreateItemGUI extends JFrame {
                         }
                         try {
                             item.createItem(GenerateItemID.GenerateItemID(), itemName.getText(), "123456", Double.parseDouble(sellingPrice.getText()), itemCategoriesCB.getSelectedItem().toString(),
-                                    Double.parseDouble(quantity.getText()), UnitsCB.getSelectedItem().toString(), expireDate);
+                                    Double.parseDouble(quantity.getText()), UnitsCB.getSelectedItem().toString(), expireDate, Double.parseDouble(purchasePrice.getText()));
                         } catch (ParseException ex) {
                             throw new RuntimeException(ex);
                         }
                         items.add(item);
                         writeCSV.write_items(items);
                         JOptionPane.showMessageDialog(null, "Item " + item.getItemName() + " successfully created with Item ID: " + item.getItemID());
-                        JFrame ItemMenuGUI = new ItemMenuGUI("Items Menu");
                         CreateItemGUI.super.dispose();
                     }
                 }

@@ -4,8 +4,10 @@ import ItemProfile.ItemProfile;
 
 import javax.swing.*;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+/*
+@author: Andrew James
+ */
+
 import ItemProfile.writeCSV;
 
 import static Main.Main.items;
@@ -33,17 +35,11 @@ public class DeleteItemGUI extends JFrame {
             }
 
         }
-
-
-        deleteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Item successfully deleted!");
-                JFrame ItemMenuGUI = new ItemMenuGUI("Items Menu");
-                items.remove(itemBox.getSelectedItem());
-                writeCSV.write_items(items);
-                DeleteItemGUI.super.dispose();
-            }
+        deleteButton.addActionListener(e -> {
+            JOptionPane.showMessageDialog(null, "Item successfully deleted!");
+            items.remove(itemBox.getSelectedItem());
+            writeCSV.write_items(items);
+            DeleteItemGUI.super.dispose();
         });
     }
 

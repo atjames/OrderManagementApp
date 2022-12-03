@@ -14,7 +14,7 @@ import java.util.Date;
 public class ItemProfile
 {
      public static final String RESOURCES_ITEMS_CSV = "Resources/items.csv";
-     public static final String ITEMS_CSV_HEADER = "itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate";
+     public static final String ITEMS_CSV_HEADER = "itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate,purchasePrice";
      public static final String PURCHASE_ORDERS_CSV = "Resources/purchaseorders.csv";
      public static final String INVOICE_CSV = "Resources/invoices.csv";
      String itemID;
@@ -22,6 +22,7 @@ public class ItemProfile
      String vendorID;
      double sellingPrice;
      String itemCategory;
+     double purchasePrice;
 
      String unitOfMeasurement;
      double quantityonHand;
@@ -32,6 +33,7 @@ public class ItemProfile
      ArrayList<String> invoices = new ArrayList<>();
 
      public void setItemID(String itemID) {this.itemID = itemID;}
+     public void setPurchasePrice(double purchasePrice) {this.purchasePrice = purchasePrice;}
      public void setUnitOfMeasurement(String unitOfMeasurment){this.unitOfMeasurement = unitOfMeasurment;}
      public void setItemName(String itemName) {this.itemName = itemName;}
      public void setVendorID(String vendorID) {this.vendorID = vendorID;}
@@ -46,6 +48,8 @@ public class ItemProfile
      {
           return formatter.format(expireDate);
      }
+
+     public double getPurchasePrice(){return purchasePrice;}
 
      public String getItemCategory() {
           return itemCategory;
@@ -91,7 +95,7 @@ public class ItemProfile
      }
 
 
-     public void createItem(String itemID, String itemName, String vendorID, double sellingPrice, String itemCategory, double quantityonHand,String unitOfMeasurment, String expireDate) throws ParseException {
+     public void createItem(String itemID, String itemName, String vendorID, double sellingPrice, String itemCategory, double quantityonHand,String unitOfMeasurment, String expireDate, double purchasePrice) throws ParseException {
           this.itemID = itemID;
           this.itemName = itemName;
           this.vendorID = vendorID;
@@ -100,6 +104,7 @@ public class ItemProfile
           this.unitOfMeasurement = unitOfMeasurment;
           this.quantityonHand = quantityonHand;
           this.expireDate = formatter.parse(expireDate);
+          this.purchasePrice = purchasePrice;
      } //basically sets everything at once for condensed setter functions. can maybe move this into a separate class so. might be borderline SOLID principle violation.
 
      public ItemProfile(){
@@ -111,6 +116,7 @@ public class ItemProfile
           unitOfMeasurement = "";
           quantityonHand = 0;
           expireDate = new Date();
+          purchasePrice = 0;
      }
 
      public String toString()

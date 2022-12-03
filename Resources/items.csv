@@ -1,4 +1,5 @@
-itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate
-000001,Taters,000001,5.0,vegetables,100.0,pounds,12/30/2022
-000002,Oranges,000002,2.51,fruits,50.0,pounds,01/22/2023
-408376,test,123456,210.0,nuts,200.0,ounce,12/08/2022
+itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate,purchasePrice
+000001,Eggs,000001,5.99,bakery products,18.0,dozen,12/29/2022,3.99
+000002,Oranges,000002,2.51,fruits,50.0,pounds,01/22/2023,100.0
+408376,test,123456,210.0,nuts,200.0,ounce,12/08/2022,200.0
+940579,testing again,123456,12345.0,nuts,2154.0,gallon,12/16/2022,123456.0
