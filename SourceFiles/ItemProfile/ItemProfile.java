@@ -25,7 +25,7 @@ public class ItemProfile
      String unitOfMeasurement;
      double quantityonHand;
      Date expireDate;
-     DateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
+     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
 
      ArrayList<String> purchaseOrders = new ArrayList<>();
      ArrayList<String> invoices = new ArrayList<>();
