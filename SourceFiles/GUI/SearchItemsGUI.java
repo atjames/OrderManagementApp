@@ -40,11 +40,13 @@ public class SearchItemsGUI extends JFrame{
                         searchByLabel.setText("Search for Item ID:");
                         expireDateForm.setVisible(false);
                         searchItem.setVisible(true);
+                        searchItem.setText("");
                         break;
                     case "Item Name":
                         searchByLabel.setText("Search for Item Name:");
                         expireDateForm.setVisible(false);
                         searchItem.setVisible(true);
+                        searchItem.setText("");
                         break;
                     case "Expire Date":
                         searchByLabel.setText("Search for Expire Date:");
@@ -52,7 +54,8 @@ public class SearchItemsGUI extends JFrame{
                         expireDateForm.setVisible(true);
                         break;
                     default:
-                        searchByLabel.setText("");
+                        searchByLabel.setText("Search:");
+                        searchItem.setText("");
                 }
             }
         });
@@ -63,7 +66,7 @@ public class SearchItemsGUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 switch(searchBy.getSelectedItem().toString()) {
                     case "Item ID":
-                        if(!searchItem.getText().matches("-?\\d+(\\.\\d+)?") || searchItem.getText() == null)
+                        if(!searchItem.getText().matches("-?\\d+(\\.\\d+)?") || searchItem.getText() == null || searchItem.getText().length() > 6)
                         {
                             JOptionPane.showMessageDialog(null, "Please enter a valid Item ID");
                             isFound = false;
@@ -74,7 +77,6 @@ public class SearchItemsGUI extends JFrame{
                                 if(searchItem.getText().matches(item.getItemID()))
                                 {
                                    itemNameSearch.add(item);
-                                   System.out.println("MATCHED FOUND!");
                                    isFound = true;
                                 }
                             }
@@ -85,6 +87,7 @@ public class SearchItemsGUI extends JFrame{
                                 CreateSearchResultsFrame.setVisible(true);
                                 CreateSearchResultsFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                                 CreateSearchResultsFrame.setLocationRelativeTo(null);
+                                itemNameSearch.removeAll(itemNameSearch);
                                 isFound = false;
                             }else{
                                 JOptionPane.showMessageDialog(null, "Item ID " + searchItem.getText() + " is not found!");
@@ -115,6 +118,7 @@ public class SearchItemsGUI extends JFrame{
                                 CreateSearchResultsFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                                 CreateSearchResultsFrame.setLocationRelativeTo(null);
                                 isFound = false;
+                                itemNameSearch.removeAll(itemNameSearch);
                             }else{
                                 JOptionPane.showMessageDialog(null, "Item Name " + searchItem.getText() + " profile is not found!");
                                 isFound = false;
@@ -131,7 +135,6 @@ public class SearchItemsGUI extends JFrame{
                         } catch (ParseException ex) {
                             throw new RuntimeException(ex);
                         }
-                        System.out.println(expireDateFor.toString());
                         for(ItemProfile item : items)
                         {
                             if(expireDateFor.compareTo(item.getExpireDate()) == 0)
@@ -148,6 +151,8 @@ public class SearchItemsGUI extends JFrame{
                             CreateSearchResultsFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                             CreateSearchResultsFrame.setLocationRelativeTo(null);
                             isFound = false;
+                            itemNameSearch.removeAll(itemNameSearch);
+
                         }else{
                         JOptionPane.showMessageDialog(null, "No Item with Expire Date: " + expireDate);
                         return;

@@ -13,7 +13,6 @@ import ItemProfile.writeCSV;
 import static Main.Main.items;
 public class DeleteItemGUI extends JFrame {
 
-
     private JButton deleteButton;
     private JComboBox itemBox;
     private JPanel mainPanel;
