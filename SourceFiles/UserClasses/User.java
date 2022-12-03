@@ -4,52 +4,52 @@ public abstract class User
 {
     String lastName;
     String firstName;
-    int userID;
+    String userID;
     String userRole;
     String password;
 
     // Getter and Setters
-    protected String getLastName()
+    public String getLastName()
     {
         return lastName;
     }
-    protected  void setLastName(String lname)
+    public   void setLastName(String lname)
     {
         lastName = lname;
     }
 
-    protected String getFirstName()
+    public String getFirstName()
     {
         return firstName;
     }
-    protected  void setFirstName(String fname)
+    public  void setFirstName(String fname)
     {
         firstName = fname;
     }
 
-    protected String getUserRole()
+    public String getUserRole()
     {
         return userRole;
     }
-    protected  void setUserRole(String uRole)
+    public  void setUserRole(String uRole)
     {
         userRole = uRole;
     }
 
-    protected int getUserID()
+    public String getUserID()
     {
         return userID;
     }
-    protected  void setUserID(int id)
+    public void setUserID(String id)
     {
         userID = id;
     }
 
-    protected String getPassword()
+    public String getPassword()
     {
         return password;
     }
-    protected  void setPassword(String pass)
+    public void setPassword(String pass)
     {
         password = pass;
     }

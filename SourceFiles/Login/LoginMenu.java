@@ -1,3 +1,7 @@
+/**
+ * Class made by 'Benjamin Pienta'
+ **/
+
 package Login;
 
 import Main.MainMenu;
@@ -47,20 +51,31 @@ public class LoginMenu extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Test for turning input into usable text
-                String nameInput = textUserID.getText();
-                System.out.println(nameInput);
-                int intNameInput = Integer.parseInt(nameInput);
+                String idInput = textUserID.getText();
 
+                // Turn password into a string
+                String passwordInput = textPassword.getText();
 
-                // These two lines are to test login functionality to the Main Menu.
-                // It also tests to see if the Main Menu only reveals certain buttons to certain user types
-                User testUser = UserAccountArray.searchForUser(intNameInput, "123Forger");
-                MainMenu.setUserType(testUser);
+                // Ensure that the UserID is in the array
+                if (!UserAccountArray.searchUserID(idInput))
+                    userID.setText("User ID not in file");
+                else
+                {
+                    if (!UserAccountArray.searchUserPassword(passwordInput))
+                        password.setText("This password is incorrect");
+                    else
+                    {
+                        // These two lines are to test login functionality to the Main Menu.
+                        // It also tests to see if the Main Menu only reveals certain buttons to certain user types
+                        User testUser = UserAccountArray.searchForUser(idInput, passwordInput);
+                        HoldCurrentLoginType.updateUser(testUser);
+                        MainMenu.setUserType(HoldCurrentLoginType.getLoggedInUser());
 
-                // Opens the Main Menu
-                new MainMenu();
-                LoginMenu.super.dispose();
+                        // Opens the Main Menu
+                        new MainMenu();
+                        LoginMenu.super.dispose();
+                    }
+                }
             }
         });
         c.add(confirm);
@@ -71,7 +86,7 @@ public class LoginMenu extends JFrame
         userID.setLocation(150, 65);
         c.add(userID);
 
-        // User ID box to insert ID
+        // Textbox box to insert ID
         textUserID = new JTextField();
         textUserID.setSize(200, 30);
         textUserID.setLocation(150, 90);

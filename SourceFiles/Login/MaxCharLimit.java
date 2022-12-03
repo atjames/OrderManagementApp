@@ -8,7 +8,7 @@ public class MaxCharLimit extends PlainDocument
 {
     private int limit;
 
-    MaxCharLimit(int limit) {
+    public MaxCharLimit(int limit) {
         super();
         this.limit = limit;
     }

@@ -1,7 +1,14 @@
+/**
+ * Class made by 'Benjamin Pienta'
+ **/
+
 package Main;
 
-import UserClasses.Owner;
-import UserClasses.User;
+import Login.FirstLoginPasswordChange;
+import Login.HoldCurrentLoginType;
+import Login.HoldPagesVisited;
+import Login.LoginMenu;
+import UserClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,12 +19,17 @@ public class MainMenu extends JFrame
 {
     private Container c;
     private JLabel menuTitle;
-    private JButton test1;
-    private JButton test2;
+    private JButton exit;
+    private JButton addUser;
+    private JButton editUser;
+    private JButton searchUser;
+    private JButton logout;
+    private JButton changePassword;
     private static User currentUser = null;
 
 
-    public MainMenu() {
+    public MainMenu()
+    {
         setTitle("MainMenu");
         setBounds(300, 90, 900, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -32,35 +44,103 @@ public class MainMenu extends JFrame
         menuTitle.setLocation(400, 30);
         c.add(menuTitle);
 
-        // Button that test1s the login of the user
-        test1 = new JButton("Test Button");
-        test1.setSize(150, 30);
-        test1.setLocation(340, 350);
-        test1.addActionListener(new ActionListener() {
+        // Button that exits the program
+        exit = new JButton("Exit");
+        exit.setSize(150, 30);
+        exit.setLocation(340, 350);
+        exit.addActionListener(new ActionListener() {
             // Test button closes the menu
             @Override
             public void actionPerformed(ActionEvent e) {
                 MainMenu.super.dispose();
             }
         });
-        c.add(test1);
+        c.add(exit);
 
-        if (currentUser instanceof Owner)
+        // If Owners or Administrators are logged in, reveal these buttons
+        if (currentUser instanceof Owner || currentUser instanceof Administrator)
         {
-            // Button that test1s the login of the user
-            test2 = new JButton("Test Button 2");
-            test2.setSize(150, 30);
-            test2.setLocation(340, 250);
-            test2.addActionListener(new ActionListener() {
+            // Button that takes allowed users to the 'Add User' page
+            addUser = new JButton("Add User");
+            addUser.setSize(150, 30);
+            addUser.setLocation(340, 250);
+            addUser.addActionListener(new ActionListener() {
                 // Test button closes the menu
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new UserCreationPage();
                     MainMenu.super.dispose();
                 }
             });
-            c.add(test2);
+            c.add(addUser);
+
+            // Button that takes allowed users to the 'Edit User' page
+            editUser = new JButton("Edit User");
+            editUser.setSize(150, 30);
+            editUser.setLocation(340, 150);
+            editUser.addActionListener(new ActionListener() {
+                // Test button closes the menu
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new UserEditPage();
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(editUser);
+
+            // Button that takes allowed users to the 'Search User' page
+            searchUser = new JButton("Search User");
+            searchUser.setSize(150, 30);
+            searchUser.setLocation(140, 150);
+            searchUser.addActionListener(new ActionListener() {
+                // Opens the Search User page
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new UserSearchPage();
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(searchUser);
         }
 
+        // Button that logs the user out
+        logout = new JButton("Log Out");
+        logout.setSize(150, 30);
+        logout.setLocation(700, 20);
+        logout.addActionListener(new ActionListener() {
+            // Test button closes the menu
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                HoldCurrentLoginType.updateUser(null);
+                HoldPagesVisited.resetNumberOfPagesVisited();
+
+                new LoginMenu();
+                MainMenu.super.dispose();
+            }
+        });
+        c.add(logout);
+
+        if (HoldPagesVisited.getNumberOfPagesVisited() == 0)
+        {
+            // Button changes the user's password upon logging in
+            changePassword = new JButton("Change Password");
+            changePassword.setSize(150, 30);
+            changePassword.setLocation(700, 500);
+            changePassword.addActionListener(new ActionListener() {
+                // Changes the User's password
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new FirstLoginPasswordChange();
+                }
+            });
+            c.add(changePassword);
+        }
 
         setVisible(true);
     }
