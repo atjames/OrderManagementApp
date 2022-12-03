@@ -30,7 +30,6 @@ public class ItemMenuGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JFrame CreateItemFrame = new CreateItemForm("Create Items");
                 CreateItemFrame.setVisible(true);
-                ItemMenuGUI.super.dispose();
             }
         });
         showItemsButton.addActionListener(new ActionListener() {

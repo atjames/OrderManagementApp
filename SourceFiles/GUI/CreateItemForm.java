@@ -126,19 +126,10 @@ public class CreateItemForm extends JFrame {
                         writeCSV.write_items(items);
                         JOptionPane.showMessageDialog(null, "Item " + item.getItemName() + " successfully created with Item ID: " + item.getItemID());
                         JFrame ItemMenuGUI = new ItemMenuGUI("Items Menu");
-                        ItemMenuGUI.setVisible(true);
                         CreateItemForm.super.dispose();
                     }
                 }
             });
-        mainMenuButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame ItemMenuGUI = new ItemMenuGUI("Items Menu");
-                ItemMenuGUI.setVisible(true);
-                CreateItemForm.super.dispose();
-            }
-        });
     }
 }
 
