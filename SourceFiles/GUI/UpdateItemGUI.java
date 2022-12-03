@@ -33,6 +33,8 @@ public class UpdateItemGUI extends JFrame {
     private JTextField quantityOnHand;
     private JDatePicker expireDateForm;
     private JButton updateItemButton;
+    private JLabel itemNameLabel;
+    private JLabel itemIDLabel;
 
     public UpdateItemGUI(String title, Object itemInfo) {
         super(title);
@@ -54,6 +56,8 @@ public class UpdateItemGUI extends JFrame {
         quantityOnHand.setEditable(false);
         expireDateForm.setEnabled(false);
 
+        itemNameLabel.setText("Item Name: " + items.get(indexOfItem).getItemName());
+        itemIDLabel.setText("ID: " + items.get(indexOfItem).getItemID());
 
         itemNameCheckBox.addActionListener(new ActionListener() {
             @Override
