@@ -1,7 +1,7 @@
 package ProfileUsers;
 
 public class ProfileFactory {
-    public static Profile ProfileFactory(String profileType)
+    public Profile makeProfile(String profileType)
     {
         if(profileType.equals("Vendor")){
             return new Vendor();

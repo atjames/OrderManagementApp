@@ -1,5 +1,6 @@
 package GUI;
 
+import ProfileUsers.ProfileFactory;
 import ProfileUsers.VendorAccountArray;
 import ProfileUsers.Vendor;
 import java.text.DateFormat;
@@ -44,7 +45,9 @@ public class VendorForm  extends JFrame{
     private JTextField SeasonalDiscountDate;
 
     public VendorForm(){
-
+        ProfileFactory vendorBuilder = new ProfileFactory();
+        Vendor v = null;
+        v = (Vendor) vendorBuilder.makeProfile("Vendor");
         setContentPane(Panel1);
         setTitle("Vendor Form");
         setSize(900,600);
@@ -59,8 +62,6 @@ public class VendorForm  extends JFrame{
         for(int i = 0;i<50;i++){
             StateList.insertItemAt(states[i],i);
         }
-
-
         Submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,15 +70,12 @@ public class VendorForm  extends JFrame{
                    int valid = 0;
                     String fullname = FullName.getText();
                     valid = checkName(fullname);
-
                     String street = StreetAdd.getText();
                     String city = City.getText();
                     String state = (String) StateList.getSelectedItem();
                     valid += checkAddress(street,city,state);
-
                     String phone = Phone.getText();
                     valid += checkPhone(phone);
-
                     String lastorderdate = LastOrderDate.getText();
                     String seasonaldate = SeasonalDiscountDate.getText();
                     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");

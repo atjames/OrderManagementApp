@@ -15,7 +15,6 @@ Class for Array of vendors to be used across the project
 public class VendorAccountArray {
     public static int arraySize = 0;
     public static Vendor[] vendors = new Vendor[arraySize];
-
     public static void init(){
         try {
             String line = "";
@@ -41,7 +40,6 @@ public class VendorAccountArray {
             try (FileWriter writer = new FileWriter(Vendor.RESOURCES_ITEMS_CSV, false)) //overwrites the .CSV with the new values
             {
                 writer.write(Vendor.CSVHeaderLine); //writes the header line to the CSV first
-
                 for (Vendor item : vendors) //iterates over arraylist and writes the formatter CSV line
                 {
                     writer.write('\n' + VendorCSV.CSVFormatter(item));
@@ -49,14 +47,11 @@ public class VendorAccountArray {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
     }
 
     public static void print() {
         for(int i = 0; i <arraySize; i++){
             System.out.println(vendors[i].getFullName());
-
         }
 
     }
