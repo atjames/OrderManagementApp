@@ -40,6 +40,7 @@ public class UpdateVendors extends  JFrame{
     private JButton Reset;
     private JTextField lastorderDate;
     private JTextField seasonaldate;
+    private JTextField lastpaidamount;
 
     UpdateVendors(){
         fullNameTextField.setDocument(new JTextFieldMaxSize(20));
@@ -51,7 +52,7 @@ public class UpdateVendors extends  JFrame{
         }
         setContentPane(UpdateVendorsPanel);
         setTitle("Vendor Form");
-        setSize(900, 600);
+        setSize(1600, 900);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         Submit.addActionListener(new ActionListener() {
@@ -115,6 +116,7 @@ public class UpdateVendors extends  JFrame{
                             String seasDate = formatter.format(new Date(seasondate));
                             lastorderDate.setText(lastDate);
                             seasonaldate.setText(seasDate);
+                            lastpaidamount.setText(String.valueOf(VendorAccountArray.searchForUser(i).getLastPaidAmount()));
                 }
             }
             }
@@ -135,7 +137,7 @@ public class UpdateVendors extends  JFrame{
                 valid += checkAddress(i,street,city,state);
                 String phone = phoneTextField.getText();
                 valid += checkPhone(phone);
-
+                String lastpaid = lastpaidamount.getText();
                 if(Balance.getText().matches(".*[a-z].*")){
                     JOptionPane.showMessageDialog(null, "Balance is not valid (only enter numbers)");
                     return;
@@ -156,9 +158,11 @@ public class UpdateVendors extends  JFrame{
                     String seasDate = formatter.format(new Date(seasondate));
                     Vendor v = new Vendor(i,fullname,street,city,state,phone,lastorder,seasonal);
                     v.setBalance(bal);
+                    v.setLastPaidAmount(Double.parseDouble(lastpaid));
                     VendorAccountArray.updateVendor(v,i);
                     new PurchaserView();
                     UpdateVendors.super.dispose();
+                    VendorAccountArray.write();
                 } catch (ParseException ex) {
                     JOptionPane.showMessageDialog(null, "Enter Valid Dates MM/DD/YYYY");
                     ex.printStackTrace();

@@ -95,6 +95,7 @@ public class VendorForm  extends JFrame{
                     }
                     new PurchaserView();
                     VendorForm.super.dispose();
+                    VendorAccountArray.write();
 
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Enter Valid Dates MM/DD/YYYY");

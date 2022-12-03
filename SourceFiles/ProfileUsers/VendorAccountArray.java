@@ -1,4 +1,13 @@
 package ProfileUsers;
+
+import java.io.*;
+import java.text.ParseException;
+import java.util.Date;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
 /*
 Class for Array of vendors to be used across the project
 @author Austin Jeffery
@@ -6,6 +15,43 @@ Class for Array of vendors to be used across the project
 public class VendorAccountArray {
     public static int arraySize = 0;
     public static Vendor[] vendors = new Vendor[arraySize];
+
+    public static void init(){
+        try {
+            String line = "";
+            BufferedReader reader = new BufferedReader(new FileReader(Vendor.RESOURCES_ITEMS_CSV));
+            reader.readLine(); // skips header line of CSV
+            while ((line = reader.readLine()) != null)
+            {
+                String[] values = line.split(","); // splits the line at the commas and then stores each value in an array of Strings.
+                Vendor item = new Vendor(Integer.parseInt(values[0]),values[1],values[2],values[3],values[4],values[5],Double.parseDouble(values[6]),Double.parseDouble(values[7]),values[8],values[9]); // creating new itemProfile
+                VendorAccountArray.addVendor(item);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void write(){
+
+            try (FileWriter writer = new FileWriter(Vendor.RESOURCES_ITEMS_CSV, false)) //overwrites the .CSV with the new values
+            {
+                writer.write(Vendor.CSVHeaderLine); //writes the header line to the CSV first
+
+                for (Vendor item : vendors) //iterates over arraylist and writes the formatter CSV line
+                {
+                    writer.write('\n' + VendorCSV.CSVFormatter(item));
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+    }
 
     public static void print() {
         for(int i = 0; i <arraySize; i++){

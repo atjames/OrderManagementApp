@@ -6,7 +6,15 @@ import ProfileUsers.Vendor;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+/*
+This is used to set a max value for JTextFields
+@author Austin Jeffery
 
+ */
 public class SearchVendors extends JFrame{
     private JLabel Enterid;
     private JLabel entername;
@@ -88,10 +96,6 @@ public class SearchVendors extends JFrame{
                         }
                     }
 
-
-
-
-
             }
         });
         returnButton.addActionListener(new ActionListener() {
@@ -105,6 +109,7 @@ public class SearchVendors extends JFrame{
     }
 
     private void getvalues(Vendor v) {
+        DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         fullname.setText(v.getFullName());
         idlabel.setText(String.valueOf(v.getUserID()));
         StreetL.setText(v.getStreetAddress());
@@ -113,8 +118,13 @@ public class SearchVendors extends JFrame{
         PhoneL.setText(v.getPhone());
         balL.setText(String.valueOf(v.getBalance()));
         LastpaidL.setText(String.valueOf(v.getLastPaidAmount()));
-        lastOrderL.setText(String.valueOf(v.getLastOrderDate()));
-        seasonalL.setText(String.valueOf(v.getSeasonalDiscount()));
+        String lastorderdate = String.valueOf(v.getLastOrderDate());
+        String seasondate =String.valueOf(v.getSeasonalDiscount());
+        String lastDate = formatter.format(new Date(lastorderdate));
+        String seasDate = formatter.format(new Date(seasondate));
+        lastOrderL.setText(lastDate);
+        seasonalL.setText(seasDate);
+
 
     }
 }

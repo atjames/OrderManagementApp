@@ -123,8 +123,10 @@ public class DeleteVendor extends  JFrame {
                 else{
                     VendorAccountArray.deleteVendor(v);
                     JOptionPane.showMessageDialog(null, "Vendor has been deleted");
+                    //check purchase orders associated with that deleted vendor to be deleted...
                     new PurchaserView();
                     DeleteVendor.super.dispose();
+                    VendorAccountArray.write();
                     return;
                 }
             }
