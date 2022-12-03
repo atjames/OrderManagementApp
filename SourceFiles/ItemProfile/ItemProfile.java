@@ -14,8 +14,9 @@ import java.util.Date;
 public class ItemProfile
 {
      public static final String RESOURCES_ITEMS_CSV = "Resources/items.csv";
-     public static final String CSVHeaderLine = "itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate";
-     public static final String PURCHASE_ORDERS = "Resources/items.csv";
+     public static final String ITEMS_CSV_HEADER = "itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate";
+     public static final String PURCHASE_ORDERS_CSV = "Resources/purchaseorders.csv";
+     public static final String INVOICE_CSV = "Resources/invoices.csv";
      String itemID;
      String itemName;
      String vendorID;
@@ -73,6 +74,22 @@ public class ItemProfile
           return itemName;
      }
 
+     public int getTotalInvoices() {
+          return invoices.size();
+     }
+
+     public int getTotalPurchaseOrders() {
+          return purchaseOrders.size();
+     }
+
+     public ArrayList getInvoices() {
+          return invoices;
+     }
+
+     public ArrayList getPurchaseOrders() {
+          return purchaseOrders;
+     }
+
 
      public void createItem(String itemID, String itemName, String vendorID, double sellingPrice, String itemCategory, double quantityonHand,String unitOfMeasurment, String expireDate) throws ParseException {
           this.itemID = itemID;
@@ -94,6 +111,11 @@ public class ItemProfile
           unitOfMeasurement = "";
           quantityonHand = 0;
           expireDate = new Date();
+     }
+
+     public String toString()
+     {
+          return itemID + " - " + itemName;
      }
 
 

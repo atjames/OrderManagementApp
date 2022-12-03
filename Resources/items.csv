@@ -1,5 +1,4 @@
 itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate
 000001,Taters,000001,5.0,vegetables,100.0,pounds,12/30/2022
 000002,Oranges,000002,2.51,fruits,50.0,pounds,01/22/2023
-662240,test,123456,100.0,fruits,10.0,pound,12/08/2022
 408376,test,123456,210.0,nuts,200.0,ounce,12/08/2022

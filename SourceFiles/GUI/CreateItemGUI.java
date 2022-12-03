@@ -18,7 +18,7 @@ import static Main.Main.items;
 @author: Andrew James
  */
 
-public class CreateItemForm extends JFrame {
+public class CreateItemGUI extends JFrame {
     private JPanel createItemFrame;
     private JTextField itemName;
     private JComboBox vendorIDCB;
@@ -39,7 +39,7 @@ public class CreateItemForm extends JFrame {
             "snacks", "soda", "juice", "bakery products"};
 
 
-    public CreateItemForm(String title) {
+    public CreateItemGUI(String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(createItemFrame);
@@ -126,7 +126,7 @@ public class CreateItemForm extends JFrame {
                         writeCSV.write_items(items);
                         JOptionPane.showMessageDialog(null, "Item " + item.getItemName() + " successfully created with Item ID: " + item.getItemID());
                         JFrame ItemMenuGUI = new ItemMenuGUI("Items Menu");
-                        CreateItemForm.super.dispose();
+                        CreateItemGUI.super.dispose();
                     }
                 }
             });

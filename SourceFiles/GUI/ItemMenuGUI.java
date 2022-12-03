@@ -28,7 +28,7 @@ public class ItemMenuGUI extends JFrame {
             createItemButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame CreateItemFrame = new CreateItemForm("Create Items");
+                JFrame CreateItemFrame = new CreateItemGUI("Create Items");
                 CreateItemFrame.setVisible(true);
             }
         });
@@ -37,10 +37,18 @@ public class ItemMenuGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JFrame CreateSearchFrame = new  JFrame("Show Items");
                 CreateSearchFrame.setSize(1250,300);
-                CreateSearchFrame.add(new itemTableForm().panel1);
+                CreateSearchFrame.add(new ItemTableGUI().panel1);
                 CreateSearchFrame.setVisible(true);
                 CreateSearchFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 CreateSearchFrame.setLocationRelativeTo(null);
+            }
+        });
+        deleteItemsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame DeleteItemFrame = new DeleteItemGUI("Delete Items");
+                DeleteItemFrame.setVisible(true);
+
             }
         });
     }
