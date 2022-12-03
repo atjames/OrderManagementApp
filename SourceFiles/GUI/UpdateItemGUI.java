@@ -28,7 +28,7 @@ public class UpdateItemGUI extends JFrame {
     private JTextField itemName;
     private JTextField sellingPrice;
     private JComboBox ItemCategoryCB;
-    private JTextField purchsaePrice;
+    private JTextField purchasePrice;
     private JComboBox UOMCB;
     private JTextField quantityOnHand;
     private JDatePicker expireDateForm;
@@ -51,7 +51,7 @@ public class UpdateItemGUI extends JFrame {
         itemName.setEditable(false);
         sellingPrice.setEditable(false);
         ItemCategoryCB.setEditable(false);
-        purchsaePrice.setEditable(false);
+        purchasePrice.setEditable(false);
         UOMCB.setEditable(false);
         quantityOnHand.setEditable(false);
         expireDateForm.setEnabled(false);
@@ -116,9 +116,9 @@ public class UpdateItemGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (purchasePriceCheckBox.isSelected()) {
-                    purchsaePrice.setEditable(true);
+                    purchasePrice.setEditable(true);
                 } else {
-                    purchsaePrice.setEditable(false);
+                    purchasePrice.setEditable(false);
                 }
             }
         });
@@ -193,11 +193,11 @@ public class UpdateItemGUI extends JFrame {
                 if (purchasePriceCheckBox.isSelected())
                 {
 
-                    if (!purchsaePrice.getText().matches("-?\\d+(\\.\\d+)?") || purchsaePrice.getText() == null || Double.parseDouble(purchsaePrice.getText()) < 0) {
+                    if (!purchasePrice.getText().matches("-?\\d+(\\.\\d+)?") || purchasePrice.getText() == null || Double.parseDouble(purchasePrice.getText()) < 0) {
                         JOptionPane.showMessageDialog(null, "Please enter valid Purchase Price");
                         return;
                     }
-                    items.get(indexOfItem).setPurchasePrice(Double.parseDouble(purchsaePrice.getText()));
+                    items.get(indexOfItem).setPurchasePrice(Double.parseDouble(purchasePrice.getText()));
                 }
 
                 if (unitOfMeasurementCheckBox.isSelected())

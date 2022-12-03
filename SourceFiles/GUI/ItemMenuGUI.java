@@ -58,6 +58,13 @@ public class ItemMenuGUI extends JFrame {
                 CreateUpdateFrame.setVisible(true);
             }
         });
+        searchItemsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame CreateSearchFrame = new SearchItemsGUI("Search for Item");
+                CreateSearchFrame.setVisible(true);
+            }
+        });
     }
 
 

@@ -1,23 +1,21 @@
 package GUI;
 
+import ItemProfile.ItemProfile;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-import ItemProfile.ItemProfile;
+import static GUI.SearchItemsGUI.itemNameSearch;
+public class SearchResultsNameGUI extends JFrame {
 
-import static Main.Main.items;
-
-/*
-@author: Andrew James
- */
-
-
-public class ItemTableGUI extends JFrame {
     JPanel panel1;
     private JTable table1;
     String header[] = {"Item ID", "Item Name", "Quantity on Hand", "Selling Price", "Purchased Price", "Expire Date"};
+
     private void createUIComponents() {
-        DefaultTableModel model = new DefaultTableModel(0, 6){
+        // TODO: place custom component creation code here
+
+        DefaultTableModel model = new DefaultTableModel(0, 6) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 //all cells false
@@ -28,10 +26,11 @@ public class ItemTableGUI extends JFrame {
         model.setColumnIdentifiers(header);
         table1 = new JTable(model);
 
-        for (ItemProfile item : items) {
+        for (ItemProfile item : itemNameSearch) {
             Object[] row = {item.getItemID(),item.getItemName(),item.getQuantityonHand(),item.getSellingPrice(),item.getPurchasePrice(),item.getExpireDateString()};
             model.addRow(row);
         }
 
     }
+
 }

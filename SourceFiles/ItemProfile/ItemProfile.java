@@ -14,7 +14,7 @@ import java.util.Date;
 public class ItemProfile
 {
      public static final String RESOURCES_ITEMS_CSV = "Resources/items.csv";
-     public static final String ITEMS_CSV_HEADER = "itemID,itemName,vendorID,sellingPrice,itemCategory,unitOfMeasurment,quantityonHand,expireDate,purchasePrice";
+     public static final String ITEMS_CSV_HEADER = "itemID,itemName,vendorID,sellingPrice,itemCategory,quantityonHand,unitOfMeasurement,expireDate,purchasePrice";
      public static final String PURCHASE_ORDERS_CSV = "Resources/purchaseorders.csv";
      public static final String INVOICE_CSV = "Resources/invoices.csv";
      String itemID;
@@ -44,10 +44,11 @@ public class ItemProfile
 
      public void addpurchaseOrder(String purchaseID) {this.purchaseOrders.add(purchaseID);}
      public void addInvoice(String invoiceID) {this.invoices.add(invoiceID);}
-     public String getExpireDate()
+     public String getExpireDateString()
      {
           return formatter.format(expireDate);
      }
+     public Date getExpireDate (){return expireDate;}
 
      public double getPurchasePrice(){return purchasePrice;}
 
