@@ -19,7 +19,7 @@ public class PurchaserView extends javax.swing.JFrame {
     private JButton ViewVendors;
     private JButton UpdateVendors;
     private JButton DeleteVendor;
-
+    private JButton SearchVendor;
 
 
     public PurchaserView(){
@@ -48,6 +48,11 @@ public class PurchaserView extends javax.swing.JFrame {
         DeleteVendor.setSize(150,30);
         DeleteVendor.setLocation(340,150);
         c.add(DeleteVendor);
+
+        SearchVendor = new JButton("Search Vendors");
+        SearchVendor.setSize(150,30);
+        SearchVendor.setLocation(140,150);
+        c.add(SearchVendor);
         DeleteVendor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -57,7 +62,15 @@ public class PurchaserView extends javax.swing.JFrame {
 
             }
         });
+        SearchVendor.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                c.hide();
+                PurchaserView.super.dispose();
+                new SearchVendors();
 
+            }
+        });
            AddVendor.addActionListener(new ActionListener() {
                @Override
                public void actionPerformed(ActionEvent e) {

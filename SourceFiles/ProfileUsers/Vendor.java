@@ -9,7 +9,7 @@ Class for Vendor
  */
 public class Vendor extends Profile{
 
-    private LocalDateTime seasonalDiscount; //mm/dd/yyyy
+    private Date seasonalDiscountsStartDate; //mm/dd/yyyy
 
     public Vendor(){
         this.userID = 0;
@@ -23,7 +23,7 @@ public class Vendor extends Profile{
         this.seasonalDiscountsStartDate = null;
         this.lastOrderDate = null;
     }
-    Date seasonalDiscountsStartDate;
+
 
     public Vendor(int userID, String fullName, String streetAddress, String city, String state, String phone) {
         this.userID = userID; //auto generated max 6 character
@@ -51,5 +51,13 @@ public class Vendor extends Profile{
 
     public String toString(){
         return print() + "";
+    }
+
+    public Date getSeasonalDiscount() {
+        return seasonalDiscountsStartDate;
+    }
+
+    public void setSeasonalDiscount(Date seasonalDiscount) {
+        this.seasonalDiscountsStartDate = seasonalDiscount;
     }
 }

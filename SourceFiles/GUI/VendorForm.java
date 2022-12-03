@@ -66,35 +66,35 @@ public class VendorForm  extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
                 try{
+                   int valid = 0;
                     String fullname = FullName.getText();
+                    valid = checkName(fullname);
+
                     String street = StreetAdd.getText();
                     String city = City.getText();
                     String state = (String) StateList.getSelectedItem();
+                    valid += checkAddress(street,city,state);
 
                     String phone = Phone.getText();
-                    String dash = String.valueOf(phone.charAt(3));
-                    String dash2 = String.valueOf(phone.charAt(7));
-                    if(phone.matches(".*[a-z].*") || (!dash.equals("-")) || (!dash2.equals( "-"))){
-                        JOptionPane.showMessageDialog(null, "Phone number is not valid, must be ###-###-####");
-                        new VendorForm();
-                        VendorForm.super.dispose();
-                        return;
-                    }
+                    valid += checkPhone(phone);
 
                     String lastorderdate = LastOrderDate.getText();
                     String seasonaldate = SeasonalDiscountDate.getText();
                     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
                     Date lastorder = formatter.parse(lastorderdate);
                     Date seasonal = formatter.parse(seasonaldate);
-                    //System.out.println(lastorder);
-                    //System.out.println(seasonal);
                     String lastDate = formatter.format(new Date(lastorderdate));
                     String seasDate = formatter.format(new Date(seasonaldate));
                     int num = VendorAccountArray.arraySize;
                     Vendor v = new Vendor(num,fullname,street,city,state,phone,lastorder,seasonal);
                     VendorAccountArray.addVendor(v);
-                    //System.out.println(lastDate);
-                    //System.out.println(seasDate);
+                    if(valid > 0){
+                        new VendorForm();
+                        VendorForm.super.dispose();
+                        return;
+                    }
+                    new PurchaserView();
+                    VendorForm.super.dispose();
 
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Enter Valid Dates MM/DD/YYYY");
@@ -102,9 +102,7 @@ public class VendorForm  extends JFrame{
                     return;
                 }
 
-                new PurchaserView();
-                VendorForm.super.dispose();
-                //Implement a way to validate input
+
 
             }
         });
@@ -117,8 +115,42 @@ public class VendorForm  extends JFrame{
             }
         });
     }
-
-
+    public int checkPhone(String phone){
+        String temp;
+        String dash = String.valueOf(phone.charAt(3));
+        String dash2 = String.valueOf(phone.charAt(7));
+        if(phone.matches(".*[a-z].*") || (!dash.equals("-")) || (!dash2.equals( "-")) || (phone.length()!=12)){
+            JOptionPane.showMessageDialog(null, "Phone number is not valid, must be ###-###-####");
+            new VendorForm();
+            VendorForm.super.dispose();
+            return 1;
+        }
+        return 0;
+    }
+    public int checkName(String name){
+        String temp;
+        for(int i =0; i <VendorAccountArray.arraySize; i++){
+            temp = VendorAccountArray.searchForUser(i).getFullName();
+            if (name.equals(temp)){
+                JOptionPane.showMessageDialog(null, "Do not enter a duplicate Vendor Name");
+               return 1;
+            }
+        }
+        return 0;
+    }
+    public int checkAddress(String street, String city, String state){
+        String tempStreet, tempCity, tempState;
+        for(int i =0; i <VendorAccountArray.arraySize; i++){
+            tempStreet = VendorAccountArray.searchForUser(i).getStreetAddress();
+            tempCity = VendorAccountArray.searchForUser(i).getCity();
+            tempState = VendorAccountArray.searchForUser(i).getState();
+            if (street.equals(tempStreet) && city.equals(tempCity) && state.equals(tempState)){
+                JOptionPane.showMessageDialog(null, "Do not enter a duplicate Vendor Address");
+                return 1;
+            }
+        }
+        return 0;
+    }
 
 
 }

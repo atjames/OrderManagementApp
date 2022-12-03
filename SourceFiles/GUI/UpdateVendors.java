@@ -6,6 +6,11 @@ import ProfileUsers.Vendor;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /*
 GUI for updating vendors.
 @author Austin Jeffery
@@ -33,6 +38,8 @@ public class UpdateVendors extends  JFrame{
     private JComboBox StateList;
     private JTextField VendorNameField;
     private JButton Reset;
+    private JTextField lastorderDate;
+    private JTextField seasonaldate;
 
     UpdateVendors(){
         fullNameTextField.setDocument(new JTextFieldMaxSize(20));
@@ -101,6 +108,13 @@ public class UpdateVendors extends  JFrame{
                     phoneTextField.setText(VendorAccountArray.searchForUser(i).getPhone());
                     Balance.setText(String.valueOf(VendorAccountArray.searchForUser(i).getBalance()));
                     StateList.setSelectedItem(VendorAccountArray.searchForUser(i).getState());
+                            String lastorderdate = String.valueOf(VendorAccountArray.searchForUser(i).getLastOrderDate());
+                            String seasondate =String.valueOf(VendorAccountArray.searchForUser(i).getSeasonalDiscount());
+                            DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+                            String lastDate = formatter.format(new Date(lastorderdate));
+                            String seasDate = formatter.format(new Date(seasondate));
+                            lastorderDate.setText(lastDate);
+                            seasonaldate.setText(seasDate);
                 }
             }
             }
@@ -109,33 +123,47 @@ public class UpdateVendors extends  JFrame{
         Update.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                int valid = 0;
                 String id = VendorIDtextfield.getText();
+                String currentName = VendorNameField.getText();
                 int i = Integer.parseInt(id);
                 String fullname = fullNameTextField.getText();
+                valid += checkName(currentName,fullname);
                 String street = streetTextField.getText();
                 String city = cityTextField.getText();
                 String state = (String) StateList.getSelectedItem();
+                valid += checkAddress(i,street,city,state);
                 String phone = phoneTextField.getText();
+                valid += checkPhone(phone);
 
-                String dash = String.valueOf(phone.charAt(3));
-                String dash2 = String.valueOf(phone.charAt(7));
-                if(phone.matches(".*[a-z].*") || (!dash.equals("-")) || (!dash2.equals( "-"))){
-                    JOptionPane.showMessageDialog(null, "Phone number is not valid, must be ###-###-####");
-                    return;
-                }
                 if(Balance.getText().matches(".*[a-z].*")){
                     JOptionPane.showMessageDialog(null, "Balance is not valid (only enter numbers)");
                     return;
                 }
                 double bal = Double.parseDouble((Balance.getText()));
-                //Implement a way to validate input
-
-
-                Vendor v = new Vendor(i,fullname,street,city,state,phone);
-                v.setBalance(bal);
-                VendorAccountArray.updateVendor(v,i);
-                new PurchaserView();
-                UpdateVendors.super.dispose();
+                if(valid>0){
+                    new UpdateVendors();
+                    UpdateVendors.super.dispose();
+                    return;
+                }
+                try {
+                    String lastorderdate = lastorderDate.getText();
+                    String seasondate = seasonaldate.getText();
+                    DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+                    Date lastorder = formatter.parse(lastorderdate);
+                    Date seasonal = formatter.parse(seasondate);
+                    String lastDate = formatter.format(new Date(lastorderdate));
+                    String seasDate = formatter.format(new Date(seasondate));
+                    Vendor v = new Vendor(i,fullname,street,city,state,phone,lastorder,seasonal);
+                    v.setBalance(bal);
+                    VendorAccountArray.updateVendor(v,i);
+                    new PurchaserView();
+                    UpdateVendors.super.dispose();
+                } catch (ParseException ex) {
+                    JOptionPane.showMessageDialog(null, "Enter Valid Dates MM/DD/YYYY");
+                    ex.printStackTrace();
+                    return;
+                }
             }
         });
         Return.addActionListener(new ActionListener() {
@@ -160,5 +188,48 @@ public class UpdateVendors extends  JFrame{
             }
         });
     }
+    public int checkAddress(int id, String street, String city, String state){
+        String tempStreet, tempCity, tempState;
+        int j = VendorAccountArray.searchForUser(id).getUserID();
+        for(int i =0; i <VendorAccountArray.arraySize; i++){
+            if(i!=j){
+                tempStreet = VendorAccountArray.searchForUser(i).getStreetAddress();
+                tempCity = VendorAccountArray.searchForUser(i).getCity();
+                tempState = VendorAccountArray.searchForUser(i).getState();
+                if (street.equals(tempStreet) && city.equals(tempCity) && state.equals(tempState)){
+                    JOptionPane.showMessageDialog(null, "Do not enter a duplicate Vendor Address");
+                    return 1;
+                }
+            }
 
+        }
+        return 0;
+    }
+    public int checkName(String current, String check){
+        String temp;
+        int j = VendorAccountArray.searchForUser(current).getUserID();
+        for(int i =0; i <VendorAccountArray.arraySize; i++){
+            temp = VendorAccountArray.searchForUser(i).getFullName();
+            if(i!=j){
+                if (check.equals(temp)){
+                    JOptionPane.showMessageDialog(null, "Do not enter a duplicate Vendor Name");
+                    return 1;
+                }
+            }
+
+        }
+        return 0;
+    }
+    public int checkPhone(String phone){
+        String temp;
+        String dash = String.valueOf(phone.charAt(3));
+        String dash2 = String.valueOf(phone.charAt(7));
+        if(phone.matches(".*[a-z].*") || (!dash.equals("-")) || (!dash2.equals( "-")) || (phone.length()!=12)){
+            JOptionPane.showMessageDialog(null, "Phone number is not valid, must be ###-###-####");
+            new VendorForm();
+            UpdateVendors.super.dispose();
+            return 1;
+        }
+        return 0;
+    }
 }
