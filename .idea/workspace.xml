@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/out/production/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/out/production/SourceFiles/SourceFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csc4110-group1new.iml" beforeDir="false" afterPath="$PROJECT_DIR$/csc4110-group1new.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/JTextFieldMaxSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/JTextFieldMaxSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfileCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfileCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/getItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/writeCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorAccountArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorAccountArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserFactory.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +29,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="AustinsBranch" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -50,7 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignment3Code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../jdatepicker-2.0.3.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -282,7 +301,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670112651136</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
+      <created>1670116272004</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670116272004</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
+      <created>1670116571831</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670116571831</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -304,6 +337,7 @@
     <MESSAGE value="Added Vendor GUI to add vendors, update, and list. Added Vendor array class&#10;fixed bugs, validated user input" />
     <MESSAGE value="Added Vendor GUI to add vendors, update, and list and delete, Added Search through vendors&#10;fixed bugs, validated user input" />
     <MESSAGE value="Added writing and reading Vendors to and from a CSV file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added writing and reading Vendors to and from a CSV file" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
   </component>
 </project>

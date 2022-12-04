@@ -99,6 +99,8 @@ public class PurchaserView extends javax.swing.JFrame {
 
             }
         });
+
+
     }
 
 
