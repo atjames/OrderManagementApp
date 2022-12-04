@@ -8,7 +8,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 
 
-/* It's important to make sure you are using the correct file path. Make sure you are defining it as Resources/<file name>.
+/* It"s important to make sure you are using the correct file path. Make sure you are defining it as Resources/<file name>.
    The Resources folder is marked as the Resource dirc so the project will read files from there without needing to put entire filepath.
 * */
 
