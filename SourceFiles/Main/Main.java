@@ -1,14 +1,18 @@
 package Main;
 
+import ItemProfile.ItemProfile;
+import Login.LoginMenu;
+import UserClasses.UserAccountArray;
+
+import java.util.ArrayList;
+
 public class Main
 {
+    public static ArrayList<ItemProfile> items = new ArrayList<>();
+
     public static void main(String[] args)
     {
-        int bruh = 1;
-        switch (bruh)
-        {
-            case 1:
-                System.out.println("hello");
-        }
+        UserAccountArray.testAccount();
+        new LoginMenu();
     }
 }
