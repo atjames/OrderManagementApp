@@ -2,7 +2,7 @@ package UserClasses;
 
 public class UserFactory
 {
-    public User userFactory(String userType)
+    public static User userFactory(String userType)
     {
         if (userType == "Owner")
             return new Owner();
