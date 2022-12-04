@@ -94,9 +94,9 @@ public class UpdateItemGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (itemCategoryCheckBox.isSelected()) {
-                    ItemCategoryCB.setEditable(true);
+                    ItemCategoryCB.setEnabled(true);
                 } else {
-                    ItemCategoryCB.setEditable(false);
+                    ItemCategoryCB.setEnabled(false);
                 }
             }
         });
@@ -126,9 +126,9 @@ public class UpdateItemGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (unitOfMeasurementCheckBox.isSelected()) {
-                    UOMCB.setEditable(true);
+                    UOMCB.setEnabled(true);
                 } else {
-                    UOMCB.setEditable(false);
+                    UOMCB.setEnabled(false);
                 }
             }
         });
