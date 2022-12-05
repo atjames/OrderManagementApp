@@ -1,6 +1,8 @@
 package UserClasses;
 
-public abstract class User
+import ObserverInterface.ObserveVendorSale;
+
+public abstract class User implements ObserveVendorSale
 {
     String lastName;
     String firstName;

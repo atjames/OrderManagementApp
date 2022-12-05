@@ -2,21 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
+      <change afterPath="$PROJECT_DIR$/SourceFiles/ObserverInterface/ObserveVendorSale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/FirstLoginPasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/FirstLoginPasswordChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/MaxCharLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/MaxCharLimit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/out/production/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/out/production/SourceFiles/SourceFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Accountant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Purchaser.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Purchaser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/SalesPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/SalesPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserSearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csc4110-group1new.iml" beforeDir="false" afterPath="$PROJECT_DIR$/csc4110-group1new.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/JTextFieldMaxSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/JTextFieldMaxSize.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfileCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfileCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/getItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/writeCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorAccountArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorAccountArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserFactory.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -36,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="AustinsBranch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../jdatepicker-2.0.3.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jdatepicker-2.0.3.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -77,7 +85,7 @@
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
-      <module name="csc4110-group1new" />
+      <module name="SourceFiles1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
@@ -125,6 +133,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="csc4110-group1new" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="csc4110-group1new" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

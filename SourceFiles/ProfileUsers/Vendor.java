@@ -1,14 +1,19 @@
 package ProfileUsers;
 
+import ObserverInterface.ObserveVendorSale;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 /*
 Class for Vendor
 @author Austin
 
+Observer functions added by:
+@Benjamin Pienta
  */
 public class Vendor extends Profile{
 
@@ -16,6 +21,10 @@ public class Vendor extends Profile{
     public static final String RESOURCES_ITEMS_CSV = "Resources/vendors.csv";
     public static final String CSVHeaderLine = "userID,fullName,streetAddress,city,state,phone,balance,lastPaidAmount,lastOrderDate,seasonalDiscountsStartDate";
     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+
+    // Observer Variables
+    public ArrayList<ObserveVendorSale> saleObservers = new ArrayList<>();
+
     public Vendor(){
         this.userID = 0;
         this.fullName = "";
@@ -77,5 +86,28 @@ public class Vendor extends Profile{
 
     public void setSeasonalDiscount(Date seasonalDiscount) {
         this.seasonalDiscountsStartDate = seasonalDiscount;
+    }
+
+    // Observer methods
+    // Add Observer for sales to array
+    public void registerSaleObserver(ObserveVendorSale saleObserver)
+    {
+        saleObservers.add(saleObserver);
+    }
+
+    // Delete Observer for sales from array
+    public void removeSaleObserver(ObserveVendorSale saleObserver)
+    {
+        // Gets the index of the oserver, then removes them
+        int observerToDelete = saleObservers.indexOf(saleObserver);
+        saleObservers.remove(observerToDelete);
+    }
+
+    // Updates all users within the observer array
+    public void updateSaleObservers()
+    {
+        // Updates all needed observers
+        for (ObserveVendorSale observeVendorSale: saleObservers)
+            observeVendorSale.update(this.fullName);
     }
 }

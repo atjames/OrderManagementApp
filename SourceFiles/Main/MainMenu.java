@@ -8,15 +8,20 @@ import Login.FirstLoginPasswordChange;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
 import Login.LoginMenu;
+import ObserverInterface.ObserveVendorSale;
+import ProfileUsers.Vendor;
+import ProfileUsers.VendorAccountArray;
 import UserClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 public class MainMenu extends JFrame
 {
+    // Main variables for the FUI
     private Container c;
     private JLabel menuTitle;
     private JButton exit;
@@ -27,6 +32,8 @@ public class MainMenu extends JFrame
     private JButton changePassword;
     private static User currentUser = null;
 
+    // Variable to store the date
+    Date todaysDate = new Date();
 
     public MainMenu()
     {
@@ -143,6 +150,17 @@ public class MainMenu extends JFrame
         }
 
         setVisible(true);
+
+        // This conditional is separate from the above as this will allow the
+        // menu to load first before displaying the needed update
+        if (HoldPagesVisited.getNumberOfPagesVisited() == 0)
+        {
+            // Test vendor observers
+            for (Vendor vendor : VendorAccountArray.vendors)
+                for (ObserveVendorSale observe : vendor.saleObservers)
+                    if (HoldCurrentLoginType.getLoggedInUser() == observe && todaysDate.after(vendor.getSeasonalDiscount()))
+                        vendor.updateSaleObservers();
+        }
     }
 
     public static void setUserType(User user)

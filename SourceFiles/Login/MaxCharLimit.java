@@ -1,3 +1,7 @@
+/**
+ * Class made by 'Benjamin Pienta'
+ **/
+
 package Login;
 
 import javax.swing.text.AttributeSet;

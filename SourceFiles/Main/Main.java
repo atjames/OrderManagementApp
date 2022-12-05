@@ -14,10 +14,10 @@ public class Main
 
     public static void main(String[] args)
     {
+        UserAccountArray.testAccount();
         VendorAccountArray.init();
 
-        new PurchaserView();
-        UserAccountArray.testAccount();
+        //new PurchaserView();
         new LoginMenu();
     }
 }

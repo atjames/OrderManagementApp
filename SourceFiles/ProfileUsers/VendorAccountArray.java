@@ -1,5 +1,9 @@
 package ProfileUsers;
 
+import UserClasses.Owner;
+import UserClasses.User;
+import UserClasses.UserAccountArray;
+
 import java.io.*;
 import java.text.ParseException;
 import java.util.Date;
@@ -11,6 +15,9 @@ import java.util.ArrayList;
 /*
 Class for Array of vendors to be used across the project
 @author Austin Jeffery
+
+Observer code added by:
+@Benjamin Pienta
  */
 public class VendorAccountArray {
     public static int arraySize = 0;
@@ -24,6 +31,13 @@ public class VendorAccountArray {
             {
                 String[] values = line.split(","); // splits the line at the commas and then stores each value in an array of Strings.
                 Vendor item = new Vendor(Integer.parseInt(values[0]),values[1],values[2],values[3],values[4],values[5],Double.parseDouble(values[6]),Double.parseDouble(values[7]),values[8],values[9]); // creating new itemProfile
+
+                // For loop adds all required observers to the vendor
+                for (User user: UserAccountArray.getUsers())
+                    if (user instanceof Owner)
+                        item.registerSaleObserver(user);
+
+                // Add the vendor to the array
                 VendorAccountArray.addVendor(item);
             }
         } catch (FileNotFoundException e) {
