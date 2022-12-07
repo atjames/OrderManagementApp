@@ -63,7 +63,7 @@ public class PurchaserView extends javax.swing.JFrame {
         DeleteVendor.setLocation(340,150);
         c.add(DeleteVendor);
 
-        // Button that backToMenus to the menu
+        // Button that send the user back to the menu
         backToMenu = new JButton("Exit to Menu");
         backToMenu.setSize(150, 30);
         backToMenu.setLocation(340, 450);
