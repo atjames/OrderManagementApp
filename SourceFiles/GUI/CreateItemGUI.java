@@ -1,5 +1,6 @@
 package GUI;
 import ItemProfile.ItemProfile;
+import ProfileUsers.VendorAccountArray;
 import org.jdatepicker.JDatePicker;
 import ItemProfile.GenerateItemID;
 import ItemProfile.writeCSV;
@@ -29,11 +30,6 @@ public class CreateItemGUI extends JFrame {
     private JButton createItemButton;
     private JComboBox itemCategoriesCB;
     private JDatePicker expireDateForm;
-    private JButton mainMenuButton;
-
-    String AlphaNumericString = "0123456789";
-
-    Date today = new Date();
 
     public CreateItemGUI(String title) {
         super(title);
@@ -47,6 +43,11 @@ public class CreateItemGUI extends JFrame {
         //setting max size for item name == 20 characters
         itemName.setDocument(new JTextFieldMaxSize(20));
 
+        //pull vendor IDs from @Austin's feature
+        for(int i = 0; i < VendorAccountArray.vendors.length; i++)
+        {
+            vendorIDCB.addItem(VendorAccountArray.vendors[i].getUserID());
+        }
         createItemButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -83,11 +84,10 @@ public class CreateItemGUI extends JFrame {
                 } else if ((expireDateFor.compareTo(currentDate)) < 0) {
                     JOptionPane.showMessageDialog(null, "Date invalid. Please put an expiry date for a future date");
                     return;
+                     } else if(vendorIDCB.getSelectedItem() == null) {
+                        JOptionPane.showMessageDialog(null, "Please Select Vendor!");
+                        return;
                      }
-                    //else if(vendorIDCB.getSelectedItem() == null) {
-                    //JOptionPane.showMessageDialog(null, "Please Select an item category");
-                    //return;
-                    //}
                 else{
                         ItemProfile item = new ItemProfile();
                         boolean doesExist = true;
@@ -104,7 +104,7 @@ public class CreateItemGUI extends JFrame {
                             }
                         }
                         try {
-                            item.createItem(GenerateItemID.GenerateItemID(), itemName.getText(), "123456", Double.parseDouble(sellingPrice.getText()), itemCategoriesCB.getSelectedItem().toString(),
+                            item.createItem(GenerateItemID.GenerateItemID(), itemName.getText(), vendorIDCB.getSelectedItem().toString(), Double.parseDouble(sellingPrice.getText()), itemCategoriesCB.getSelectedItem().toString(),
                                     Double.parseDouble(quantity.getText()), UnitsCB.getSelectedItem().toString(), expireDate, Double.parseDouble(purchasePrice.getText()));
                         } catch (ParseException ex) {
                             throw new RuntimeException(ex);
