@@ -4,3 +4,4 @@ itemID,itemName,vendorID,sellingPrice,itemCategory,quantityonHand,unitOfMeasurem
 408376,test,123456,210.0,nuts,200.0,ounce,12/08/2022,200.0
 123456,test,000063,210.0,fruits,500.0,dozen,12/08/2022,200.0
 122096,test,123456,200.0,vegetables,200.0,dozen,12/04/2022,20.0
+781913,test vendor ids,2,200.0,vegetables,24.0,dozen,12/16/2022,200.0
