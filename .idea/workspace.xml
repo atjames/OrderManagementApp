@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,10 +52,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jdatepicker-2.0.3.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
-      <module name="csc4110-group1new" />
+      <module name="SourceFiles" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
