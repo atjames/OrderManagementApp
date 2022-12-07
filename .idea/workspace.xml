@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Fixed a login bug with a valid user id and a valid password for a different user. Added a page for purchasers to view all expired items." />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Small commit, made only owner able to see a list of all vendors.">
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -348,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670455904139</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Small commit, made only owner able to see a list of all vendors.">
+      <created>1670456446617</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670456446617</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,6 +385,7 @@
     <MESSAGE value="Fully added a user list display." />
     <MESSAGE value="Fixed a bug with UserEditPage. Added accessibility for Purchasers to see the buttons they need to. Added logout and exit to menu buttons into the vendor menu and items menu." />
     <MESSAGE value="Fixed a login bug with a valid user id and a valid password for a different user. Added a page for purchasers to view all expired items." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a login bug with a valid user id and a valid password for a different user. Added a page for purchasers to view all expired items." />
+    <MESSAGE value="Small commit, made only owner able to see a list of all vendors." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small commit, made only owner able to see a list of all vendors." />
   </component>
 </project>
