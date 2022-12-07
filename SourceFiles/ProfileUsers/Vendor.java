@@ -78,4 +78,17 @@ public class Vendor extends Profile{
     public void setSeasonalDiscount(Date seasonalDiscount) {
         this.seasonalDiscountsStartDate = seasonalDiscount;
     }
+
+    public void setAttributes(int num, String fullname, String street, String city, String state, String phone, Date lastorder, Date seasonal) {
+        this.userID = num; //auto generated max 6 character
+        this.fullName = fullname;//must be unique
+        this.streetAddress = street;//must be unique
+        this.city = city;
+        this.state = state;
+        this.phone = phone;
+        this.balance = 0;
+        this.lastPaidAmount = 0;
+        this.lastOrderDate = lastorder;
+        this.seasonalDiscountsStartDate = seasonal;
+    }
 }
