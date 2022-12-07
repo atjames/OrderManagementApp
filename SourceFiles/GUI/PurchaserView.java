@@ -1,4 +1,9 @@
 package GUI;
+import Login.HoldCurrentLoginType;
+import Login.HoldPagesVisited;
+import Login.LoginMenu;
+import Main.MainMenu;
+
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,8 +13,7 @@ import javax.swing.text.View;
 /*
 Class for the Purchaser view. Once a purchaser logins they have access to these functions
 to add vendors, edit, delete.
-@autho Austin Jeffery
-
+@author Austin Jeffery
  */
 public class PurchaserView extends javax.swing.JFrame {
 
@@ -20,6 +24,10 @@ public class PurchaserView extends javax.swing.JFrame {
     private JButton UpdateVendors;
     private JButton DeleteVendor;
     private JButton SearchVendor;
+
+    // Logout and Back To Menu buttons
+    private JButton logout;
+    private JButton backToMenu;
 
 
     public PurchaserView(){
@@ -48,6 +56,39 @@ public class PurchaserView extends javax.swing.JFrame {
         DeleteVendor.setSize(150,30);
         DeleteVendor.setLocation(340,150);
         c.add(DeleteVendor);
+
+        // Button that backToMenus to the menu
+        backToMenu = new JButton("Exit to Menu");
+        backToMenu.setSize(150, 30);
+        backToMenu.setLocation(340, 450);
+        backToMenu.addActionListener(new ActionListener() {
+            // Sends user back to main menu
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new MainMenu();
+                PurchaserView.super.dispose();
+            }
+        });
+        c.add(backToMenu);
+
+        // Button that logs the user out
+        logout = new JButton("Log Out");
+        logout.setSize(150, 30);
+        logout.setLocation(700, 20);
+        logout.addActionListener(new ActionListener() {
+            // Send user to the login page after being logged out
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                HoldCurrentLoginType.updateUser(null);
+                HoldPagesVisited.resetNumberOfPagesVisited();
+
+                new LoginMenu();
+                PurchaserView.super.dispose();
+            }
+        });
+        c.add(logout);
 
         SearchVendor = new JButton("Search Vendors");
         SearchVendor.setSize(150,30);

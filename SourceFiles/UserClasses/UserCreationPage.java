@@ -89,7 +89,7 @@ public class UserCreationPage extends JFrame
                         user.setLastName(lastNameInput);
                         user.setPassword(passwordInput);
                         user.setUserRole(userRoleInput);
-                        user.setFirstLogin(false); // When a new user is made, they will have never logged in
+                        user.setFirstLogin(true); // When a new user is made, they will have never logged in
 
                         // Add the user to the array and write them to the .csv
                         UserAccountArray.addUser(user);

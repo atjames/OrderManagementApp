@@ -1,3 +1,4 @@
 lastName,firstName,userID,userRole,password,firstLogin
-Ackerman,Bob,654321,Administrator,321Forger,true
 White,Charles,123456,Owner,123Forger,false
+Ackerman,Bob,654321,Administrator,321Forger,false
+Shmoe,Joe,E32314,Purchaser,G0dzi11er,false

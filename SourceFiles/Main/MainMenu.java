@@ -4,6 +4,8 @@
 
 package Main;
 
+import GUI.ItemMenuGUI;
+import GUI.PurchaserView;
 import Login.PasswordChange;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
@@ -31,6 +33,8 @@ public class MainMenu extends JFrame
     private JButton logout;
     private JButton changePassword;
     private JButton showAllUsers;
+    private JButton purchaserView;
+    private JButton itemMenu;
     private static User currentUser = null;
 
     // Variable to store the date
@@ -162,6 +166,39 @@ public class MainMenu extends JFrame
             }
         });
         c.add(changePassword);
+
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner || HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
+        {
+            // Button that sends the user to the purchaser view
+            purchaserView = new JButton("Vendor Actions");
+            purchaserView.setSize(150, 30);
+            purchaserView.setLocation(100, 250);
+            purchaserView.addActionListener(new ActionListener() {
+                // Open the purchaser view
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    new PurchaserView();
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(purchaserView);
+
+            // Button that sends the user to the items menu
+            itemMenu = new JButton("Item Actions");
+            itemMenu.setSize(150, 30);
+            itemMenu.setLocation(100, 350);
+            itemMenu.addActionListener(new ActionListener() {
+                // Open the purchaser view
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    new ItemMenuGUI("Items Menu");
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(itemMenu);
+        }
 
         setVisible(true);
 

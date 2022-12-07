@@ -38,7 +38,7 @@ public class UserListDisplay extends JFrame
         int row = 0; // rows of the new 2d arraylist
 
         // Columns for the table
-        String[] columns = {"Last Name", "First Name", "User ID", "User Role", "Password", "Is It the First Login?"};
+        String[] columns = {"Last Name", "First Name", "User ID", "User Role"};
 
         // Store all the user information into the 2D array list
         String line = "";
@@ -61,15 +61,11 @@ public class UserListDisplay extends JFrame
                 String firstName = variables[1];
                 String userID = variables[2];
                 String userRole = variables[3];
-                String password = variables[4];
-                String firstLogin = variables[5];
 
                 userInfo.get(row).add(lastName);
                 userInfo.get(row).add(firstName);
                 userInfo.get(row).add(userID);
                 userInfo.get(row).add(userRole);
-                userInfo.get(row).add(password);
-                userInfo.get(row).add(firstLogin);
 
                 // Increment row count
                 row++;
@@ -90,14 +86,12 @@ public class UserListDisplay extends JFrame
         // Transfer all data from the 2D arraylist to the normal 2D String array
         for (int i = 0; i < row; i++)
         {
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < 4; j++)
             {
                 normal2DStringArray[i][0] = userInfo.get(i).get(0);
                 normal2DStringArray[i][1] = userInfo.get(i).get(1);
                 normal2DStringArray[i][2] = userInfo.get(i).get(2);
                 normal2DStringArray[i][3] = userInfo.get(i).get(3);
-                normal2DStringArray[i][4] = userInfo.get(i).get(4);
-                normal2DStringArray[i][5] = userInfo.get(i).get(5);
             }
         }
 
@@ -118,12 +112,12 @@ public class UserListDisplay extends JFrame
     {
         JPanel extraButtons = new JPanel();
 
-        // Button that exits the program
+        // Button that exits to the menu
         backToMenu = new JButton("Exit To Menu");
         backToMenu.setSize(150, 30);
         backToMenu.setLocation(340, 450);
         backToMenu.addActionListener(new ActionListener() {
-            // Test button closes the menu
+            // Sends user back to the menu
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MainMenu();
@@ -137,7 +131,7 @@ public class UserListDisplay extends JFrame
         logout.setSize(150, 30);
         logout.setLocation(700, 20);
         logout.addActionListener(new ActionListener() {
-            // Test button closes the menu
+            // Logs the user out and sends them to the login screen
             @Override
             public void actionPerformed(ActionEvent e)
             {

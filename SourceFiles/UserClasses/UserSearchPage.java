@@ -79,7 +79,7 @@ public class UserSearchPage extends JFrame
                     textPassword.setText(UserAccountArray.getUsers().get(slotOfUser).getPassword());
                 }
                 else
-                    menuTitle.setText("The " + firstName + " " + lastName + " profile is not found");
+                    JOptionPane.showMessageDialog(null, "The " + firstName + " " + lastName + " profile is not found");
             }
         });
         c.add(selectUser);

@@ -23,6 +23,7 @@ public class UserEditPage extends JFrame
     private JButton selectUser;
     private JButton deleteUser;
     private JButton logout;
+    private JButton backToMenu;
     private int userSlotInArrayList;
     private boolean userSelected = false;
 
@@ -152,7 +153,7 @@ public class UserEditPage extends JFrame
                     menuTitle.setText("User is a(n) " + UserAccountArray.getUsers().get(userSlotInArrayList).getUserRole());
                 }
                 else
-                    allUsersLabel.setText("ID Not Found");
+                    JOptionPane.showMessageDialog(null, "ID not found");
             }
         });
         c.add(selectUser);
@@ -170,6 +171,7 @@ public class UserEditPage extends JFrame
                 if (userSelected)
                 {
                     UserAccountArray.removeUser(userSlotInArrayList);
+                    UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
                     userSelected = false;
                     new UserEditPage();
                     UserEditPage.super.dispose();
@@ -271,6 +273,19 @@ public class UserEditPage extends JFrame
         });
         c.add(logout);
 
+        // Button that exits to the menu
+        backToMenu = new JButton("Exit To Menu");
+        backToMenu.setSize(150, 30);
+        backToMenu.setLocation(540, 450);
+        backToMenu.addActionListener(new ActionListener() {
+            // Sends user back to the menu
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu();
+                UserEditPage.super.dispose();
+            }
+        });
+        c.add(backToMenu);
 
         setVisible(true);
     }
@@ -295,10 +310,14 @@ public class UserEditPage extends JFrame
             }
             allUsersIDs = new String[numOfAllowedEdits];
 
+            int placeInAllUsersIDs = 0;
             for (int i = 0; i < UserAccountArray.getUsers().size(); i++)
             {
                 if (!(UserAccountArray.getUsers().get(i) instanceof Owner || UserAccountArray.getUsers().get(i) instanceof Administrator))
-                    allUsersIDs[i] = UserAccountArray.getUsers().get(i).getUserID();
+                {
+                    allUsersIDs[placeInAllUsersIDs] = UserAccountArray.getUsers().get(i).getUserID();
+                    placeInAllUsersIDs++;
+                }
             }
         }
     }

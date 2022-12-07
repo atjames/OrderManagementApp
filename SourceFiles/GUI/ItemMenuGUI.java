@@ -1,5 +1,10 @@
 package GUI;
 
+import Login.HoldCurrentLoginType;
+import Login.HoldPagesVisited;
+import Login.LoginMenu;
+import Main.MainMenu;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +21,10 @@ public class ItemMenuGUI extends JFrame {
     private JButton deleteItemsButton;
     private JButton searchItemsButton;
     private JButton updateItemsButton;
+
+    // Logout and Exit To Menu buttons
+    private JButton logout;
+    private JButton exitToMenuButton;
 
     public ItemMenuGUI(String title){
             super(title);
@@ -65,6 +74,37 @@ public class ItemMenuGUI extends JFrame {
                 CreateSearchFrame.setVisible(true);
             }
         });
+
+        // Logout and Exit To Menu buttons
+        // Logout button defined
+        logout.addActionListener(new ActionListener()
+        {
+            // Logs the user out and sends them to the login screen
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                HoldCurrentLoginType.updateUser(null);
+                HoldPagesVisited.resetNumberOfPagesVisited();
+
+                new LoginMenu();
+                ItemMenuGUI.super.dispose();
+            }
+        });
+
+        // Back To Menu button defined
+        exitToMenuButton.addActionListener(new ActionListener()
+        {
+            // Sends user back to main menu
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new MainMenu();
+                ItemMenuGUI.super.dispose();
+            }
+        });
+
+        // Makes the window visible
+        this.setVisible(true);
     }
 
 
