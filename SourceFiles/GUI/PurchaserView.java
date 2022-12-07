@@ -3,6 +3,7 @@ import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
 import Login.LoginMenu;
 import Main.MainMenu;
+import UserClasses.Owner;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -41,11 +42,16 @@ public class PurchaserView extends javax.swing.JFrame {
             AddVendor.setSize(150, 30);
             AddVendor.setLocation(340, 350);
            c.add(AddVendor);
-           //make list to show all vendors
-           ViewVendors = new JButton("View Vendors");
-           ViewVendors.setSize(150,30);
-           ViewVendors.setLocation(140,350);
-           c.add(ViewVendors);
+
+           if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
+           {
+               //make list to show all vendors
+               ViewVendors = new JButton("View Vendors");
+               ViewVendors.setSize(150,30);
+               ViewVendors.setLocation(140,350);
+               c.add(ViewVendors);
+           }
+
            //Enter vendor id to search and update
         UpdateVendors = new JButton("Update Vendors");
         UpdateVendors.setSize(150,30);
