@@ -4,62 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/items.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/items.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/CreateItemGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/CreateItemGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/CustomerOrderInvoice/CustomerInvoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/CustomerOrderInvoice/CustomerInvoice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/AccountaintView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/AccountaintView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/JTextFieldMaxSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/JTextFieldMaxSize.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ListVendors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ListVendors$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ListVendors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ListVendors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfileCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfileCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/getItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/writeCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Profile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/ProfileFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/ProfileFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Vendor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Vendor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorAccountArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorAccountArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/writeVendor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/writeVendor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Accountant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Accountant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Administrator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/InventoryManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Owner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Purchaser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Purchaser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/SalesPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/SalesPerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,16 +47,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/atjam/Downloads/jdatepicker-2.0.3.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
-  }
-}</component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
