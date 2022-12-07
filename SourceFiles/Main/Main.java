@@ -1,14 +1,13 @@
 package Main;
 
-import GUI.ItemMenuGUI;
-import GUI.PurchaserView;
+import GUI.PurchaseOrderMenuGUI;
 import ItemProfile.ItemProfile;
-import Login.LoginMenu;
 import ProfileUsers.VendorAccountArray;
 import UserClasses.UserAccountArray;
 import ItemProfile.getItems;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -19,10 +18,8 @@ public class Main
     public static void main(String[] args) throws IOException {
         VendorAccountArray.init();
         items = getItems.get_items();
-        new PurchaserView();
         UserAccountArray.testAccount();
-        new LoginMenu();
-        JFrame ItemMenu = new ItemMenuGUI("Item Menu");
-        ItemMenu.setVisible(true);
+        JFrame PurchaseOrderMenu = new PurchaseOrderMenuGUI("Purchase Order");
+        PurchaseOrderMenu.setVisible(true);
     }
 }
