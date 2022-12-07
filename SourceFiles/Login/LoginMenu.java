@@ -61,7 +61,7 @@ public class LoginMenu extends JFrame
                     JOptionPane.showMessageDialog(null, "User ID is not on file");
                 else
                 {
-                    if (!UserAccountArray.searchUserPassword(passwordInput))
+                    if (!UserAccountArray.searchUserPassword(passwordInput, idInput))
                         JOptionPane.showMessageDialog(null, "This password is incorrect");
                     else
                     {

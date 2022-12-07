@@ -2,7 +2,6 @@
  * Class made by 'Benjamin Pienta'
  **/
 
-
 package UserClasses;
 
 import Login.HoldCurrentLoginType;
@@ -81,7 +80,7 @@ public class UserListDisplay extends JFrame
         }
 
         // Transfer the Arraylist data to the 2D string for ease of adding to the table
-        String[][] normal2DStringArray = new String[row][6];
+        String[][] normal2DStringArray = new String[row][4];
 
         // Transfer all data from the 2D arraylist to the normal 2D String array
         for (int i = 0; i < row; i++)

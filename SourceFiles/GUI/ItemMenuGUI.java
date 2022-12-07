@@ -1,9 +1,11 @@
 package GUI;
 
+import ItemProfile.AllExpiredItems;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
 import Login.LoginMenu;
 import Main.MainMenu;
+import UserClasses.Purchaser;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -25,6 +27,7 @@ public class ItemMenuGUI extends JFrame {
     // Logout and Exit To Menu buttons
     private JButton logout;
     private JButton exitToMenuButton;
+    private JButton expiredItems;
 
     public ItemMenuGUI(String title){
             super(title);
@@ -32,6 +35,7 @@ public class ItemMenuGUI extends JFrame {
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             this.setContentPane(mainPanel);
             this.pack();
+            this.setBounds(100,100,500,500);
             setLocationRelativeTo(null);
 
             createItemButton.addActionListener(new ActionListener() {
@@ -102,6 +106,23 @@ public class ItemMenuGUI extends JFrame {
                 ItemMenuGUI.super.dispose();
             }
         });
+
+        // Send the user to the expired items page
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
+        {
+            expiredItems.setVisible(true);
+            expiredItems.addActionListener(new ActionListener()
+            {
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    JFrame createExpiredListFrame = new AllExpiredItems();
+                    createExpiredListFrame.setVisible(true);
+                }
+            });
+        }
+        else
+            expiredItems.setVisible(false);
 
         // Makes the window visible
         this.setVisible(true);

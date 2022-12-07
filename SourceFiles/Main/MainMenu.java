@@ -178,6 +178,7 @@ public class MainMenu extends JFrame
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    HoldPagesVisited.incrementPagesVisited();
                     new PurchaserView();
                     MainMenu.super.dispose();
                 }
@@ -193,6 +194,7 @@ public class MainMenu extends JFrame
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    HoldPagesVisited.incrementPagesVisited();
                     new ItemMenuGUI("Items Menu");
                     MainMenu.super.dispose();
                 }
