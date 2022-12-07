@@ -25,7 +25,6 @@ public class Main
 
     {
         items = getItems.get_items();
-
         //Enter fake values for customer to work with and fake customer orders
         try {
             Customer c1 =  new Customer( 0,  "Harry",  "321 drive",  "Chicago",  "IL", "312-565-4949"
