@@ -5,13 +5,14 @@
 package Login;
 
 import UserClasses.UserAccountArray;
+import UserClasses.UserWriteToCSV;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FirstLoginPasswordChange extends JFrame
+public class PasswordChange extends JFrame
 {
     private Container c;
     private JLabel menuTitle;
@@ -21,7 +22,7 @@ public class FirstLoginPasswordChange extends JFrame
     protected JLabel passwordLabel;
     protected JTextField textPassword;
 
-    public FirstLoginPasswordChange()
+    public PasswordChange()
     {
         setTitle("Search For user");
         setBounds(300, 90, 900, 600);
@@ -32,7 +33,7 @@ public class FirstLoginPasswordChange extends JFrame
         c.setLayout(null);
 
         // Menu title
-        menuTitle = new JLabel("Edit Account");
+        menuTitle = new JLabel("Change password");
         menuTitle.setSize(400, 30);
         menuTitle.setLocation(400, 30);
         c.add(menuTitle);
@@ -67,13 +68,21 @@ public class FirstLoginPasswordChange extends JFrame
                 {
                     int userSlot = UserAccountArray.getUserPlace(HoldCurrentLoginType.getLoggedInUser().getUserID());
 
-                    HoldCurrentLoginType.getLoggedInUser().setPassword(passwordInput);
-                    UserAccountArray.editUser(userSlot, HoldCurrentLoginType.getLoggedInUser());
+                    // Ensure the user is not trying to re-enter their old password
+                    if (!HoldCurrentLoginType.getLoggedInUser().getPassword().equals(passwordInput))
+                    {
+                        // Update user in array and in .csv
+                        HoldCurrentLoginType.getLoggedInUser().setPassword(passwordInput);
+                        UserAccountArray.editUser(userSlot, HoldCurrentLoginType.getLoggedInUser());
+                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
-                    FirstLoginPasswordChange.super.dispose();
+                        PasswordChange.super.dispose();
+                    }
+                    else
+                        JOptionPane.showMessageDialog(null, "The password is the same as before");
                 }
                 else
-                    passwordLabel.setText("Password too Short");
+                    JOptionPane.showMessageDialog(null, "The password is too short");
 
             }
         });

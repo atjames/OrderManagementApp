@@ -89,6 +89,13 @@ public class UserEditPage extends JFrame
                     String userRoleInput = (String)userTypeDropBox.getSelectedItem();
                     String passwordInput = textPassword.getText();
                     String selectedID = (String)allUsersDropBox.getSelectedItem();
+                    String firstLogin;
+
+                    // Assigns true or false as a string depending on if the user has logged in for the first time
+                    if (UserAccountArray.getUsers().get(userSlotInArrayList).isFirstLogin())
+                        firstLogin = "true";
+                    else
+                        firstLogin = "false";
 
                     // Checks if the new password length is long enough
                     if (passwordInput.length() >= 8)
@@ -100,19 +107,24 @@ public class UserEditPage extends JFrame
                         user.setPassword(passwordInput);
                         user.setUserID(selectedID);
                         user.setUserRole(userRoleInput);
+                        if (firstLogin.equals("true"))
+                            user.setFirstLogin(true);
+                        else
+                            user.setFirstLogin(false);
 
-                        // Replace old user with new user
+                        // Replace old user with new user and update the .csv file
                         UserAccountArray.editUser(userSlotInArrayList, user);
+                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
                         // Opens the Main Menu
                         new MainMenu();
                         UserEditPage.super.dispose();
                     }
                     else
-                        passwordLabel.setText("Password too Short");
+                        JOptionPane.showMessageDialog(null, "The password is too short");
                 }
                 else
-                    menuTitle.setText("Select a User from the ID list first");
+                    JOptionPane.showMessageDialog(null, "Select a User from the ID list first");
             }
         });
         c.add(confirm);

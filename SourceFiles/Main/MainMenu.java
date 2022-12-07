@@ -4,7 +4,7 @@
 
 package Main;
 
-import Login.FirstLoginPasswordChange;
+import Login.PasswordChange;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
 import Login.LoginMenu;
@@ -131,31 +131,44 @@ public class MainMenu extends JFrame
         });
         c.add(logout);
 
-        if (HoldPagesVisited.getNumberOfPagesVisited() == 0)
-        {
-            // Button changes the user's password upon logging in
-            changePassword = new JButton("Change Password");
-            changePassword.setSize(150, 30);
-            changePassword.setLocation(700, 500);
-            changePassword.addActionListener(new ActionListener() {
-                // Changes the User's password
-                @Override
-                public void actionPerformed(ActionEvent e)
-                {
-                    HoldPagesVisited.incrementPagesVisited();
-                    new FirstLoginPasswordChange();
-                }
-            });
-            c.add(changePassword);
-        }
+        // Button changes the user's password upon use
+        changePassword = new JButton("Change Password");
+        changePassword.setSize(150, 30);
+        changePassword.setLocation(700, 500);
+        changePassword.addActionListener(new ActionListener() {
+            // Changes the User's password
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                HoldPagesVisited.incrementPagesVisited();
+                new PasswordChange();
+            }
+        });
+        c.add(changePassword);
 
         setVisible(true);
 
-        // This conditional is separate from the above as this will allow the
-        // menu to load first before displaying the needed update
+        // If this is the first time a user has used the system, send them to change their password
+        // and update their profile
+        if (HoldCurrentLoginType.getLoggedInUser().isFirstLogin())
+        {
+            new PasswordChange();
+
+            // Change firstLogin to false for the user
+            for (User user: UserAccountArray.getUsers())
+                if (HoldCurrentLoginType.getLoggedInUser() == user)
+                {
+                    user.setFirstLogin(false);
+                }
+
+            UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+        }
+
+        // Having the conditional after the 'setVisible' loads the menu THEN shows
+        // the pop-ups
         if (HoldPagesVisited.getNumberOfPagesVisited() == 0)
         {
-            // Test vendor observers
+            // If the logged-in user is meant to be updated, tell that user a sale is occurring.
             for (Vendor vendor : VendorAccountArray.vendors)
                 for (ObserveVendorSale observe : vendor.saleObservers)
                     if (HoldCurrentLoginType.getLoggedInUser() == observe && todaysDate.after(vendor.getSeasonalDiscount()))

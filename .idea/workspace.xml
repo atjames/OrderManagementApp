@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
-      <change afterPath="$PROJECT_DIR$/SourceFiles/ObserverInterface/ObserveVendorSale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Currently working on observers for feature 8. Got the observer to correctly work.">
+      <change afterPath="$PROJECT_DIR$/Resources/users.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/GetUsersFromCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCSVFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserListDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserWriteToCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/FirstLoginPasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/FirstLoginPasswordChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/MaxCharLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/MaxCharLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/FirstLoginPasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/PasswordChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ObserverInterface/ObserveVendorSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ObserverInterface/ObserveVendorSale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Accountant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/InventoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Purchaser.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Purchaser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/SalesPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/SalesPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csc4110-group1new.iml" beforeDir="false" afterPath="$PROJECT_DIR$/csc4110-group1new.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -336,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670116571831</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Currently working on observers for feature 8. Got the observer to correctly work.">
+      <created>1670279775710</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670279775710</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,6 +361,7 @@
     <MESSAGE value="Added Vendor GUI to add vendors, update, and list and delete, Added Search through vendors&#10;fixed bugs, validated user input" />
     <MESSAGE value="Added writing and reading Vendors to and from a CSV file" />
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
+    <MESSAGE value="Currently working on observers for feature 8. Got the observer to correctly work." />
+    <option name="LAST_COMMIT_MESSAGE" value="Currently working on observers for feature 8. Got the observer to correctly work." />
   </component>
 </project>

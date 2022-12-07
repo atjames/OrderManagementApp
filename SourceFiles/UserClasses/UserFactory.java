@@ -8,17 +8,17 @@ public class UserFactory
 {
     public static User userFactory(String userType)
     {
-        if (userType == "Owner")
+        if (userType.equals("Owner"))
             return new Owner();
-        else if (userType == "Administrator")
+        else if (userType.equals("Administrator"))
             return new Administrator();
-        else if (userType == "InventoryManager")
+        else if (userType.equals("InventoryManager"))
             return new InventoryManager();
-        else if (userType == "Purchaser")
+        else if (userType.equals("Purchaser"))
             return new Purchaser();
-        else if (userType == "SalesPerson")
+        else if (userType.equals("SalesPerson"))
             return new SalesPerson();
-        else if (userType == "Accountant")
+        else if (userType.equals("Accountant"))
             return new Accountant();
         else
             return null;

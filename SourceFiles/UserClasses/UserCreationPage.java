@@ -89,19 +89,21 @@ public class UserCreationPage extends JFrame
                         user.setLastName(lastNameInput);
                         user.setPassword(passwordInput);
                         user.setUserRole(userRoleInput);
+                        user.setFirstLogin(false); // When a new user is made, they will have never logged in
 
+                        // Add the user to the array and write them to the .csv
                         UserAccountArray.addUser(user);
-
+                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
                         // Opens the Main Menu
                         new MainMenu();
                         UserCreationPage.super.dispose();
                     }
                     else
-                        userID.setText("User ID already exists or is blank");
+                        JOptionPane.showMessageDialog(null, "User ID already exists or is blank");
                 }
                 else
-                    password.setText("Password too Short");
+                    JOptionPane.showMessageDialog(null, "The password is too short");
 
             }
         });

@@ -1,3 +1,7 @@
+/**
+ * Class made by 'Benjamin Pienta'
+ **/
+
 package ObserverInterface;
 
 public interface ObserveVendorSale

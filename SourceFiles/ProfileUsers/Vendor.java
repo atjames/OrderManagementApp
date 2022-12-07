@@ -98,7 +98,7 @@ public class Vendor extends Profile{
     // Delete Observer for sales from array
     public void removeSaleObserver(ObserveVendorSale saleObserver)
     {
-        // Gets the index of the oserver, then removes them
+        // Gets the index of the observer, then removes them
         int observerToDelete = saleObservers.indexOf(saleObserver);
         saleObservers.remove(observerToDelete);
     }
