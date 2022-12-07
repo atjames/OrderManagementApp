@@ -30,6 +30,7 @@ public class MainMenu extends JFrame
     private JButton searchUser;
     private JButton logout;
     private JButton changePassword;
+    private JButton showAllUsers;
     private static User currentUser = null;
 
     // Variable to store the date
@@ -111,6 +112,22 @@ public class MainMenu extends JFrame
                 }
             });
             c.add(searchUser);
+
+            // Button that shows all users employed
+            showAllUsers = new JButton("Show Users");
+            showAllUsers.setSize(150, 30);
+            showAllUsers.setLocation(100, 500);
+            showAllUsers.addActionListener(new ActionListener() {
+                // Open User list
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new UserListDisplay();
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(showAllUsers);
         }
 
         // Button that logs the user out

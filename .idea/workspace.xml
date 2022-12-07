@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Currently working on observers for feature 8. Got the observer to correctly work.">
-      <change afterPath="$PROJECT_DIR$/Resources/users.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/GetUsersFromCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCSVFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserListDisplay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserWriteToCSV.java" afterDir="false" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Successfully got the csv file to work with Users, new, old, and updated users.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/FirstLoginPasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/PasswordChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/LoginMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ObserverInterface/ObserveVendorSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ObserverInterface/ObserveVendorSale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserListDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserListDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670279775710</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Successfully got the csv file to work with Users, new, old, and updated users.">
+      <created>1670382404944</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670382404944</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -362,6 +355,7 @@
     <MESSAGE value="Added writing and reading Vendors to and from a CSV file" />
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <MESSAGE value="Currently working on observers for feature 8. Got the observer to correctly work." />
-    <option name="LAST_COMMIT_MESSAGE" value="Currently working on observers for feature 8. Got the observer to correctly work." />
+    <MESSAGE value="Successfully got the csv file to work with Users, new, old, and updated users." />
+    <option name="LAST_COMMIT_MESSAGE" value="Successfully got the csv file to work with Users, new, old, and updated users." />
   </component>
 </project>
