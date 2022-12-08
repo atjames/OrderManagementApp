@@ -1,5 +1,8 @@
 package GUI;
 
+import Main.MainMenu;
+import UserClasses.Accountant;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -43,8 +46,10 @@ public class AccountantView extends JFrame {
 
         returnButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                return;
+            public void actionPerformed(ActionEvent e)
+            {
+                new MainMenu();
+                AccountantView.super.dispose();
                 //logout
             }
         });

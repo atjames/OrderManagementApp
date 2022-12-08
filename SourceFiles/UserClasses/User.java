@@ -1,12 +1,15 @@
 package UserClasses;
 
-public abstract class User
+import ObserverInterface.ObserveVendorSale;
+
+public abstract class User implements ObserveVendorSale
 {
     String lastName;
     String firstName;
     String userID;
     String userRole;
     String password;
+    boolean firstLogin = true;
 
     // Getter and Setters
     public String getLastName()
@@ -52,5 +55,15 @@ public abstract class User
     public void setPassword(String pass)
     {
         password = pass;
+    }
+
+    public boolean isFirstLogin()
+    {
+        return firstLogin;
+    }
+
+    public void setFirstLogin(boolean firstLogin)
+    {
+        this.firstLogin = firstLogin;
     }
 }

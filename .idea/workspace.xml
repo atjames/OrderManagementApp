@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Small commit, made only owner able to see a list of all vendors.">
+      <change afterPath="$PROJECT_DIR$/Resources/users.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/AllExpiredItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/ObserverInterface/ObserveVendorSale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/GetUsersFromCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCSVFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserListDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserWriteToCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/AccountantView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/AccountantView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/FirstLoginPasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/PasswordChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/LoginMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/MaxCharLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/MaxCharLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Accountant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/Purchaser.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/Purchaser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/SalesPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/SalesPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserAccountArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserAccountArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserSearchPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,17 +45,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="Feature7&amp;more" />
+    <option name="BRANCH" value="AustinsBranch" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Feature7&amp;more" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,15 +81,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jdatepicker-2.0.3.jar" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
-      <module name="SourceFiles" />
+      <module name="SourceFiles1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
@@ -113,16 +149,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="csc4110-group1new" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="csc4110-group1new" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main (3)" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.Main (3)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (2)" />
       </list>
@@ -298,14 +348,49 @@
       <option name="project" value="LOCAL" />
       <updated>1670116571831</updated>
     </task>
-    <task id="LOCAL-00024" summary="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv">
-      <created>1670117519019</created>
+    <task id="LOCAL-00024" summary="Currently working on observers for feature 8. Got the observer to correctly work.">
+      <created>1670279775710</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1670117519019</updated>
+      <updated>1670279775710</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Successfully got the csv file to work with Users, new, old, and updated users.">
+      <created>1670382404944</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670382404944</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fully added a user list display.">
+      <created>1670388947545</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670388947545</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixed a bug with UserEditPage. Added accessibility for Purchasers to see the buttons they need to. Added logout and exit to menu buttons into the vendor menu and items menu.">
+      <created>1670444797496</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670444797496</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fixed a login bug with a valid user id and a valid password for a different user. Added a page for purchasers to view all expired items.">
+      <created>1670455904139</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670455904139</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Small commit, made only owner able to see a list of all vendors.">
+      <created>1670456446617</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670456446617</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,6 +413,12 @@
     <MESSAGE value="Added Vendor GUI to add vendors, update, and list and delete, Added Search through vendors&#10;fixed bugs, validated user input" />
     <MESSAGE value="Added writing and reading Vendors to and from a CSV file" />
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
+    <MESSAGE value="Currently working on observers for feature 8. Got the observer to correctly work." />
+    <MESSAGE value="Successfully got the csv file to work with Users, new, old, and updated users." />
+    <MESSAGE value="Fully added a user list display." />
+    <MESSAGE value="Fixed a bug with UserEditPage. Added accessibility for Purchasers to see the buttons they need to. Added logout and exit to menu buttons into the vendor menu and items menu." />
+    <MESSAGE value="Fixed a login bug with a valid user id and a valid password for a different user. Added a page for purchasers to view all expired items." />
+    <MESSAGE value="Small commit, made only owner able to see a list of all vendors." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small commit, made only owner able to see a list of all vendors." />
   </component>
 </project>

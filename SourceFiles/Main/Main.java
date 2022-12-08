@@ -8,6 +8,7 @@ import ItemProfile.ItemProfile;
 import Login.LoginMenu;
 import ProfileUsers.*;
 import UserClasses.Accountant;
+import UserClasses.GetUsersFromCSV;
 import UserClasses.UserAccountArray;
 import ItemProfile.getItems;
 
@@ -54,11 +55,12 @@ public class Main
         CustomerOrderArray.addCustomerOrder(co2);
 
 
+        GetUsersFromCSV.getUsersFromCSV();
         VendorAccountArray.init();
-        new PurchaserView();
-        new AccountantView();
-        UserAccountArray.testAccount();
-        //new LoginMenu();
+        //new PurchaserView();
+        //new AccountantView();
+        //UserAccountArray.testAccount();
+        new LoginMenu();
     }
 
 }

@@ -58,11 +58,11 @@ public class LoginMenu extends JFrame
 
                 // Ensure that the UserID is in the array
                 if (!UserAccountArray.searchUserID(idInput))
-                    userID.setText("User ID not in file");
+                    JOptionPane.showMessageDialog(null, "User ID is not on file");
                 else
                 {
-                    if (!UserAccountArray.searchUserPassword(passwordInput))
-                        password.setText("This password is incorrect");
+                    if (!UserAccountArray.searchUserPassword(passwordInput, idInput))
+                        JOptionPane.showMessageDialog(null, "This password is incorrect");
                     else
                     {
                         // These two lines are to test login functionality to the Main Menu.

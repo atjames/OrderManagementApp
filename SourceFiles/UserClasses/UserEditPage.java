@@ -1,3 +1,7 @@
+/**
+ * Class made by 'Benjamin Pienta'
+ **/
+
 package UserClasses;
 
 import Login.HoldCurrentLoginType;
@@ -5,6 +9,8 @@ import Login.HoldPagesVisited;
 import Login.LoginMenu;
 import Login.MaxCharLimit;
 import Main.MainMenu;
+import ProfileUsers.Vendor;
+import ProfileUsers.VendorAccountArray;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +25,7 @@ public class UserEditPage extends JFrame
     private JButton selectUser;
     private JButton deleteUser;
     private JButton logout;
+    private JButton backToMenu;
     private int userSlotInArrayList;
     private boolean userSelected = false;
 
@@ -85,6 +92,13 @@ public class UserEditPage extends JFrame
                     String userRoleInput = (String)userTypeDropBox.getSelectedItem();
                     String passwordInput = textPassword.getText();
                     String selectedID = (String)allUsersDropBox.getSelectedItem();
+                    String firstLogin;
+
+                    // Assigns true or false as a string depending on if the user has logged in for the first time
+                    if (UserAccountArray.getUsers().get(userSlotInArrayList).isFirstLogin())
+                        firstLogin = "true";
+                    else
+                        firstLogin = "false";
 
                     // Checks if the new password length is long enough
                     if (passwordInput.length() >= 8)
@@ -96,19 +110,24 @@ public class UserEditPage extends JFrame
                         user.setPassword(passwordInput);
                         user.setUserID(selectedID);
                         user.setUserRole(userRoleInput);
+                        if (firstLogin.equals("true"))
+                            user.setFirstLogin(true);
+                        else
+                            user.setFirstLogin(false);
 
-                        // Replace old user with new user
+                        // Replace old user with new user and update the .csv file
                         UserAccountArray.editUser(userSlotInArrayList, user);
+                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
                         // Opens the Main Menu
                         new MainMenu();
                         UserEditPage.super.dispose();
                     }
                     else
-                        passwordLabel.setText("Password too Short");
+                        JOptionPane.showMessageDialog(null, "The password is too short");
                 }
                 else
-                    menuTitle.setText("Select a User from the ID list first");
+                    JOptionPane.showMessageDialog(null, "Select a User from the ID list first");
             }
         });
         c.add(confirm);
@@ -136,7 +155,7 @@ public class UserEditPage extends JFrame
                     menuTitle.setText("User is a(n) " + UserAccountArray.getUsers().get(userSlotInArrayList).getUserRole());
                 }
                 else
-                    allUsersLabel.setText("ID Not Found");
+                    JOptionPane.showMessageDialog(null, "ID not found");
             }
         });
         c.add(selectUser);
@@ -154,6 +173,7 @@ public class UserEditPage extends JFrame
                 if (userSelected)
                 {
                     UserAccountArray.removeUser(userSlotInArrayList);
+                    UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
                     userSelected = false;
                     new UserEditPage();
                     UserEditPage.super.dispose();
@@ -249,12 +269,28 @@ public class UserEditPage extends JFrame
                 HoldCurrentLoginType.updateUser(null);
                 HoldPagesVisited.resetNumberOfPagesVisited();
 
+                for (Vendor vendor: VendorAccountArray.vendors)
+                    vendor.hasNotUpdated = true;
+
                 new LoginMenu();
                 UserEditPage.super.dispose();
             }
         });
         c.add(logout);
 
+        // Button that exits to the menu
+        backToMenu = new JButton("Exit To Menu");
+        backToMenu.setSize(150, 30);
+        backToMenu.setLocation(540, 450);
+        backToMenu.addActionListener(new ActionListener() {
+            // Sends user back to the menu
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu();
+                UserEditPage.super.dispose();
+            }
+        });
+        c.add(backToMenu);
 
         setVisible(true);
     }
@@ -279,10 +315,14 @@ public class UserEditPage extends JFrame
             }
             allUsersIDs = new String[numOfAllowedEdits];
 
+            int placeInAllUsersIDs = 0;
             for (int i = 0; i < UserAccountArray.getUsers().size(); i++)
             {
                 if (!(UserAccountArray.getUsers().get(i) instanceof Owner || UserAccountArray.getUsers().get(i) instanceof Administrator))
-                    allUsersIDs[i] = UserAccountArray.getUsers().get(i).getUserID();
+                {
+                    allUsersIDs[placeInAllUsersIDs] = UserAccountArray.getUsers().get(i).getUserID();
+                    placeInAllUsersIDs++;
+                }
             }
         }
     }
