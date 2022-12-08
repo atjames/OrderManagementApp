@@ -87,16 +87,14 @@ public class ItemProfile
           return purchaseOrders.size();
      }
 
-     public ArrayList getInvoices() {
-          return invoices;
-     }
-
-     public ArrayList getPurchaseOrders() {
-          return purchaseOrders;
-     }
 
 
-     public void createItem(String itemID, String itemName, String vendorID, double sellingPrice, String itemCategory, double quantityonHand,String unitOfMeasurment, String expireDate, double purchasePrice) throws ParseException {
+     public ArrayList getInvoices() {return invoices;}
+
+     public ArrayList getPurchaseOrders() {return purchaseOrders;}
+
+
+     public void createItem(String itemID, String itemName, String vendorID, double sellingPrice, String itemCategory, double quantityonHand, String unitOfMeasurment, String expireDate, double purchasePrice) throws ParseException {
           this.itemID = itemID;
           this.itemName = itemName;
           this.vendorID = vendorID;

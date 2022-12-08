@@ -12,20 +12,16 @@ import java.util.Date;
 Class for Vendor
 @author Austin
 
-Observer functions added by:
-@Benjamin Pienta
  */
 public class Vendor extends Profile{
 
+    // Observer Variables
+    public ArrayList<ObserveVendorSale> saleObservers = new ArrayList<>();
+    public boolean hasNotUpdated = true;
     private Date seasonalDiscountsStartDate; //mm/dd/yyyy
     public static final String RESOURCES_ITEMS_CSV = "Resources/vendors.csv";
     public static final String CSVHeaderLine = "userID,fullName,streetAddress,city,state,phone,balance,lastPaidAmount,lastOrderDate,seasonalDiscountsStartDate";
     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-    public boolean hasNotUpdated = true;
-
-    // Observer Variables
-    public ArrayList<ObserveVendorSale> saleObservers = new ArrayList<>();
-
     public Vendor(){
         this.userID = 0;
         this.fullName = "";
@@ -89,7 +85,8 @@ public class Vendor extends Profile{
         this.seasonalDiscountsStartDate = seasonalDiscount;
     }
 
-    // Observer methods
+    public void addToBalance(Double balance){this.balance+=balance;}
+
     // Add Observer for sales to array
     public void registerSaleObserver(ObserveVendorSale saleObserver)
     {
@@ -131,5 +128,6 @@ public class Vendor extends Profile{
         this.lastOrderDate = lastorder;
         this.seasonalDiscountsStartDate = seasonal;
     }
+
 
 }

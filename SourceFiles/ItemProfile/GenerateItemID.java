@@ -1,8 +1,8 @@
 package ItemProfile;
 
 public class GenerateItemID extends ItemProfile {
-    public static String GenerateItemID() {
-        String NumericString = "0123456789";
+    public static java.lang.String GenerateItemID() {
+        java.lang.String NumericString = "0123456789";
         int idLength = 6;
         StringBuilder sb = new StringBuilder(idLength);
 

@@ -10,7 +10,7 @@ public class SearchResultsNameGUI extends JFrame {
 
     JPanel panel1;
     private JTable table1;
-    String header[] = {"Item ID", "Item Name", "Quantity on Hand", "Selling Price", "Purchased Price", "Expire Date"};
+    java.lang.String header[] = {"Item ID", "Item Name", "Quantity on Hand", "Selling Price", "Purchased Price", "Expire Date"};
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
