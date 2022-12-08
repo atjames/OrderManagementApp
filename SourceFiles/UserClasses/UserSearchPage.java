@@ -1,3 +1,7 @@
+/**
+ * Class made by 'Benjamin Pienta'
+ **/
+
 package UserClasses;
 
 import Login.HoldCurrentLoginType;
@@ -5,6 +9,8 @@ import Login.HoldPagesVisited;
 import Login.LoginMenu;
 import Login.MaxCharLimit;
 import Main.MainMenu;
+import ProfileUsers.Vendor;
+import ProfileUsers.VendorAccountArray;
 
 import javax.swing.*;
 import java.awt.*;
@@ -75,7 +81,7 @@ public class UserSearchPage extends JFrame
                     textPassword.setText(UserAccountArray.getUsers().get(slotOfUser).getPassword());
                 }
                 else
-                    menuTitle.setText("The " + firstName + " " + lastName + " profile is not found");
+                    JOptionPane.showMessageDialog(null, "The " + firstName + " " + lastName + " profile is not found");
             }
         });
         c.add(selectUser);
@@ -157,6 +163,9 @@ public class UserSearchPage extends JFrame
             {
                 HoldCurrentLoginType.updateUser(null);
                 HoldPagesVisited.resetNumberOfPagesVisited();
+
+                for (Vendor vendor: VendorAccountArray.vendors)
+                    vendor.hasNotUpdated = true;
 
                 new LoginMenu();
                 UserSearchPage.super.dispose();

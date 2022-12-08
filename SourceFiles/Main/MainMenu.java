@@ -4,19 +4,27 @@
 
 package Main;
 
-import Login.FirstLoginPasswordChange;
+import GUI.AccountantView;
+import GUI.ItemMenuGUI;
+import GUI.PurchaserView;
+import Login.PasswordChange;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
 import Login.LoginMenu;
+import ObserverInterface.ObserveVendorSale;
+import ProfileUsers.Vendor;
+import ProfileUsers.VendorAccountArray;
 import UserClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 public class MainMenu extends JFrame
 {
+    // Main variables for the FUI
     private Container c;
     private JLabel menuTitle;
     private JButton exit;
@@ -25,8 +33,14 @@ public class MainMenu extends JFrame
     private JButton searchUser;
     private JButton logout;
     private JButton changePassword;
+    private JButton showAllUsers;
+    private JButton purchaserView;
+    private JButton itemMenu;
+    private JButton accountantView;
     private static User currentUser = null;
 
+    // Variable to store the date
+    Date todaysDate = new Date();
 
     public MainMenu()
     {
@@ -104,6 +118,22 @@ public class MainMenu extends JFrame
                 }
             });
             c.add(searchUser);
+
+            // Button that shows all users employed
+            showAllUsers = new JButton("Show Users");
+            showAllUsers.setSize(150, 30);
+            showAllUsers.setLocation(100, 500);
+            showAllUsers.addActionListener(new ActionListener() {
+                // Open User list
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new UserListDisplay();
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(showAllUsers);
         }
 
         // Button that logs the user out
@@ -118,31 +148,112 @@ public class MainMenu extends JFrame
                 HoldCurrentLoginType.updateUser(null);
                 HoldPagesVisited.resetNumberOfPagesVisited();
 
+                for (Vendor vendor: VendorAccountArray.vendors)
+                    vendor.hasNotUpdated = true;
+
                 new LoginMenu();
                 MainMenu.super.dispose();
             }
         });
         c.add(logout);
 
-        if (HoldPagesVisited.getNumberOfPagesVisited() == 0)
+        // Button changes the user's password upon use
+        changePassword = new JButton("Change Password");
+        changePassword.setSize(150, 30);
+        changePassword.setLocation(700, 500);
+        changePassword.addActionListener(new ActionListener() {
+            // Changes the User's password
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                HoldPagesVisited.incrementPagesVisited();
+                new PasswordChange();
+            }
+        });
+        c.add(changePassword);
+
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner || HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
         {
-            // Button changes the user's password upon logging in
-            changePassword = new JButton("Change Password");
-            changePassword.setSize(150, 30);
-            changePassword.setLocation(700, 500);
-            changePassword.addActionListener(new ActionListener() {
-                // Changes the User's password
+            // Button that sends the user to the purchaser view
+            purchaserView = new JButton("Vendor Actions");
+            purchaserView.setSize(150, 30);
+            purchaserView.setLocation(100, 250);
+            purchaserView.addActionListener(new ActionListener() {
+                // Open the purchaser view
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
                     HoldPagesVisited.incrementPagesVisited();
-                    new FirstLoginPasswordChange();
+                    new PurchaserView();
+                    MainMenu.super.dispose();
                 }
             });
-            c.add(changePassword);
+            c.add(purchaserView);
+
+            // Button that sends the user to the items menu
+            itemMenu = new JButton("Item Actions");
+            itemMenu.setSize(150, 30);
+            itemMenu.setLocation(100, 350);
+            itemMenu.addActionListener(new ActionListener() {
+                // Open the purchaser view
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new ItemMenuGUI("Items Menu");
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(itemMenu);
+        }
+
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner || HoldCurrentLoginType.getLoggedInUser() instanceof Accountant)
+        {
+            // Button that sends the user to the purchaser view
+            accountantView = new JButton("Accountant Actions");
+            accountantView.setSize(150, 30);
+            accountantView.setLocation(600, 250);
+            accountantView.addActionListener(new ActionListener() {
+                // Open the purchaser view
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    HoldPagesVisited.incrementPagesVisited();
+                    new AccountantView();
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(accountantView);
         }
 
         setVisible(true);
+
+        // If this is the first time a user has used the system, send them to change their password
+        // and update their profile
+        if (HoldCurrentLoginType.getLoggedInUser().isFirstLogin())
+        {
+            new PasswordChange();
+
+            // Change firstLogin to false for the user
+            for (User user: UserAccountArray.getUsers())
+                if (HoldCurrentLoginType.getLoggedInUser() == user)
+                {
+                    user.setFirstLogin(false);
+                }
+
+            UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+        }
+
+        // Having the conditional after the 'setVisible' loads the menu THEN shows
+        // the pop-ups
+        if (HoldPagesVisited.getNumberOfPagesVisited() == 0)
+        {
+            // If the logged-in user is meant to be updated, tell that user a sale is occurring.
+            for (Vendor vendor : VendorAccountArray.vendors)
+                for (ObserveVendorSale observe : vendor.saleObservers)
+                    if (HoldCurrentLoginType.getLoggedInUser() == observe && todaysDate.after(vendor.getSeasonalDiscount()))
+                        vendor.updateSaleObservers();
+        }
     }
 
     public static void setUserType(User user)

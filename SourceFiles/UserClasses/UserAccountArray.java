@@ -65,12 +65,12 @@ public class UserAccountArray
     }
 
     // Returns true if the password is found
-    public static boolean searchUserPassword(String password)
+    public static boolean searchUserPassword(String password, String id)
     {
         boolean foundID = false;
 
         for (int i = 0; i < users.size(); i++)
-            if (users.get(i).getPassword().equals(password))
+            if (users.get(i).getPassword().equals(password) && users.get(i).getUserID().equals(id))
                 foundID = true;
 
         return foundID;

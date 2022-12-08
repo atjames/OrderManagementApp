@@ -1,5 +1,14 @@
 package GUI;
 
+import ItemProfile.AllExpiredItems;
+import Login.HoldCurrentLoginType;
+import Login.HoldPagesVisited;
+import Login.LoginMenu;
+import Main.MainMenu;
+import ProfileUsers.Vendor;
+import ProfileUsers.VendorAccountArray;
+import UserClasses.Purchaser;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,12 +26,18 @@ public class ItemMenuGUI extends JFrame {
     private JButton searchItemsButton;
     private JButton updateItemsButton;
 
+    // Logout and Exit To Menu buttons
+    private JButton logout;
+    private JButton exitToMenuButton;
+    private JButton expiredItems;
+
     public ItemMenuGUI(String title){
             super(title);
 
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             this.setContentPane(mainPanel);
             this.pack();
+            this.setBounds(100,100,500,500);
             setLocationRelativeTo(null);
 
             createItemButton.addActionListener(new ActionListener() {
@@ -65,6 +80,58 @@ public class ItemMenuGUI extends JFrame {
                 CreateSearchFrame.setVisible(true);
             }
         });
+
+        // Logout and Exit To Menu buttons
+        // Logout button defined
+        logout.addActionListener(new ActionListener()
+        {
+            // Logs the user out and sends them to the login screen
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                HoldCurrentLoginType.updateUser(null);
+                HoldPagesVisited.resetNumberOfPagesVisited();
+
+                // Reset 'hasNotUpdated' for all vendors
+                for (Vendor vendor: VendorAccountArray.vendors)
+                    vendor.hasNotUpdated = true;
+
+                new LoginMenu();
+                ItemMenuGUI.super.dispose();
+            }
+        });
+
+        // Back To Menu button defined
+        exitToMenuButton.addActionListener(new ActionListener()
+        {
+            // Sends user back to main menu
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new MainMenu();
+                ItemMenuGUI.super.dispose();
+            }
+        });
+
+        // Send the user to the expired items page
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
+        {
+            expiredItems.setVisible(true);
+            expiredItems.addActionListener(new ActionListener()
+            {
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    JFrame createExpiredListFrame = new AllExpiredItems();
+                    createExpiredListFrame.setVisible(true);
+                }
+            });
+        }
+        else
+            expiredItems.setVisible(false);
+
+        // Makes the window visible
+        this.setVisible(true);
     }
 
 
