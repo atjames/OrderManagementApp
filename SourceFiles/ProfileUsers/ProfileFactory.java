@@ -1,5 +1,8 @@
 package ProfileUsers;
-
+/*
+@author Austin Jeffery
+Profile factory for Vendor and Customer objects
+ */
 public class ProfileFactory {
     public Profile makeProfile(String profileType)
     {

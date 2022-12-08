@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 /*
 This class is to show the form to add Vendors and will validate user input
+implemented ProfileFactory to return Vendor profile
 @author Austin Jeffery
 
  */
@@ -46,8 +47,6 @@ public class VendorForm  extends JFrame{
 
     public VendorForm(){
         ProfileFactory vendorBuilder = new ProfileFactory();
-        Vendor v = null;
-        v = (Vendor) vendorBuilder.makeProfile("Vendor");
         setContentPane(Panel1);
         setTitle("Vendor Form");
         setSize(900,600);
@@ -65,7 +64,7 @@ public class VendorForm  extends JFrame{
         Submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Vendor v = null;
                 try{
                    int valid = 0;
                     String fullname = FullName.getText();
@@ -84,7 +83,8 @@ public class VendorForm  extends JFrame{
                     String lastDate = formatter.format(new Date(lastorderdate));
                     String seasDate = formatter.format(new Date(seasonaldate));
                     int num = VendorAccountArray.arraySize;
-                    Vendor v = new Vendor(num,fullname,street,city,state,phone,lastorder,seasonal);
+                    v = (Vendor) vendorBuilder.makeProfile("Vendor");
+                    v.setAttributes(num,fullname,street,city,state,phone,lastorder,seasonal);
                     VendorAccountArray.addVendor(v);
                     if(valid > 0){
                         new VendorForm();
@@ -100,9 +100,6 @@ public class VendorForm  extends JFrame{
                     ex.printStackTrace();
                     return;
                 }
-
-
-
             }
         });
         Return.addActionListener(new ActionListener() {
