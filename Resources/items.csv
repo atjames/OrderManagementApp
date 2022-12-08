@@ -1,7 +1,6 @@
 itemID,itemName,vendorID,sellingPrice,itemCategory,quantityonHand,unitOfMeasurement,expireDate,purchasePrice
 000001,Eggs,0,5.99,bakery products,18.0,dozen,12/29/2022,3.99
-000002,Test,0,20.0,fruits,50.0,pounds,01/22/2023,100.0
-408376,test,1,210.0,nuts,200.0,ounce,12/08/2022,200.0
-123456,test,2,210.0,fruits,500.0,dozen,12/08/2022,200.0
-122096,test,3,200.0,vegetables,200.0,dozen,12/04/2022,20.0
-781913,test vendor ids,2,200.0,vegetables,24.0,dozen,12/16/2022,200.0
+000002,Oranges,3,20.0,fruits,50.0,pounds,01/22/2023,100.0
+408376,Peanuts,2,210.0,nuts,200.0,ounce,12/08/2022,200.0
+123456,Apples,1,210.0,fruits,500.0,dozen,12/20/2022,200.0
+122096,Carrots,0,200.0,vegetables,200.0,dozen,12/20/2022,20.0

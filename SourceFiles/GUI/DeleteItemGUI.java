@@ -17,7 +17,7 @@ public class DeleteItemGUI extends JFrame {
     private JComboBox itemBox;
     private JPanel mainPanel;
 
-    public DeleteItemGUI (String title)
+    public DeleteItemGUI (java.lang.String title)
     {
         super(title);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

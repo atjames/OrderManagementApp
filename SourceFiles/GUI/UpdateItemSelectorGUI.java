@@ -15,7 +15,7 @@ public class UpdateItemSelectorGUI extends JFrame {
     private JComboBox itemBox;
     private JPanel mainPanel;
 
-    public UpdateItemSelectorGUI(String title) {
+    public UpdateItemSelectorGUI(java.lang.String title) {
 
         super(title);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

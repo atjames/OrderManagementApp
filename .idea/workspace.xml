@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="created PurchaseOrder">
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/items.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/items.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/purchaseorders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/purchaseorders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/CreateItemGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/CreateItemGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/DeleteItemGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/DeleteItemGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ItemTableGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ItemTableGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/SearchItemsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/SearchItemsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/SearchResultsNameGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/SearchResultsNameGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/UpdateItemSelectorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/UpdateItemSelectorGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/GenerateItemID.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/GenerateItemID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfileCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfileCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/getItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/getItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +77,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\atjam\CSC4110\SourceFiles\GUI" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="GUI.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.Main" />
@@ -320,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670440825848</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="created PurchaseOrder">
+      <created>1670453129586</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670453129586</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

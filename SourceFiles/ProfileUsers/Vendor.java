@@ -78,4 +78,6 @@ public class Vendor extends Profile{
     public void setSeasonalDiscount(Date seasonalDiscount) {
         this.seasonalDiscountsStartDate = seasonalDiscount;
     }
+
+    public void addToBalance(Double balance){this.balance+=balance;}
 }
