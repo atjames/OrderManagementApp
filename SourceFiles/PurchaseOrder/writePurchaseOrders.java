@@ -1,13 +1,14 @@
 package PurchaseOrder;
 
-import ItemProfile.ItemProfile;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static Main.Main.items;
 import static PurchaseOrder.PurchaseOrderCSV.CSVFormatter;
+
+/*
+@author Andrew James
+ */
 
 public class writePurchaseOrders extends PurchaseOrder{
 
@@ -29,7 +30,11 @@ public class writePurchaseOrders extends PurchaseOrder{
         {
             writer2.write(PurchaseOrder.PURCHASE_ORDER_ITEMS_CSV_HEADER); //writes the header line to the CSV first
 
-            for (PurchaseOrder order : orders) //iterates over arraylist and writes the formatter CSV line
+            /*this one was a bit tricky. Involved creating a seperate "storage class". We essentially have two CSV
+            We have two CSVs and map the ItemID to the PurchaseOrderID. Was a lot easier to do it this way.
+             */
+            for (PurchaseOrder order : orders)
+
             {
                 ArrayList<String> temp;
                 temp = order.getPurchasedItems();

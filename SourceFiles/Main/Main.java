@@ -19,6 +19,8 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static PurchaseOrder.writePurchaseOrders.write_items;
+
 public class Main
 {
     //Final touches hehe xd

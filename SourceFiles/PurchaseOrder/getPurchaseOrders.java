@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 import static ProfileUsers.VendorAccountArray.vendors;
 
+/*
+@author Andrew James
+ */
 public class getPurchaseOrders extends PurchaseOrder{
 
     public static ArrayList<PurchaseOrder> get_orders() throws IOException {
@@ -47,6 +50,7 @@ public class getPurchaseOrders extends PurchaseOrder{
             }
         }
 
+        //updating vendor balances stored in the CSV for their purchase orders
         for(PurchaseOrder order: orders){
 
             for(int i = 0; i < vendors.length; i++){

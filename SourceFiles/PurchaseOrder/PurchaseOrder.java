@@ -1,13 +1,14 @@
 package PurchaseOrder;
 
-import ItemProfile.ItemProfile;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+/*
+@author Andrew James
+ */
 public class PurchaseOrder
 {
     public static final java.lang.String PURCHASE_ORDERS_CSV = "Resources/purchaseorders.csv";

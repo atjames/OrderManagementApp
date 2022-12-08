@@ -1,7 +1,8 @@
 package PurchaseOrder;
 
-import ItemProfile.ItemProfile;
-
+/*
+@author Andrew James
+ */
 public class PurchaseOrderCSV extends PurchaseOrder{
     public static java.lang.String CSVFormatter(PurchaseOrder order){
 

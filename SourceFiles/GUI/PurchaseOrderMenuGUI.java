@@ -7,6 +7,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
 
+/*
+@author Andrew James
+ */
+
 import static Main.Main.ItemPurchaseOrderStorage;
 
 public class PurchaseOrderMenuGUI extends JFrame {
@@ -24,6 +28,7 @@ public class PurchaseOrderMenuGUI extends JFrame {
         this.setBounds(100,100,500,500);
         setLocationRelativeTo(null);
         Date currentDate = new Date(System.currentTimeMillis());
+        //add vendors to the vendorCB so they can be selected
         for(int i = 0; i < VendorAccountArray.vendors.length; i++)
         {
             vendorList.addItem(VendorAccountArray.vendors[i].getFullName());
@@ -37,6 +42,8 @@ public class PurchaseOrderMenuGUI extends JFrame {
                 PurchaseOrderMenuGUI.super.dispose();
             }
         });
+
+        //View all purchase orders. Can view by vendor by viewing the table
         viewPurchaseOrdersButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
