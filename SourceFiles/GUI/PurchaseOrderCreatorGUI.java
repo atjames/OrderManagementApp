@@ -5,7 +5,7 @@ import PurchaseOrder.PurchaseOrder;
 import org.jdatepicker.JDatePicker;
 
 import javax.swing.*;
-
+import PurchaseOrder.writePurchaseOrders;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
@@ -168,6 +168,7 @@ public class PurchaseOrderCreatorGUI extends JFrame{
                     PurchaseOrderCreatorGUI.super.dispose();
                     JFrame PurchaseMenu = new PurchaseOrderMenuGUI("Purchase Order");
                     PurchaseMenu.setVisible(true);
+                    writePurchaseOrders.write_items(PurchaseOrders);
                 }
 
             }

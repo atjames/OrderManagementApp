@@ -12,8 +12,8 @@ public class PurchaseOrder
 {
     public static final java.lang.String PURCHASE_ORDERS_CSV = "Resources/purchaseorders.csv";
     public static final java.lang.String PURCHASE_ORDERS_ITEMS_CSV = "Resources/purchaserordersitem.csv";
-    public static final java.lang.String PURCHASE_ORDER_CSV_HEADER = "purchaseOrders,vendorID,balance,needByDate";
-    public static final java.lang.String PURCHASE_ORDER_ITEMS_CSV_HEADER = "itemID,purchaseOrders";
+    public static final java.lang.String PURCHASE_ORDER_CSV_HEADER = "purchaseOrderID,vendorID,balance,needByDate";
+    public static final java.lang.String PURCHASE_ORDER_ITEMS_CSV_HEADER = "itemID,purchaseOrderID";
 
     java.lang.String purchaseOrderID;
     double totalCost;

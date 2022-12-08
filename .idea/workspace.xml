@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="created PurchaseOrder">
-      <change afterPath="$PROJECT_DIR$/Resources/purchaserordersitem.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/getPurchaseOrders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/writePurchaseOrders.java" afterDir="false" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added Read/Write to CSVs for purchaseorders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/purchaseorders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/purchaseorders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/getItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/getItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/writeCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/writeCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/purchaserordersitem.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/purchaserordersitem.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderCreatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderCreatorGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderItemInfoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderItemInfoGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrderCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrderCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/writePurchaseOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/writePurchaseOrders.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670478537999</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="added Read/Write to CSVs for purchaseorders">
+      <created>1670520824560</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670520824560</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -381,6 +387,7 @@
     <MESSAGE value="Added writing and reading Vendors to and from a CSV file" />
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <MESSAGE value="created PurchaseOrder" />
-    <option name="LAST_COMMIT_MESSAGE" value="created PurchaseOrder" />
+    <MESSAGE value="added Read/Write to CSVs for purchaseorders" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Read/Write to CSVs for purchaseorders" />
   </component>
 </project>

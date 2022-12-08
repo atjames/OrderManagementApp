@@ -49,6 +49,7 @@ public class PurchaseOrderItemInfoGUI extends JFrame {
                     }else{
                     ItemPurchaseOrderStore thisitem = new ItemPurchaseOrderStore();
                     thisitem.setItemID(itemID);
+                    System.out.println(thisitem.getItemID());
                     thisitem.setAmountPurchased(Double.parseDouble(quantity.getText()));
                     thisitem.setBalance(Double.parseDouble(priceOfItem.getText()));
                     ItemPurchaseOrderStorage.add(thisitem);
