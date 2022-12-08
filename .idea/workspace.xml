@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="created PurchaseOrder">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/items.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/items.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/purchaseorders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/purchaseorders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/CreateItemGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/CreateItemGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/DeleteItemGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/DeleteItemGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ItemTableGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ItemTableGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/SearchItemsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/SearchItemsGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/SearchResultsNameGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/SearchResultsNameGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/UpdateItemSelectorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/UpdateItemSelectorGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/GenerateItemID.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/GenerateItemID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfileCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/ItemProfileCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/getItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/getItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc4110-group1new/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
-    </list>
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="created PurchaseOrder" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -344,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670453129586</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="created PurchaseOrder">
+      <created>1670476974901</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670476974901</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
