@@ -31,7 +31,7 @@ public class CreateItemGUI extends JFrame {
     private JComboBox itemCategoriesCB;
     private JDatePicker expireDateForm;
 
-    public CreateItemGUI(String title) {
+    public CreateItemGUI(java.lang.String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(createItemFrame);
@@ -52,7 +52,7 @@ public class CreateItemGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Format date from the JDatePicker so we can pass it to our item
-                String expireDate = (expireDateForm.getModel().getMonth() + 1) + "/" + (expireDateForm.getModel().getDay()) + "/" + (expireDateForm.getModel().getYear());
+                java.lang.String expireDate = (expireDateForm.getModel().getMonth() + 1) + "/" + (expireDateForm.getModel().getDay()) + "/" + (expireDateForm.getModel().getYear());
                 Date currentDate = new Date(System.currentTimeMillis());
                 Date expireDateFor;
                 try {
@@ -93,7 +93,7 @@ public class CreateItemGUI extends JFrame {
                         boolean doesExist = true;
                         //verify that ItemID is unique. If not will generate a new one.
                         while (doesExist) {
-                            String itemID = GenerateItemID.GenerateItemID();
+                            java.lang.String itemID = GenerateItemID.GenerateItemID();
                             for (ItemProfile itemTest : items) {
                                 if (Objects.equals(itemTest.getItemID(), itemID)) {
                                     doesExist = true;

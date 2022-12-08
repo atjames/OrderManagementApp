@@ -1,19 +1,14 @@
 package ProfileUsers;
 
-import ObserverInterface.ObserveVendorSale;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Date;
 /*
 Class for Vendor
 @author Austin
 
-Observer functions added by:
-@Benjamin Pienta
  */
 public class Vendor extends Profile{
 
@@ -21,11 +16,6 @@ public class Vendor extends Profile{
     public static final String RESOURCES_ITEMS_CSV = "Resources/vendors.csv";
     public static final String CSVHeaderLine = "userID,fullName,streetAddress,city,state,phone,balance,lastPaidAmount,lastOrderDate,seasonalDiscountsStartDate";
     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-    public boolean hasNotUpdated = true;
-
-    // Observer Variables
-    public ArrayList<ObserveVendorSale> saleObservers = new ArrayList<>();
-
     public Vendor(){
         this.userID = 0;
         this.fullName = "";
@@ -89,47 +79,5 @@ public class Vendor extends Profile{
         this.seasonalDiscountsStartDate = seasonalDiscount;
     }
 
-    // Observer methods
-    // Add Observer for sales to array
-    public void registerSaleObserver(ObserveVendorSale saleObserver)
-    {
-        saleObservers.add(saleObserver);
-    }
-
-    // Delete Observer for sales from array
-    public void removeSaleObserver(ObserveVendorSale saleObserver)
-    {
-        // Gets the index of the observer, then removes them
-        int observerToDelete = saleObservers.indexOf(saleObserver);
-        saleObservers.remove(observerToDelete);
-    }
-
-    // Updates all users within the observer array
-    public void updateSaleObservers()
-    {
-        // Updates all needed observers
-        for (ObserveVendorSale observeVendorSale: saleObservers)
-        {
-            // If the vendor has NOT sent out an update yet
-            if (hasNotUpdated)
-            {
-                hasNotUpdated = false;
-                observeVendorSale.update(this.fullName);
-            }
-        }
-    }
-
-    public void setAttributes(int num, String fullname, String street, String city, String state, String phone, Date lastorder, Date seasonal) {
-        this.userID = num; //auto generated max 6 character
-        this.fullName = fullname;//must be unique
-        this.streetAddress = street;//must be unique
-        this.city = city;
-        this.state = state;
-        this.phone = phone;
-        this.balance = 0;
-        this.lastPaidAmount = 0;
-        this.lastOrderDate = lastorder;
-        this.seasonalDiscountsStartDate = seasonal;
-    }
-
+    public void addToBalance(Double balance){this.balance+=balance;}
 }
