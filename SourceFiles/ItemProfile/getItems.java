@@ -55,7 +55,6 @@ public class getItems extends ItemProfile {
                     }
                 }
             }
-
             while ((line = reader3.readLine()) != null) {
 
                 java.lang.String[] values = line.split(",");

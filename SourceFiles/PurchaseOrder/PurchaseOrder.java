@@ -11,7 +11,9 @@ import java.util.Date;
 public class PurchaseOrder
 {
     public static final java.lang.String PURCHASE_ORDERS_CSV = "Resources/purchaseorders.csv";
-    public static final java.lang.String PURCHASE_ORDER_CSV_HEADER = "itemID,purchaseOrders,vendorID,balance,needByDate";
+    public static final java.lang.String PURCHASE_ORDERS_ITEMS_CSV = "Resources/purchaserordersitem.csv";
+    public static final java.lang.String PURCHASE_ORDER_CSV_HEADER = "purchaseOrders,vendorID,balance,needByDate";
+    public static final java.lang.String PURCHASE_ORDER_ITEMS_CSV_HEADER = "itemID,purchaseOrders";
 
     java.lang.String purchaseOrderID;
     double totalCost;
@@ -21,7 +23,7 @@ public class PurchaseOrder
     ArrayList<String> purchasedItems = new ArrayList<>();
     ArrayList<Double> costOfItems = new  ArrayList<>();
     void setPurchaseOrderID(java.lang.String purchaseOrderID){this.purchaseOrderID = purchaseOrderID;}
-    void setTotalCost(double totalCost){this.totalCost = totalCost;}
+    public void setTotalCost(double totalCost){this.totalCost = totalCost;}
     void setNeedByDate(Date needByDate){this.needByDate = needByDate;}
     public void addPurchaseItems(String item){purchasedItems.add(item);}
     public java.lang.String getPurchaseOrderID(){return purchaseOrderID;}
