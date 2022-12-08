@@ -38,7 +38,4 @@ public class PurchaseOrder
         this.needByDate=formatter.parse(needByDate);
     }
 
-
-
-
 }
