@@ -1,14 +1,28 @@
 package CustomerOrderInvoice;
 
+import ItemProfile.ItemProfile;
+import CustomerOrderInvoice.CustomerOrder;
+import CustomerOrderInvoice.CustomerOrderArray;
+import GUI.ItemPurchaseOrderStore;
+import PurchaseOrder.getPurchaseOrders;
+import ItemProfile.ItemProfile;
+import Login.LoginMenu;
+import ProfileUsers.*;
+import PurchaseOrder.PurchaseOrder;
+import UserClasses.GetUsersFromCSV;
+import ItemProfile.getItems;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 
 public class CustomerOrder {
 public int id;
 public String custName;
+public static ArrayList<ItemProfile> items2 = new ArrayList<>();
     public Date getNeedbydate() {
         return needbydate;
     }
@@ -92,6 +106,15 @@ private String[] items = new String[5];
 
         return output;
     }
+
+    public void setTotal()throws IOException {
+        //set total
+        items2 = getItems.get_items();
+        for(int i = 0; i < 5; i++){
+            this.total = items2.get(i).getSellingPrice() * this.quantity[i];
+        }
+    }
+
     public String displayCustomerOrder(){
         String output ="ID: " + this.id + " total: " + this.total + " Need By Date: " + this.needbydate + " Order Date: "  + this.orderdate
                 + " \n\n " + itemquantity();
