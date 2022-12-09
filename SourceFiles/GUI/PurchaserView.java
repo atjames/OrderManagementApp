@@ -49,7 +49,7 @@ public class PurchaserView extends javax.swing.JFrame {
 
             if (HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
             {
-                //make list to show all vendors
+                //add create purchase order button
                 CreatePurchaseOrder = new JButton("Create Purchase Order");
                 CreatePurchaseOrder.setSize(150,30);
                 CreatePurchaseOrder.setLocation(140,350);
