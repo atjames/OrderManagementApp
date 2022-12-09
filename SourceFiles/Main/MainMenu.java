@@ -310,8 +310,8 @@ public class MainMenu extends JFrame
         {
             //add create purchase order button
             JButton CreatePurchaseOrder = new JButton("Create Purchase Order");
-            CreatePurchaseOrder.setSize(150,30);
-            CreatePurchaseOrder.setLocation(140,350);
+            CreatePurchaseOrder.setSize(250,30);
+            CreatePurchaseOrder.setLocation(300,400);
             c.add(CreatePurchaseOrder);
             CreatePurchaseOrder.addActionListener(new ActionListener() {
                 @Override
@@ -322,8 +322,6 @@ public class MainMenu extends JFrame
                     MainMenu.super.dispose();
                 }
             });
-
-
 
 
         }
