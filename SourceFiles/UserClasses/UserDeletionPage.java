@@ -236,7 +236,7 @@ public class UserDeletionPage extends JFrame
         setVisible(true);
     }
 
-    // Creates a copy of the needed array
+    // Creates the array list for this GUI depending on the user logged in
     protected void createArrayCopy()
     {
         if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
@@ -251,8 +251,7 @@ public class UserDeletionPage extends JFrame
             int numOfAllowedEdits = 0;
             for (int i = 0; i < UserAccountArray.getUsers().size(); i++)
             {
-                if (!(UserAccountArray.getUsers().get(i) instanceof Owner))
-                    System.out.println("hello");
+                if (!(UserAccountArray.getUsers().get(i) instanceof Owner || UserAccountArray.getUsers().get(i) instanceof Administrator))
                     numOfAllowedEdits++;
             }
             allUsersIDs = new String[numOfAllowedEdits];
@@ -260,9 +259,8 @@ public class UserDeletionPage extends JFrame
             int placeInAllUsersIDs = 0;
             for (int i = 0; i < UserAccountArray.getUsers().size(); i++)
             {
-                if (!(UserAccountArray.getUsers().get(i) instanceof Owner))
+                if (!(UserAccountArray.getUsers().get(i) instanceof Owner || UserAccountArray.getUsers().get(i) instanceof Administrator))
                 {
-                    System.out.println("hi");
                     allUsersIDs[placeInAllUsersIDs] = UserAccountArray.getUsers().get(i).getUserID();
                     placeInAllUsersIDs++;
                 }
