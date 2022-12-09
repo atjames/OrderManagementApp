@@ -16,7 +16,7 @@ public class UserFactory
             return new InventoryManager();
         else if (userType.equals("Purchaser"))
             return new Purchaser();
-        else if (userType.equals("SalesPerson"))
+        else if (userType.equals("Sales Person"))
             return new SalesPerson();
         else if (userType.equals("Accountant"))
             return new Accountant();
