@@ -40,7 +40,6 @@ public class Main
         order3.addPurchaseItems(items.get(2).getItemID());
         order3.createPurchaseOrder("000003","2",103,"12/15/2022");
         PurchaseOrders.add(order3);
-        UserAccountArray.testAccount();
         //JFrame PurchaseOrderMenu = new PurchaseOrderMenuGUI("Purchase Order");
         //PurchaseOrderMenu.setVisible(true);
 

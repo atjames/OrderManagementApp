@@ -73,7 +73,6 @@ public class PasswordChange extends JFrame
                     {
                         // Update user in array and in .csv
                         HoldCurrentLoginType.getLoggedInUser().setPassword(passwordInput);
-                        UserAccountArray.editUser(userSlot, HoldCurrentLoginType.getLoggedInUser());
                         UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
                         PasswordChange.super.dispose();

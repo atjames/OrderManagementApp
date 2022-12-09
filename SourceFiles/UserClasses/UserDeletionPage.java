@@ -17,21 +17,22 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UserEditPage extends JFrame
+/*
+This class was originally going to just extend the UserEditPage and have required tweaks,
+but the program kept messing up when an administrator tried to use this page...
+But for some reason copying over the edit page and making the changes needed there into here works just fine for some reason...
+I really don't know...
+ */
+public class UserDeletionPage extends JFrame
 {
     protected Container c;
     protected JLabel menuTitle;
-    protected JButton confirm;
     protected JButton selectUser;
     protected JButton deleteUser;
     protected JButton logout;
     protected JButton backToMenu;
     protected int userSlotInArrayList;
     protected boolean userSelected = false;
-
-    // User Type
-    protected JLabel userTypeLabel;
-    protected JComboBox userTypeDropBox;
 
     // firstName
     protected JLabel firstNameLabel;
@@ -52,13 +53,7 @@ public class UserEditPage extends JFrame
     // List of All Users
     protected String[] allUsersIDs;
 
-    // Lists for the JComboBox for owners and Administrators respectively
-    protected String userTypeListOwner[]
-            = {"Owner", "Administrator", "Inventory Manager", "Accountant", "Purchaser", "Sales Person"};
-    protected String userTypeListAdministrator[]
-            = {"Inventory Manager", "Accountant", "Purchaser", "Sales Person"};
-
-    public UserEditPage()
+    UserDeletionPage()
     {
         setTitle("Edit User Profile");
         setBounds(300, 90, 900, 600);
@@ -74,50 +69,6 @@ public class UserEditPage extends JFrame
         menuTitle.setSize(400, 30);
         menuTitle.setLocation(400, 30);
         c.add(menuTitle);
-
-        // Button that confirms the submission of the new user
-        confirm = new JButton("Confirm Edit");
-        confirm.setSize(150, 30);
-        confirm.setLocation(340, 350);
-        confirm.addActionListener(new ActionListener() {
-            // Updates the user for the new array
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                if (userSelected)
-                {
-                    // Variables from input
-                    String firstNameInput = textFirstName.getText();
-                    String lastNameInput = textLastName.getText();
-                    String userRoleInput = (String)userTypeDropBox.getSelectedItem();
-                    String passwordInput = textPassword.getText();
-                    String selectedID = (String)allUsersDropBox.getSelectedItem();
-
-                    // Checks if the new password length is long enough
-                    if (passwordInput.length() >= 8)
-                    {
-                        // Changes the value of that user
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setUserID(selectedID);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setFirstName(firstNameInput);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setLastName(lastNameInput);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setPassword(passwordInput);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setUserRole(userRoleInput);
-
-                        // Re-write the updated user to the .csv file
-                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
-
-                        // Opens the Main Menu
-                        new MainMenu();
-                        UserEditPage.super.dispose();
-                    }
-                    else
-                        JOptionPane.showMessageDialog(null, "The password is too short");
-                }
-                else
-                    JOptionPane.showMessageDialog(null, "Select a User from the ID list first");
-            }
-        });
-        c.add(confirm);
 
         // Button that selects the user for Editing
         selectUser = new JButton("Select");
@@ -148,7 +99,7 @@ public class UserEditPage extends JFrame
         c.add(selectUser);
 
         // Button that deletes a selected user
-        deleteUser = new JButton("Delete User Page");
+        deleteUser = new JButton("Delete User");
         deleteUser.setSize(150, 30);
         deleteUser.setLocation(140, 450);
         deleteUser.addActionListener(new ActionListener() {
@@ -156,33 +107,42 @@ public class UserEditPage extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                new UserDeletionPage();
-                UserEditPage.super.dispose();
+                // If a user has been selected, remove them from the database
+                if (userSelected)
+                {
+                    // If the user has deleted them self, send them to the login screen
+                    // Don't delete yourself from the database ;)
+                    if (HoldCurrentLoginType.getLoggedInUser() == UserAccountArray.getUsers().get(userSlotInArrayList))
+                    {
+                        HoldCurrentLoginType.updateUser(null);
+                        HoldPagesVisited.resetNumberOfPagesVisited();
+
+                        for (Vendor vendor: VendorAccountArray.vendors)
+                            vendor.hasNotUpdated = true;
+
+                        // Remove the user from the program
+                        UserAccountArray.removeUser(userSlotInArrayList);
+                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+                        userSelected = false;
+
+                        new LoginMenu();
+                        UserDeletionPage.super.dispose();
+                    }
+                    else
+                    {
+                        // Remove the user from the program
+                        UserAccountArray.removeUser(userSlotInArrayList);
+                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+                        userSelected = false;
+                        new UserDeletionPage();
+                        UserDeletionPage.super.dispose();
+                    }
+                }
+                else
+                    JOptionPane.showMessageDialog(null, "Select a User from the ID list first");
             }
         });
         c.add(deleteUser);
-
-        // Label for the User Type dropdown box
-        userTypeLabel = new JLabel("Account Type");
-        userTypeLabel.setSize(150, 30);
-        userTypeLabel.setLocation(150, 65);
-        c.add(userTypeLabel);
-
-        // Dropdown list for the User Types
-        if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
-        {
-            userTypeDropBox = new JComboBox<>(userTypeListOwner);
-            userTypeDropBox.setSize(125, 30);
-            userTypeDropBox.setLocation(150, 100);
-            c.add(userTypeDropBox);
-        }
-        else if (HoldCurrentLoginType.getLoggedInUser() instanceof Administrator)
-        {
-            userTypeDropBox = new JComboBox<>(userTypeListAdministrator);
-            userTypeDropBox.setSize(125, 30);
-            userTypeDropBox.setLocation(150, 100);
-            c.add(userTypeDropBox);
-        }
 
         // Label for the firstName Box
         firstNameLabel = new JLabel("Enter First Name");
@@ -195,6 +155,7 @@ public class UserEditPage extends JFrame
         textFirstName.setSize(200, 30);
         textFirstName.setLocation(525, 90);
         textFirstName.setDocument(new MaxCharLimit(16));
+        textFirstName.setEditable(false);
         c.add(textFirstName);
 
         // Label for the lastName Box
@@ -208,6 +169,7 @@ public class UserEditPage extends JFrame
         textLastName.setSize(200, 30);
         textLastName.setLocation(525, 140);
         textLastName.setDocument(new MaxCharLimit(16));
+        textLastName.setEditable(false);
         c.add(textLastName);
 
         // Label for the User ID list
@@ -233,6 +195,7 @@ public class UserEditPage extends JFrame
         textPassword.setSize(200, 30);
         textPassword.setLocation(150, 205);
         textPassword.setDocument(new MaxCharLimit(16));
+        textPassword.setEditable(false);
         c.add(textPassword);
 
         // Button that logs the user out
@@ -240,7 +203,7 @@ public class UserEditPage extends JFrame
         logout.setSize(150, 30);
         logout.setLocation(700, 20);
         logout.addActionListener(new ActionListener() {
-            // Test button closes the menu
+            // Logs the user out and sends them to the login screen
             @Override
             public void actionPerformed(ActionEvent e)
             {
@@ -251,7 +214,7 @@ public class UserEditPage extends JFrame
                     vendor.hasNotUpdated = true;
 
                 new LoginMenu();
-                UserEditPage.super.dispose();
+                UserDeletionPage.super.dispose();
             }
         });
         c.add(logout);
@@ -265,7 +228,7 @@ public class UserEditPage extends JFrame
             @Override
             public void actionPerformed(ActionEvent e) {
                 new MainMenu();
-                UserEditPage.super.dispose();
+                UserDeletionPage.super.dispose();
             }
         });
         c.add(backToMenu);
@@ -273,7 +236,7 @@ public class UserEditPage extends JFrame
         setVisible(true);
     }
 
-    // Creates the array list for this GUI depending on the user logged in
+    // Creates a copy of the needed array
     protected void createArrayCopy()
     {
         if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
@@ -288,7 +251,8 @@ public class UserEditPage extends JFrame
             int numOfAllowedEdits = 0;
             for (int i = 0; i < UserAccountArray.getUsers().size(); i++)
             {
-                if (!(UserAccountArray.getUsers().get(i) instanceof Owner || UserAccountArray.getUsers().get(i) instanceof Administrator))
+                if (!(UserAccountArray.getUsers().get(i) instanceof Owner))
+                    System.out.println("hello");
                     numOfAllowedEdits++;
             }
             allUsersIDs = new String[numOfAllowedEdits];
@@ -296,8 +260,9 @@ public class UserEditPage extends JFrame
             int placeInAllUsersIDs = 0;
             for (int i = 0; i < UserAccountArray.getUsers().size(); i++)
             {
-                if (!(UserAccountArray.getUsers().get(i) instanceof Owner || UserAccountArray.getUsers().get(i) instanceof Administrator))
+                if (!(UserAccountArray.getUsers().get(i) instanceof Owner))
                 {
+                    System.out.println("hi");
                     allUsersIDs[placeInAllUsersIDs] = UserAccountArray.getUsers().get(i).getUserID();
                     placeInAllUsersIDs++;
                 }

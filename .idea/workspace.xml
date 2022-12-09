@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Finished more of feature 8. Only two things left there to go. Fixed a non-bug bug.">
-      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerInvoiceList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerInvoicesToCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerOrderList.java" afterDir="false" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Finished the entirety of feature 8. Only thing left to do is string checks.">
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserDeletionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/users.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/CustomerOrdersToCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerOrdersToCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/FindNonPayingCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/FindNonPayingCustomers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/PasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/PasswordChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670555836629</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Finished the entirety of feature 8. Only thing left to do is string checks.">
+      <created>1670563032116</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670563032116</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,6 +383,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <MESSAGE value="created PurchaseOrder" />
     <MESSAGE value="Finished more of feature 8. Only two things left there to go. Fixed a non-bug bug." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished more of feature 8. Only two things left there to go. Fixed a non-bug bug." />
+    <MESSAGE value="Finished the entirety of feature 8. Only thing left to do is string checks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the entirety of feature 8. Only thing left to do is string checks." />
   </component>
 </project>
