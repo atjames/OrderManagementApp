@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added some comments to the code and fixed a bug with read/write.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +41,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/master" />
+    <option name="BRANCH" value="AndyFinalTouches" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="AndyFinalTouches" />
+        <entry key="$PROJECT_DIR$" value="andyfinal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,8 +150,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.GUI.Main" />
         <item itemvalue="Application.Main (1)" />
@@ -349,7 +370,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670596879429</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="added some comments to the code and fixed a bug with read/write.">
+      <created>1670596944311</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670596944311</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added some comments to the code and fixed a bug with read/write.">
+      <created>1670596999696</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670596999696</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
