@@ -5,6 +5,7 @@
 package ItemProfile;
 
 import GUI.DeleteItemGUI;
+import GUI.ItemMenuGUI;
 import GUI.UpdateItemSelectorGUI;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
@@ -21,7 +22,6 @@ import java.util.Date;
 public class AllExpiredItems extends JFrame
 {
     private JTable itemTable;
-    private JButton logout;
     private JButton editItems;
     private JButton deleteItems;
 
@@ -111,24 +111,6 @@ public class AllExpiredItems extends JFrame
     private JPanel extraButtons()
     {
         JPanel panel = new JPanel();
-
-        // Button that logs the user out
-        logout = new JButton("Log Out");
-        logout.setSize(150, 30);
-        logout.setLocation(700, 20);
-        logout.addActionListener(new ActionListener() {
-            // Logs the user out and sends them to the login screen
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                HoldCurrentLoginType.updateUser(null);
-                HoldPagesVisited.resetNumberOfPagesVisited();
-
-                new LoginMenu();
-                AllExpiredItems.super.dispose();
-            }
-        });
-        panel.add(logout);
 
         // Button that sends the user to the Update Items page
         editItems = new JButton("Update Items Page");
