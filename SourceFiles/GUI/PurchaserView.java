@@ -47,14 +47,6 @@ public class PurchaserView extends javax.swing.JFrame {
             AddVendor.setLocation(340, 350);
             c.add(AddVendor);
 
-            if (HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
-            {
-                //add create purchase order button
-                CreatePurchaseOrder = new JButton("Create Purchase Order");
-                CreatePurchaseOrder.setSize(150,30);
-                CreatePurchaseOrder.setLocation(140,350);
-                c.add(CreatePurchaseOrder);
-            }
 
            if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
            {
@@ -160,16 +152,6 @@ public class PurchaserView extends javax.swing.JFrame {
                 PurchaserView.super.dispose();
                 new UpdateVendors();
 
-            }
-        });
-
-        CreatePurchaseOrder.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                c.hide();
-                JFrame PurchaseOrderMenu = new PurchaseOrderMenuGUI("Purchase Order");
-                PurchaseOrderMenu.setVisible(true);
-                PurchaserView.super.dispose();
             }
         });
 

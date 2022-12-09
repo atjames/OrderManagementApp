@@ -40,7 +40,6 @@ public class PurchaseOrderMenuGUI extends JFrame {
         {
             vendorList.addItem(VendorAccountArray.vendors[i].getFullName());
         }
-
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

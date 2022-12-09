@@ -4,8 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Fixed bug in User Factory">
-      <change beforePath="$PROJECT_DIR$/Resources/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/users.csv" afterDir="false" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added purchaserorder menu button">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +69,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/atjam/Downloads/jdatepicker-2.0.3.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\atjam\CSC4110\SourceFiles\GUI" />
@@ -360,14 +388,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670616079590</updated>
     </task>
-    <task id="LOCAL-00033" summary="Fixed bug in User Factory">
-      <created>1670617013673</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1670617013673</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,7 +414,6 @@
     <MESSAGE value="created PurchaseOrder" />
     <MESSAGE value="added some comments to the code and fixed a bug with read/write." />
     <MESSAGE value="Please let main through" />
-    <MESSAGE value="Fixed bug in User Factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in User Factory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Please let main through" />
   </component>
 </project>
