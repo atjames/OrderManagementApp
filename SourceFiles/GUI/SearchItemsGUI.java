@@ -22,7 +22,7 @@ public class SearchItemsGUI extends JFrame{
     private JDatePicker expireDateForm;
     boolean isFound = false;
     public static ArrayList<ItemProfile> itemNameSearch = new ArrayList<>();
-    public SearchItemsGUI(String title) {
+    public SearchItemsGUI(java.lang.String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(panel1);
@@ -128,7 +128,7 @@ public class SearchItemsGUI extends JFrame{
                         }
                         break;
                     case "Expire Date":
-                        String expireDate = (expireDateForm.getModel().getMonth() + 1) + "/" + (expireDateForm.getModel().getDay()) + "/" + (expireDateForm.getModel().getYear());
+                        java.lang.String expireDate = (expireDateForm.getModel().getMonth() + 1) + "/" + (expireDateForm.getModel().getDay()) + "/" + (expireDateForm.getModel().getYear());
                         Date expireDateFor;
                         try {
                             expireDateFor = formatter.parse(expireDate);

@@ -15,7 +15,7 @@ import static Main.Main.items;
 public class ItemTableGUI extends JFrame {
     JPanel panel1;
     private JTable table1;
-    String header[] = {"Item ID", "Item Name", "Quantity on Hand", "Selling Price", "Purchased Price", "Expire Date"};
+    java.lang.String header[] = {"Item ID", "Item Name", "Quantity on Hand", "Selling Price", "Purchased Price", "Expire Date"};
     private void createUIComponents() {
         DefaultTableModel model = new DefaultTableModel(0, 6){
             @Override

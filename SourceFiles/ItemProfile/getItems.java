@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class getItems extends ItemProfile {
         public static ArrayList<ItemProfile> get_items() throws IOException {
 
-            String line = "";
+            java.lang.String line = "";
             ArrayList<ItemProfile> items = new ArrayList<>(); //arraylist of items that we will store items from CSV in
             BufferedReader reader2;
             BufferedReader reader3;
@@ -31,7 +31,7 @@ public class getItems extends ItemProfile {
                 reader2.readLine();
                 reader3.readLine();
                 while ((line = reader.readLine()) != null) {
-                    String[] values = line.split(","); // splits the line at the commas and then stores each value in an array of Strings.
+                    java.lang.String[] values = line.split(","); // splits the line at the commas and then stores each value in an array of Strings.
                     ItemProfile item = new ItemProfile(); // creating new itemProfile
                     item.createItem(values[0], values[1], values[2], Double.parseDouble(values[3]), values[4], Double.parseDouble(values[5]), values[6], values[7], Double.parseDouble(values[8]));
                     //line above takes the CSV values and creates an item.
@@ -47,7 +47,7 @@ public class getItems extends ItemProfile {
 
             while ((line = reader2.readLine()) != null) {
 
-                String[] values = line.split(",");
+                java.lang.String[] values = line.split(",");
 
                 for(ItemProfile item: items){
                     if(values[0].matches(item.getItemID())){
@@ -58,7 +58,7 @@ public class getItems extends ItemProfile {
 
             while ((line = reader3.readLine()) != null) {
 
-                String[] values = line.split(",");
+                java.lang.String[] values = line.split(",");
 
                 for(ItemProfile item: items){
 
