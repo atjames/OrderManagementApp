@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added Read/Write to CSVs for purchaseorders">
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added some comments to the code and fixed a bug with read/write.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/items.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/items.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/purchaseorders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/purchaseorders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/purchaserordersitem.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/purchaserordersitem.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ItemPurchaseOrderStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ItemPurchaseOrderStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderCreatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderCreatorGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderItemInfoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderItemInfoGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderMenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderMenuGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderTableGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaseOrderTableGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrderCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrderCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/getPurchaseOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/getPurchaseOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/writePurchaseOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/writePurchaseOrders.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670529604148</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added some comments to the code and fixed a bug with read/write.">
+      <created>1670530645169</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670530645169</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -401,6 +395,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <MESSAGE value="created PurchaseOrder" />
     <MESSAGE value="added Read/Write to CSVs for purchaseorders" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Read/Write to CSVs for purchaseorders" />
+    <MESSAGE value="added some comments to the code and fixed a bug with read/write." />
+    <option name="LAST_COMMIT_MESSAGE" value="added some comments to the code and fixed a bug with read/write." />
   </component>
 </project>
