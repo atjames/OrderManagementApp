@@ -1,2 +1,2 @@
 Here you will find the JAR executable of our project. 
-Please ensure all Resource files (CSVs) are in the same folder as the JAR file before running.
+Please ensure all Resource files (CSVs) are in a folder named Resources. This Resources file should be in the same file as your JAR when you attempt to run.
