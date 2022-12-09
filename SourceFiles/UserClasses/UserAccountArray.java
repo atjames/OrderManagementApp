@@ -10,27 +10,6 @@ public class UserAccountArray
 {
     private static ArrayList<User> users = new ArrayList<User>();
 
-    // Adds an Owner and Administrator account for testing purposes
-    public static void testAccount()
-    {
-        User owner = UserFactory.userFactory("Owner");
-        owner.setUserID("123456");
-        owner.setPassword("123Forger");
-        owner.setFirstName("Charles");
-        owner.setLastName("White");
-        owner.setUserRole("Owner");
-
-        User admin = UserFactory.userFactory("Administrator");
-        admin.setUserID("654321");
-        admin.setPassword("321Forger");
-        admin.setFirstName("Bob");
-        admin.setLastName("Ackerman");
-        admin.setUserRole("Administrator");
-
-        addUser(owner);
-        addUser(admin);
-    }
-
     // Adds a user to the User Array
     public static void addUser(User user)
     {

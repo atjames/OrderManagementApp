@@ -3,13 +3,12 @@
  **/
 
 package UserClasses;
-import Login.HoldCurrentLoginType;
-import Login.HoldPagesVisited;
-import Login.LoginMenu;
-import Login.MaxCharLimit;
+import Login.*;
 import Main.MainMenu;
 import ProfileUsers.Vendor;
 import ProfileUsers.VendorAccountArray;
+import UserClasses.CheckStrings.CheckUserID;
+import UserClasses.CheckStrings.CheckUserPassword;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +21,7 @@ public class UserCreationPage extends JFrame
     private JLabel menuTitle;
     private JButton confirm;
     private JButton logout;
+    private JButton backToMenu;
 
     // User Type
     protected JLabel userType;
@@ -80,32 +80,46 @@ public class UserCreationPage extends JFrame
                 String passwordInput = textPassword.getText();
                 String userIDInput = textUserID.getText();
 
-                if (passwordInput.length() >= 8)
+                // Check if the user id input is legal
+                if (!CheckUserID.checkID(userIDInput))
                 {
-                    if (!UserAccountArray.searchUserID(userIDInput) && !userIDInput.equals(""))
+                    // Check that the password is legal
+                    if (!CheckUserPassword.checkPassword(passwordInput))
                     {
-                        // Initialize the new user being made
-                        User user = UserFactory.userFactory(userRoleInput);
-                        user.setUserID(userIDInput);
-                        user.setFirstName(firstNameInput);
-                        user.setLastName(lastNameInput);
-                        user.setPassword(passwordInput);
-                        user.setUserRole(userRoleInput);
-                        user.setFirstLogin(true); // When a new user is made, they will have never logged in
+                        // check if the password input is large enough
+                        if (passwordInput.length() >= 8)
+                        {
+                            // Make sure the user id is not already taken
+                            if (!UserAccountArray.searchUserID(userIDInput) && !userIDInput.equals(""))
+                            {
+                                // Initialize the new user being made
+                                User user = UserFactory.userFactory(userRoleInput);
+                                user.setUserID(userIDInput);
+                                user.setFirstName(firstNameInput);
+                                user.setLastName(lastNameInput);
+                                user.setPassword(passwordInput);
+                                user.setUserRole(userRoleInput);
+                                user.setFirstLogin(true); // When a new user is made, they will have never logged in
 
-                        // Add the user to the array and write them to the .csv
-                        UserAccountArray.addUser(user);
-                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+                                // Add the user to the array and write them to the .csv
+                                UserAccountArray.addUser(user);
+                                UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
-                        // Opens the Main Menu
-                        new MainMenu();
-                        UserCreationPage.super.dispose();
+                                // Opens the Main Menu
+                                new MainMenu();
+                                UserCreationPage.super.dispose();
+                            }
+                            else
+                                JOptionPane.showMessageDialog(null, "User ID already exists or is blank");
+                        }
+                        else
+                            JOptionPane.showMessageDialog(null, "The password is too short");
                     }
                     else
-                        JOptionPane.showMessageDialog(null, "User ID already exists or is blank");
+                        JOptionPane.showMessageDialog(null, "There cannot be spaces in the password");
                 }
                 else
-                    JOptionPane.showMessageDialog(null, "The password is too short");
+                    JOptionPane.showMessageDialog(null, "The User ID input is not just letters and digits");
 
             }
         });
@@ -205,6 +219,20 @@ public class UserCreationPage extends JFrame
             }
         });
         c.add(logout);
+
+        // Button that exits to the menu
+        backToMenu = new JButton("Exit To Menu");
+        backToMenu.setSize(150, 30);
+        backToMenu.setLocation(340, 450);
+        backToMenu.addActionListener(new ActionListener() {
+            // Sends user back to the menu
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu();
+                UserCreationPage.super.dispose();
+            }
+        });
+        c.add(backToMenu);
 
         setVisible(true);
     }
