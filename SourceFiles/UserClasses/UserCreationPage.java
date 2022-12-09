@@ -157,7 +157,7 @@ public class UserCreationPage extends JFrame
         textFirstName = new JTextField();
         textFirstName.setSize(200, 30);
         textFirstName.setLocation(525, 90);
-        textFirstName.setDocument(new MaxCharLimit(16));
+        textFirstName.setDocument(new MaxCharLimit(15));
         c.add(textFirstName);
 
         // Label for the lastName Box
@@ -170,7 +170,7 @@ public class UserCreationPage extends JFrame
         textLastName = new JTextField();
         textLastName.setSize(200, 30);
         textLastName.setLocation(525, 140);
-        textLastName.setDocument(new MaxCharLimit(16));
+        textLastName.setDocument(new MaxCharLimit(15));
         c.add(textLastName);
 
         // Label for the User ID box
