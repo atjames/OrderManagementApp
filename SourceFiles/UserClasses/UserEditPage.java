@@ -11,6 +11,8 @@ import Login.MaxCharLimit;
 import Main.MainMenu;
 import ProfileUsers.Vendor;
 import ProfileUsers.VendorAccountArray;
+import UserClasses.CheckStrings.CheckUserID;
+import UserClasses.CheckStrings.CheckUserPassword;
 
 import javax.swing.*;
 import java.awt.*;
@@ -84,6 +86,7 @@ public class UserEditPage extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                // If a user has been selected
                 if (userSelected)
                 {
                     // Variables from input
@@ -93,25 +96,31 @@ public class UserEditPage extends JFrame
                     String passwordInput = textPassword.getText();
                     String selectedID = (String)allUsersDropBox.getSelectedItem();
 
-                    // Checks if the new password length is long enough
-                    if (passwordInput.length() >= 8)
+                    // Check if the password is legal
+                    if (!CheckUserPassword.checkPassword(passwordInput))
                     {
-                        // Changes the value of that user
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setUserID(selectedID);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setFirstName(firstNameInput);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setLastName(lastNameInput);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setPassword(passwordInput);
-                        UserAccountArray.getUsers().get(userSlotInArrayList).setUserRole(userRoleInput);
+                        // Checks if the new password length is long enough
+                        if (passwordInput.length() >= 8)
+                        {
+                            // Changes the value of that user
+                            UserAccountArray.getUsers().get(userSlotInArrayList).setUserID(selectedID);
+                            UserAccountArray.getUsers().get(userSlotInArrayList).setFirstName(firstNameInput);
+                            UserAccountArray.getUsers().get(userSlotInArrayList).setLastName(lastNameInput);
+                            UserAccountArray.getUsers().get(userSlotInArrayList).setPassword(passwordInput);
+                            UserAccountArray.getUsers().get(userSlotInArrayList).setUserRole(userRoleInput);
 
-                        // Re-write the updated user to the .csv file
-                        UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+                            // Re-write the updated user to the .csv file
+                            UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
-                        // Opens the Main Menu
-                        new MainMenu();
-                        UserEditPage.super.dispose();
+                            // Opens the Main Menu
+                            new MainMenu();
+                            UserEditPage.super.dispose();
+                        }
+                        else
+                            JOptionPane.showMessageDialog(null, "The password is too short");
                     }
                     else
-                        JOptionPane.showMessageDialog(null, "The password is too short");
+                        JOptionPane.showMessageDialog(null, "The password is not valid");
                 }
                 else
                     JOptionPane.showMessageDialog(null, "Select a User from the ID list first");

@@ -7,6 +7,7 @@ package Login;
 import Main.MainMenu;
 import ProfileUsers.Vendor;
 import ProfileUsers.VendorAccountArray;
+import UserClasses.CheckStrings.CheckUserPassword;
 import UserClasses.UserAccountArray;
 import UserClasses.UserWriteToCSV;
 
@@ -84,30 +85,37 @@ public class PasswordChange extends JFrame
                 String passwordInput = textPassword.getText();
                 String oldPasswordInput = oldPassword.getText();
 
-                if (oldPasswordInput.equals(HoldCurrentLoginType.getLoggedInUser().getPassword()))
+                // Check if the password input is legal
+                if (!CheckUserPassword.checkPassword(passwordInput))
                 {
-                    // If the password is long enough, change the user password
-                    if (passwordInput.length() >= 8)
+                    // Check if the old password inputted is correct
+                    if (oldPasswordInput.equals(HoldCurrentLoginType.getLoggedInUser().getPassword()))
                     {
-
-                        // Ensure the user is not trying to re-enter their old password
-                        if (!HoldCurrentLoginType.getLoggedInUser().getPassword().equals(passwordInput))
+                        // If the password is long enough, change the user password
+                        if (passwordInput.length() >= 8)
                         {
-                            // Update user in array and in .csv
-                            HoldCurrentLoginType.getLoggedInUser().setPassword(passwordInput);
-                            UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
 
-                            new MainMenu();
-                            PasswordChange.super.dispose();
+                            // Ensure the user is not trying to re-enter their old password
+                            if (!HoldCurrentLoginType.getLoggedInUser().getPassword().equals(passwordInput))
+                            {
+                                // Update user in array and in .csv
+                                HoldCurrentLoginType.getLoggedInUser().setPassword(passwordInput);
+                                UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+
+                                new MainMenu();
+                                PasswordChange.super.dispose();
+                            }
+                            else
+                                JOptionPane.showMessageDialog(null, "The new password is the same as the old password");
                         }
                         else
-                            JOptionPane.showMessageDialog(null, "The new password is the same as the old password");
+                            JOptionPane.showMessageDialog(null, "The new password is too short");
                     }
                     else
-                        JOptionPane.showMessageDialog(null, "The new password is too short");
+                        JOptionPane.showMessageDialog(null, "Enter in your Correct Original Password");
                 }
                 else
-                    JOptionPane.showMessageDialog(null, "Enter in your Correct Original Password");
+                    JOptionPane.showMessageDialog(null, "There cannot be spaces in the password");
             }
         });
         c.add(confirm);
