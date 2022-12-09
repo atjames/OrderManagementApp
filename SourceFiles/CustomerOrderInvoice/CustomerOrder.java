@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class CustomerOrder {
 public int id;
-private String custName;
+public String custName;
     public Date getNeedbydate() {
         return needbydate;
     }
@@ -64,9 +64,9 @@ private int[] quantity = new int[5];
 private String[] items = new String[5];
 
     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-    public CustomerOrder(int id,String name, double total, String needbydate, String orderdate, int quantity[], String items[]) {
+    public CustomerOrder(int id, String custName, double total, String needbydate, String orderdate, int quantity[], String items[]) {
         this.id = id;
-        this.custName = name;
+        this.custName = custName;
         this.total = total;
 
         try {

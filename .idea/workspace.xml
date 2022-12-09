@@ -4,125 +4,210 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="created PurchaseOrder">
+    <list default="true" id="36daf876-15df-4593-8902-a5fb881b28ed" name="Changes" comment="Commit for merging">
+      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerInvoiceList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerInvoicesToCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerOrderList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/CustomerOrdersToCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/FindItemProfits.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/FindItemProfits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/GUI/FindNonPayingCustomers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/CheckStrings/CheckUserID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/CheckStrings/CheckUserPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserDeletionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ItemMenuGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/PurchaseOrder/PurchaseOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Login/PasswordChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Login/PasswordChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ProfileUsers/VendorAccountArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/CustomerOrderInvoice/CustomerInvoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/AccountaintView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/CreateItemGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/CreateItemGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteItemGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/DeleteVendor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemMenuGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemMenuGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemMenuGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemMenuGUI$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemMenuGUI$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemMenuGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemPurchaseOrderStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemTableGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ItemTableGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/JTextFieldMaxSize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ListVendors$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/ListVendors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderCreatorGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderCreatorGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderCreatorGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderItemInfoGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderItemInfoGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderTableGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaseOrderTableGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/PurchaserView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchItemsGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchItemsGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchItemsGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchResultsNameGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchResultsNameGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/SearchVendors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemSelectorGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateItemSelectorGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/UpdateVendors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/GUI/VendorForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/GenerateItemID.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/ItemProfileCSV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/getItems.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ItemProfile/writeCSV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/FirstLoginPasswordChange$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/FirstLoginPasswordChange.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/HoldCurrentLoginType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/HoldPagesVisited.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/LoginMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Login/MaxCharLimit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/MainMenu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/MainMenu$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/MainMenu$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/MainMenu$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/MainMenu$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/MainMenu$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/Main/MainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Profile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/ProfileFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/Vendor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorAccountArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/VendorCSV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/ProfileUsers/writeVendor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/PurchaseOrder/PurchaseOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Accountant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Administrator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/InventoryManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Owner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/Purchaser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/SalesPerson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserAccountArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserCreationPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserCreationPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserCreationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserEditPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserEditPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserEditPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserEditPage$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserEditPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserSearchPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserSearchPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc4110-group1new/UserClasses/UserSearchPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserAccountArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserAccountArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserEditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/CreateItemGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/CreateItemGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/CreateItemGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/CreateItemGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ItemMenuGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/JTextFieldMaxSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/JTextFieldMaxSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/ItemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/ItemProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/Login/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/Login/LoginMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ProfileUsers/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ProfileUsers/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ProfileUsers/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ProfileUsers/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ProfileUsers/ProfileFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ProfileUsers/ProfileFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ProfileUsers/Vender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/SourceFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/SourceFiles1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/SourceFiles1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Accountant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Accountant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Administrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/InventoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Owner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Purchaser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/Purchaser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/SalesPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/SalesPerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/out/production/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/out/production/SourceFiles/SourceFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/out/production/SourceFiles1/SourceFiles1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/out/production/SourceFiles1/SourceFiles1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/CustomerOrderInvoice/CustomerInvoice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/CustomerOrderInvoice/CustomerInvoiceArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/CustomerOrderInvoice/CustomerOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/CustomerOrderInvoice/CustomerOrderArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/AccountantView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/AccountantView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/AccountantView$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/AccountantView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/CreateItemGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/CreateItemGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/DeleteItemGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/DeleteVendor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/DeleteVendor$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/DeleteVendor$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/DeleteVendor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemMenuGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemTableGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemTableGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/JTextFieldMaxSize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ListVendors$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ListVendors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaserView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchCustomers$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchCustomers$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchCustomers$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchCustomers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchInvoices$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchInvoices$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchInvoices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchItemsGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchItemsGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchItemsGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchResultsNameGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchResultsNameGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchVendors$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchVendors$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/SearchVendors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemSelectorGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateItemSelectorGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateVendors$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateVendors$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateVendors$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateVendors$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/UpdateVendors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/VendorForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/VendorForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/VendorForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ViewCustomerInvoices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/AllExpiredItems$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/AllExpiredItems$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/AllExpiredItems$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/AllExpiredItems.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/GenerateItemID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/ItemProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/ItemProfileCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Login/HoldCurrentLoginType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Login/HoldPagesVisited.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Login/LoginMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Login/LoginMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Login/MaxCharLimit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Login/PasswordChange$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Login/PasswordChange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/MainMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ObserverInterface/ObserveVendorSale.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ProfileUsers/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ProfileUsers/CustomerArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ProfileUsers/Profile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ProfileUsers/ProfileFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ProfileUsers/Vendor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ProfileUsers/VendorAccountArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ProfileUsers/VendorCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/SourceFiles1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/SourceFiles1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/Accountant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/Administrator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/GetUsersFromCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/InventoryManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/Purchaser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/SalesPerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserAccountArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserCSVFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserCreationPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserCreationPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserCreationPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserEditPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserEditPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserEditPage$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserEditPage$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserEditPage$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserEditPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserListDisplay$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserListDisplay$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserListDisplay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserSearchPage$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserSearchPage$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserSearchPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/UserClasses/UserWriteToCSV.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,16 +251,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/atjam/Downloads/jdatepicker-2.0.3.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jdatepicker-2.0.3.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\atjam\CSC4110\SourceFiles\GUI" />
@@ -199,7 +280,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
-      <module name="SourceFiles1" />
+      <module name="SourceFiles" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
@@ -234,19 +315,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="SourceFiles1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="SourceFiles1" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -472,7 +540,42 @@
       <option name="project" value="LOCAL" />
       <updated>1670478009185</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Finished more of feature 8. Only two things left there to go. Fixed a non-bug bug.">
+      <created>1670555836628</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670555836629</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Finished the entirety of feature 8. Only thing left to do is string checks.">
+      <created>1670563032116</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670563032116</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Added proper user deletion page. Got rid of redundant method in UserAccountArray. Going to post more commits more frequently due to power outages in my area.">
+      <created>1670608965576</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670608965576</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Updated the password change mechanism to check for the old password. Also differentiated the page for users who first log in and users opening the page from the menu.">
+      <created>1670610417022</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670610417022</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Finished all of Feature 1. Added checks to make sure that all input is valid for the program.">
+      <created>1670611826734</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670611826734</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -496,6 +599,11 @@
     <MESSAGE value="Added writing and reading Vendors to and from a CSV file" />
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <MESSAGE value="created PurchaseOrder" />
-    <option name="LAST_COMMIT_MESSAGE" value="created PurchaseOrder" />
+    <MESSAGE value="Finished more of feature 8. Only two things left there to go. Fixed a non-bug bug." />
+    <MESSAGE value="Finished the entirety of feature 8. Only thing left to do is string checks." />
+    <MESSAGE value="Added proper user deletion page. Got rid of redundant method in UserAccountArray. Going to post more commits more frequently due to power outages in my area." />
+    <MESSAGE value="Updated the password change mechanism to check for the old password. Also differentiated the page for users who first log in and users opening the page from the menu." />
+    <MESSAGE value="Finished all of Feature 1. Added checks to make sure that all input is valid for the program." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished all of Feature 1. Added checks to make sure that all input is valid for the program." />
   </component>
 </project>

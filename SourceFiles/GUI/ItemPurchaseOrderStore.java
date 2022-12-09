@@ -1,8 +1,12 @@
 package GUI;
 
+/*
+@author Andrew James
+ */
 public class ItemPurchaseOrderStore
 {
 
+    //This class is used as temp storage for creating purchaseorders
     String itemID;
     double amountPurchased;
     double balance;

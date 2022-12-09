@@ -34,10 +34,12 @@ public class VendorAccountArray {
 
                 // For loop adds all required observers to the vendor
                 for (User user: UserAccountArray.getUsers())
+                {
                     if (user instanceof Owner)
                     {
                         item.registerSaleObserver(user);
                     }
+                }
 
                 // Add the vendor to the array
                 VendorAccountArray.addVendor(item);

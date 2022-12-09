@@ -10,7 +10,6 @@ import java.util.ArrayList;
  */
 
 public class writeCSV extends ItemProfile {
-
     public static void write_items(ArrayList<ItemProfile> items){
 
             try (FileWriter writer = new FileWriter(ItemProfile.RESOURCES_ITEMS_CSV, false)) //overwrites the .CSV with the new values
