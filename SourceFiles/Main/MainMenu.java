@@ -306,6 +306,28 @@ public class MainMenu extends JFrame
             c.add(allCustomersWithOrders);
         }
 
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
+        {
+            //add create purchase order button
+            JButton CreatePurchaseOrder = new JButton("Create Purchase Order");
+            CreatePurchaseOrder.setSize(150,30);
+            CreatePurchaseOrder.setLocation(140,350);
+            c.add(CreatePurchaseOrder);
+            CreatePurchaseOrder.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    c.hide();
+                    JFrame PurchaseOrderMenu = new PurchaseOrderMenuGUI("Purchase Order");
+                    PurchaseOrderMenu.setVisible(true);
+                    MainMenu.super.dispose();
+                }
+            });
+
+
+
+
+        }
+
         if (HoldCurrentLoginType.getLoggedInUser() instanceof Accountant)
         {
             // Button that sends the user to select a customer to find all orders to the customer
