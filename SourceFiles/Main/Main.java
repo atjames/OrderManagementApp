@@ -10,7 +10,6 @@ import ProfileUsers.*;
 import PurchaseOrder.PurchaseOrder;
 import UserClasses.GetUsersFromCSV;
 import ItemProfile.getItems;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -48,12 +47,14 @@ public class Main
             quantity[i] = rn.nextInt((9+1))+1;
         }
         CustomerOrder co1 = new CustomerOrder(0, "Harry", 0.0,"12/9/2022","12/7/2022",quantity,custitems);
+        co1.setTotal();
         CustomerOrderArray.addCustomerOrder(co1);
         for(int i=0;i<5;i++){
             custitems[i] = items.get(i).getItemName();
             quantity2[i] = rn.nextInt((9+1))+1;
         }
         CustomerOrder co2 = new CustomerOrder(1,"Joe", 0.0,"12/9/2022","12/7/2022",quantity2,custitems);
+        co2.setTotal();
         CustomerOrderArray.addCustomerOrder(co2);
 
 
