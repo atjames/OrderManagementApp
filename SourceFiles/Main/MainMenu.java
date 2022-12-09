@@ -183,6 +183,7 @@ public class MainMenu extends JFrame
             {
                 HoldPagesVisited.incrementPagesVisited();
                 new PasswordChange();
+                MainMenu.super.dispose();
             }
         });
         c.add(changePassword);
@@ -345,6 +346,7 @@ public class MainMenu extends JFrame
                 }
 
             UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+            MainMenu.super.dispose();
         }
 
         // Having the conditional after the 'setVisible' loads the menu THEN shows
