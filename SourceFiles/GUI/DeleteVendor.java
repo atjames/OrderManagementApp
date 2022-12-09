@@ -32,7 +32,7 @@ public class DeleteVendor extends  JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
-
+        JOptionPane.showMessageDialog(null, "Vendors can only be deleted if they have a balance of ZERO!");
         Search.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -76,7 +76,6 @@ public class DeleteVendor extends  JFrame {
                     if(VendorAccountArray.searchForUser(i)==null){
                         return;
                     }
-
                     if(VendorAccountArray.searchForUser(i).getFullName().equals(null)){
                         JOptionPane.showMessageDialog(null, "Vendor ID and name do not match!");
                     }

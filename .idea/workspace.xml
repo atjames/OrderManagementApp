@@ -5,28 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added some comments to the code and fixed a bug with read/write.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoiceArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoiceArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/DeleteVendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/DeleteVendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/ListVendors.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/ListVendors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/SearchCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/SearchCustomers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/SearchInvoices.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/SearchInvoices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/SearchVendors.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/SearchVendors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/VendorForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/VendorForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +116,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SourceFiles" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SourceFiles" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

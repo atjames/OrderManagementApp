@@ -12,11 +12,11 @@ import java.util.Date;
 import ItemProfile.getItems;
 /*
 @author Austin Jeffery
+
  */
 public class CustomerInvoice
 {
-    public static int invoiceid = 0;
-
+    public static int invoiceid = 0;//increase invoice id for every invoice made
     public CustomerInvoice() {
 
     }
@@ -66,7 +66,6 @@ public class CustomerInvoice
     public int getCustOrdernumber() {
         return custOrdernumber;
     }
-
     public Date invoiceDate;
     private Date OrderDate;
     private int custOrdernumber;
@@ -75,9 +74,7 @@ public class CustomerInvoice
     public int[] quantity;
     private double total;
     public static ArrayList<ItemProfile> items = new ArrayList<>();
-
     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-
     public CustomerInvoice(String orderdate, int customerordernumb, String[] items, int[] quant) {
         try {
             this.OrderDate = formatter.parse(orderdate);
@@ -89,7 +86,6 @@ public class CustomerInvoice
         this.quantity = quant;
         this.invoiceid++;
         this.invoiceDate = new Date(System.currentTimeMillis());
-
     }
 
     public double getTotal() {
@@ -99,7 +95,8 @@ public class CustomerInvoice
     public void setTotal(double total) {
         this.totalinvoiceamount = total;
     }
-
+    //DetailsPerItem returns string output to list item name, quantity and subprice for that item
+    //then lists the sales tax and total item
     public String DetailsPerItem() throws IOException {
         items = getItems.get_items();
         String details= "";
