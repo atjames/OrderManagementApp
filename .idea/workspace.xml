@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36daf876-15df-4593-8902-a5fb881b28ed" name="Changes" comment="Merge my branch with master.">
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/getItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/writeCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
+    <list default="true" id="36daf876-15df-4593-8902-a5fb881b28ed" name="Changes" comment="Made it so administrators can't delete other administrators.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -383,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670614660741</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Made it so administrators can't delete other administrators.">
+      <created>1670615083800</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670615083800</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,6 +417,7 @@
     <MESSAGE value="Updated the password change mechanism to check for the old password. Also differentiated the page for users who first log in and users opening the page from the menu." />
     <MESSAGE value="Finished all of Feature 1. Added checks to make sure that all input is valid for the program." />
     <MESSAGE value="Merge my branch with master." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge my branch with master." />
+    <MESSAGE value="Made it so administrators can't delete other administrators." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made it so administrators can't delete other administrators." />
   </component>
 </project>
