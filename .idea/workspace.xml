@@ -4,29 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added some comments to the code and fixed a bug with read/write.">
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Please let main through">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/UserClasses/UserCreationPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670596999696</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Please let main through">
+      <created>1670616079590</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670616079590</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,6 +386,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <MESSAGE value="created PurchaseOrder" />
     <MESSAGE value="added some comments to the code and fixed a bug with read/write." />
-    <option name="LAST_COMMIT_MESSAGE" value="added some comments to the code and fixed a bug with read/write." />
+    <MESSAGE value="Please let main through" />
+    <option name="LAST_COMMIT_MESSAGE" value="Please let main through" />
   </component>
 </project>
