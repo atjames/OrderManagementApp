@@ -20,48 +20,37 @@ public class CustomerInvoice
     public CustomerInvoice() {
 
     }
-
     public static void setInvoiceid(int invoiceid) {
         CustomerInvoice.invoiceid = invoiceid;
     }
-
     public String getInvoiceDate() {
         return formatter.format(invoiceDate);
     }
-
     public void setInvoiceDate(Date invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
-
     public String getOrderDate() {
         return formatter.format(this.OrderDate);
     }
-
     public void setOrderDate(Date orderDate) {
         OrderDate = orderDate;
     }
-
     public void setCustOrdernumber(int custOrdernumber) {
         this.custOrdernumber = custOrdernumber;
     }
-
     public String getTotalinvoiceamount() {
         DecimalFormat f = new DecimalFormat("##.00");
         return "$ " + f.format(this.totalinvoiceamount);
     }
-
     public void setTotalinvoiceamount(double totalinvoiceamount) {
         this.totalinvoiceamount = totalinvoiceamount;
     }
-
     public static int getInvoiceid() {
         return invoiceid;
     }
-
     public int getCustOrdernumber() {
         return custOrdernumber;
     }
-
     private Date invoiceDate;
     private Date OrderDate;
     private int custOrdernumber;
@@ -70,9 +59,7 @@ public class CustomerInvoice
     private int[] quantity;
     private double total;
     public static ArrayList<ItemProfile> items = new ArrayList<>();
-
     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-
     public CustomerInvoice(String orderdate, int customerordernumb, String[] items, int[] quant) {
         try {
             this.OrderDate = formatter.parse(orderdate);
@@ -84,9 +71,7 @@ public class CustomerInvoice
         this.quantity = quant;
         this.invoiceid++;
         this.invoiceDate = new Date(System.currentTimeMillis());
-
     }
-
     public double getTotal() {
         return this.totalinvoiceamount;
     }

@@ -2,7 +2,11 @@ package GUI;
 
 import Main.MainMenu;
 import UserClasses.Accountant;
+/*
 
+@author Austin Jeffery
+Account view to search customer orders- to create customer invoices
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

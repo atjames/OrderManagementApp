@@ -45,13 +45,13 @@ public class Main
             custitems[i] = items.get(i).getItemName();
             quantity[i] = rn.nextInt((9+1))+1;
         }
-        CustomerOrder co1 = new CustomerOrder(0,0.0,"12/9/2022","12/7/2022",quantity,custitems);
+        CustomerOrder co1 = new CustomerOrder(0,"Harry",0.0,"12/9/2022","12/7/2022",quantity,custitems);
         CustomerOrderArray.addCustomerOrder(co1);
         for(int i=0;i<5;i++){
             custitems[i] = items.get(i).getItemName();
             quantity2[i] = rn.nextInt((9+1))+1;
         }
-        CustomerOrder co2 = new CustomerOrder(1,0.0,"12/9/2022","12/7/2022",quantity2,custitems);
+        CustomerOrder co2 = new CustomerOrder(1,"Joe",0.0,"12/9/2022","12/7/2022",quantity2,custitems);
         CustomerOrderArray.addCustomerOrder(co2);
 
 

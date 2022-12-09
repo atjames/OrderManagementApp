@@ -64,8 +64,9 @@ private int[] quantity = new int[5];
 private String[] items = new String[5];
 
     DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-    public CustomerOrder(int id, double total, String needbydate, String orderdate, int quantity[], String items[]) {
+    public CustomerOrder(int id,String name, double total, String needbydate, String orderdate, int quantity[], String items[]) {
         this.id = id;
+        this.custName = name;
         this.total = total;
 
         try {
