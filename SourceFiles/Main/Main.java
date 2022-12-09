@@ -8,6 +8,7 @@ import ItemProfile.ItemProfile;
 import Login.LoginMenu;
 import ProfileUsers.*;
 import PurchaseOrder.PurchaseOrder;
+import PurchaseOrder.getPurchaseOrders;
 import UserClasses.GetUsersFromCSV;
 import ItemProfile.getItems;
 import UserClasses.UserAccountArray;
@@ -18,9 +19,11 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static PurchaseOrder.writePurchaseOrders.write_items;
+
 public class Main
 {
-    //Final touches hehe xd
+
     public static ArrayList<ItemProfile> items = new ArrayList<>();
     public static ArrayList<ItemPurchaseOrderStore> ItemPurchaseOrderStorage = new ArrayList<>();
     public static ArrayList<PurchaseOrder> PurchaseOrders = new ArrayList<>();
@@ -30,6 +33,8 @@ public class Main
 
         VendorAccountArray.init();
         items = getItems.get_items();
+        PurchaseOrders = getPurchaseOrders.get_orders();
+        /*
         PurchaseOrder order = new PurchaseOrder();
         PurchaseOrder order2 = new PurchaseOrder();
         PurchaseOrder order3 = new PurchaseOrder();
@@ -42,11 +47,12 @@ public class Main
         order3.addPurchaseItems(items.get(2).getItemID());
         order3.createPurchaseOrder("000003","2",103,"12/15/2022");
         PurchaseOrders.add(order3);
+         */
         UserAccountArray.testAccount();
         JFrame PurchaseOrderMenu = new PurchaseOrderMenuGUI("Purchase Order");
         PurchaseOrderMenu.setVisible(true);
 
-        items = getItems.get_items();
+
         //Enter fake values for customer to work with and fake customer orders
         try {
             Customer c1 =  new Customer( 0,  "Harry",  "321 drive",  "Chicago",  "IL", "312-565-4949"

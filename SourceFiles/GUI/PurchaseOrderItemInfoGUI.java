@@ -9,6 +9,10 @@ import java.awt.event.ActionListener;
 
 import static Main.Main.*;
 
+/*
+@author Andrew James
+ */
+
 public class PurchaseOrderItemInfoGUI extends JFrame {
 
 
@@ -43,10 +47,16 @@ public class PurchaseOrderItemInfoGUI extends JFrame {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                //input verification as outline in requirements. no negative or 0 value
                 if (!quantity.getText().matches("-?\\d+(\\.\\d+)?") || quantity.getText() == null || Double.parseDouble(quantity.getText()) <= 0 ||
                         Double.parseDouble(quantity.getText()) > Double.parseDouble(currentQuantity.getText())) {
                     JOptionPane.showMessageDialog(null, "Please enter a valid Quantity");
                     }else{
+
+                    /*calling on the itempurchasestorage class. I use this to store the data we get from the user here so we can user it when we generate an order.
+                    Probably an easier/efficent way of doing this but Java does not allow pass by reference and I am still learning :(
+                     */
                     ItemPurchaseOrderStore thisitem = new ItemPurchaseOrderStore();
                     thisitem.setItemID(itemID);
                     thisitem.setAmountPurchased(Double.parseDouble(quantity.getText()));

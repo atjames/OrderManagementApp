@@ -8,10 +8,14 @@ import javax.swing.table.DefaultTableModel;
 
 import static Main.Main.PurchaseOrders;
 
+/*
+@author Andrew James
+ */
 public class PurchaseOrderTableGUI {
     JPanel panel1;
     private JTable table1;
 
+    //creates a table that displays all purchase order info. third coulmn allows users to view order by vendor
     java.lang.String header[] = {"Purchase ID", "Need By Date", "Vendor ID"};
     private void createUIComponents() {
 
