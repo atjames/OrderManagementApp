@@ -4,9 +4,9 @@
 
 package Main;
 
-import GUI.AccountantView;
-import GUI.ItemMenuGUI;
-import GUI.PurchaserView;
+import CustomerOrderInvoice.CustomerInvoice;
+import CustomerOrderInvoice.CustomerInvoiceArray;
+import GUI.*;
 import Login.PasswordChange;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
@@ -24,7 +24,7 @@ import java.util.Date;
 
 public class MainMenu extends JFrame
 {
-    // Main variables for the FUI
+    // Main variables for the GUI
     private Container c;
     private JLabel menuTitle;
     private JButton exit;
@@ -37,6 +37,10 @@ public class MainMenu extends JFrame
     private JButton purchaserView;
     private JButton itemMenu;
     private JButton accountantView;
+    private JButton itemProfits;
+    private JButton nonPaying;
+    private JButton allCustomersWithOrders;
+    private JButton allCustomersWithInvoices;
     private static User currentUser = null;
 
     // Variable to store the date
@@ -44,7 +48,7 @@ public class MainMenu extends JFrame
 
     public MainMenu()
     {
-        setTitle("MainMenu");
+        setTitle("Main Menu");
         setBounds(300, 90, 900, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -62,10 +66,12 @@ public class MainMenu extends JFrame
         exit = new JButton("Exit");
         exit.setSize(150, 30);
         exit.setLocation(340, 350);
-        exit.addActionListener(new ActionListener() {
-            // Test button closes the menu
+        exit.addActionListener(new ActionListener()
+        {
+            // Closes the menu
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 MainMenu.super.dispose();
             }
         });
@@ -78,10 +84,12 @@ public class MainMenu extends JFrame
             addUser = new JButton("Add User");
             addUser.setSize(150, 30);
             addUser.setLocation(340, 250);
-            addUser.addActionListener(new ActionListener() {
+            addUser.addActionListener(new ActionListener()
+            {
                 // Test button closes the menu
                 @Override
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(ActionEvent e)
+                {
                     HoldPagesVisited.incrementPagesVisited();
                     new UserCreationPage();
                     MainMenu.super.dispose();
@@ -93,10 +101,12 @@ public class MainMenu extends JFrame
             editUser = new JButton("Edit User");
             editUser.setSize(150, 30);
             editUser.setLocation(340, 150);
-            editUser.addActionListener(new ActionListener() {
+            editUser.addActionListener(new ActionListener()
+            {
                 // Test button closes the menu
                 @Override
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(ActionEvent e)
+                {
                     HoldPagesVisited.incrementPagesVisited();
                     new UserEditPage();
                     MainMenu.super.dispose();
@@ -108,10 +118,12 @@ public class MainMenu extends JFrame
             searchUser = new JButton("Search User");
             searchUser.setSize(150, 30);
             searchUser.setLocation(140, 150);
-            searchUser.addActionListener(new ActionListener() {
+            searchUser.addActionListener(new ActionListener()
+            {
                 // Opens the Search User page
                 @Override
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(ActionEvent e)
+                {
                     HoldPagesVisited.incrementPagesVisited();
                     new UserSearchPage();
                     MainMenu.super.dispose();
@@ -123,7 +135,8 @@ public class MainMenu extends JFrame
             showAllUsers = new JButton("Show Users");
             showAllUsers.setSize(150, 30);
             showAllUsers.setLocation(100, 500);
-            showAllUsers.addActionListener(new ActionListener() {
+            showAllUsers.addActionListener(new ActionListener()
+            {
                 // Open User list
                 @Override
                 public void actionPerformed(ActionEvent e)
@@ -140,8 +153,9 @@ public class MainMenu extends JFrame
         logout = new JButton("Log Out");
         logout.setSize(150, 30);
         logout.setLocation(700, 20);
-        logout.addActionListener(new ActionListener() {
-            // Test button closes the menu
+        logout.addActionListener(new ActionListener()
+        {
+            // Logs the user out and sends them to the login screen
             @Override
             public void actionPerformed(ActionEvent e)
             {
@@ -161,13 +175,15 @@ public class MainMenu extends JFrame
         changePassword = new JButton("Change Password");
         changePassword.setSize(150, 30);
         changePassword.setLocation(700, 500);
-        changePassword.addActionListener(new ActionListener() {
+        changePassword.addActionListener(new ActionListener()
+        {
             // Changes the User's password
             @Override
             public void actionPerformed(ActionEvent e)
             {
                 HoldPagesVisited.incrementPagesVisited();
                 new PasswordChange();
+                MainMenu.super.dispose();
             }
         });
         c.add(changePassword);
@@ -178,7 +194,8 @@ public class MainMenu extends JFrame
             purchaserView = new JButton("Vendor Actions");
             purchaserView.setSize(150, 30);
             purchaserView.setLocation(100, 250);
-            purchaserView.addActionListener(new ActionListener() {
+            purchaserView.addActionListener(new ActionListener()
+            {
                 // Open the purchaser view
                 @Override
                 public void actionPerformed(ActionEvent e)
@@ -194,7 +211,8 @@ public class MainMenu extends JFrame
             itemMenu = new JButton("Item Actions");
             itemMenu.setSize(150, 30);
             itemMenu.setLocation(100, 350);
-            itemMenu.addActionListener(new ActionListener() {
+            itemMenu.addActionListener(new ActionListener()
+            {
                 // Open the purchaser view
                 @Override
                 public void actionPerformed(ActionEvent e)
@@ -209,12 +227,13 @@ public class MainMenu extends JFrame
 
         if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner || HoldCurrentLoginType.getLoggedInUser() instanceof Accountant)
         {
-            // Button that sends the user to the purchaser view
+            // Button that sends the user to the accountant view
             accountantView = new JButton("Accountant Actions");
             accountantView.setSize(150, 30);
             accountantView.setLocation(600, 250);
-            accountantView.addActionListener(new ActionListener() {
-                // Open the purchaser view
+            accountantView.addActionListener(new ActionListener()
+            {
+                // Open the accountant view
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
@@ -224,6 +243,91 @@ public class MainMenu extends JFrame
                 }
             });
             c.add(accountantView);
+        }
+
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
+        {
+            // Button that exits the program
+            itemProfits = new JButton("Item Profits");
+            itemProfits.setSize(150, 30);
+            itemProfits.setLocation(600, 350);
+            itemProfits.addActionListener(new ActionListener() {
+                // Test button closes the menu
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    if (CustomerInvoiceArray.customerInvoices.length == 0)
+                        JOptionPane.showMessageDialog(null, "There Are No Invoices to Track Profits With");
+                    else
+                    {
+                        new FindItemProfits();
+                        MainMenu.super.dispose();
+                    }
+                }
+            });
+            c.add(itemProfits);
+
+            // Button that sends the user to see all the baaaad customers
+            nonPaying = new JButton("Non-Paying Customers");
+            nonPaying.setSize(200, 30);
+            nonPaying.setLocation(600, 150);
+            nonPaying.addActionListener(new ActionListener()
+            {
+                // Open the list of shame
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    if (CustomerInvoiceArray.customerInvoices.length == 0)
+                        JOptionPane.showMessageDialog(null, "There Are No Invoices to See Who Hasn't Paid");
+                    else
+                    {
+                        HoldPagesVisited.incrementPagesVisited();
+                        new FindNonPayingCustomers();
+                        MainMenu.super.dispose();
+                    }
+                }
+            });
+            c.add(nonPaying);
+
+            // Button that sends the user to select a customer to find all orders to the customer
+            allCustomersWithOrders = new JButton("Find Customer Orders");
+            allCustomersWithOrders.setSize(200, 30);
+            allCustomersWithOrders.setLocation(340, 450);
+            allCustomersWithOrders.addActionListener(new ActionListener()
+            {
+                // Sends user to map all orders to a customer
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    new CustomerOrdersToCustomer();
+                    MainMenu.super.dispose();
+                }
+            });
+            c.add(allCustomersWithOrders);
+        }
+
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Accountant)
+        {
+            // Button that sends the user to select a customer to find all orders to the customer
+            allCustomersWithInvoices = new JButton("Find Customer Invoices");
+            allCustomersWithInvoices.setSize(200, 30);
+            allCustomersWithInvoices.setLocation(340, 450);
+            allCustomersWithInvoices.addActionListener(new ActionListener()
+            {
+                // Sends user to map all orders to a customer
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    if (CustomerInvoiceArray.customerInvoices.length == 0)
+                        JOptionPane.showMessageDialog(null, "There Are No Invoices to See See a List Of!");
+                    else
+                    {
+                        new CustomerInvoicesToCustomer();
+                        MainMenu.super.dispose();
+                    }
+                }
+            });
+            c.add(allCustomersWithInvoices);
         }
 
         setVisible(true);
@@ -242,6 +346,7 @@ public class MainMenu extends JFrame
                 }
 
             UserWriteToCSV.writeUsersToCSV(UserAccountArray.getUsers());
+            MainMenu.super.dispose();
         }
 
         // Having the conditional after the 'setVisible' loads the menu THEN shows
