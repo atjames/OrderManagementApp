@@ -6,12 +6,12 @@ import Main.MainMenu;
 import ProfileUsers.Vendor;
 import ProfileUsers.VendorAccountArray;
 import UserClasses.Owner;
+import UserClasses.Purchaser;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-import javax.swing.text.View;
 
 /*
 Class for the Purchaser view. Once a purchaser logins they have access to these functions
@@ -24,6 +24,7 @@ public class PurchaserView extends javax.swing.JFrame {
     private JPanel panel1;
     private JButton AddVendor;
     private JButton ViewVendors;
+    private JButton CreatePurchaseOrder;
     private JButton UpdateVendors;
     private JButton DeleteVendor;
     private JButton SearchVendor;
@@ -40,10 +41,20 @@ public class PurchaserView extends javax.swing.JFrame {
             setResizable(false);
             c = getContentPane();
             c.setLayout(null);
+
             AddVendor = new JButton("Add Vendor");
             AddVendor.setSize(150, 30);
             AddVendor.setLocation(340, 350);
-           c.add(AddVendor);
+            c.add(AddVendor);
+
+            if (HoldCurrentLoginType.getLoggedInUser() instanceof Purchaser)
+            {
+                //add create purchase order button
+                CreatePurchaseOrder = new JButton("Create Purchase Order");
+                CreatePurchaseOrder.setSize(150,30);
+                CreatePurchaseOrder.setLocation(140,350);
+                c.add(CreatePurchaseOrder);
+            }
 
            if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
            {
@@ -149,6 +160,16 @@ public class PurchaserView extends javax.swing.JFrame {
                 PurchaserView.super.dispose();
                 new UpdateVendors();
 
+            }
+        });
+
+        CreatePurchaseOrder.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                c.hide();
+                JFrame PurchaseOrderMenu = new PurchaseOrderMenuGUI("Purchase Order");
+                PurchaseOrderMenu.setVisible(true);
+                PurchaserView.super.dispose();
             }
         });
 

@@ -23,6 +23,7 @@ public class UserSearchPage extends JFrame
     private JLabel menuTitle;
     private JButton selectUser;
     private JButton logout;
+    private JButton backToMenu;
 
     // User Type
     protected JLabel userTypeLabel;
@@ -173,6 +174,19 @@ public class UserSearchPage extends JFrame
         });
         c.add(logout);
 
+        // Button that exits to the menu
+        backToMenu = new JButton("Exit To Menu");
+        backToMenu.setSize(150, 30);
+        backToMenu.setLocation(540, 450);
+        backToMenu.addActionListener(new ActionListener() {
+            // Sends user back to the menu
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu();
+                UserSearchPage.super.dispose();
+            }
+        });
+        c.add(backToMenu);
 
         setVisible(true);
     }
