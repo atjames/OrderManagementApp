@@ -1,5 +1,10 @@
 package GUI;
 
+import Login.HoldCurrentLoginType;
+import Login.HoldPagesVisited;
+import Login.LoginMenu;
+import Main.MainMenu;
+import ProfileUsers.Vendor;
 import ProfileUsers.VendorAccountArray;
 
 import javax.swing.*;
@@ -18,6 +23,8 @@ public class PurchaseOrderMenuGUI extends JFrame {
     private JButton submitButton;
     private JPanel mainPanel;
     private JButton viewPurchaseOrdersButton;
+    private JButton returnToMainMenuButton;
+    private JButton logoutButton;
 
     public PurchaseOrderMenuGUI(String title) {
         super(title);
@@ -54,6 +61,27 @@ public class PurchaseOrderMenuGUI extends JFrame {
                 OrderTable.setVisible(true);
                 OrderTable.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 OrderTable.setLocationRelativeTo(null);
+            }
+        });
+        returnToMainMenuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu();
+                PurchaseOrderMenuGUI.super.dispose();
+            }
+        });
+        logoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HoldCurrentLoginType.updateUser(null);
+                HoldPagesVisited.resetNumberOfPagesVisited();
+
+                // Reset 'hasNotUpdated' for all vendors
+                for (Vendor vendor: VendorAccountArray.vendors)
+                    vendor.hasNotUpdated = true;
+
+                new LoginMenu();
+                PurchaseOrderMenuGUI.super.dispose();
             }
         });
     }
