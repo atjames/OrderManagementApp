@@ -62,12 +62,12 @@ public class CustomerInvoice
         return custOrdernumber;
     }
 
-    private Date invoiceDate;
+    public Date invoiceDate;
     private Date OrderDate;
     private int custOrdernumber;
     private double totalinvoiceamount;
-    private String[] itemname;
-    private int[] quantity;
+    public String[] itemname;
+    public int[] quantity;
     private double total;
     public static ArrayList<ItemProfile> items = new ArrayList<>();
 

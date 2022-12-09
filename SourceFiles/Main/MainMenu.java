@@ -4,9 +4,8 @@
 
 package Main;
 
-import GUI.AccountantView;
-import GUI.ItemMenuGUI;
-import GUI.PurchaserView;
+import CustomerOrderInvoice.CustomerInvoiceArray;
+import GUI.*;
 import Login.PasswordChange;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
@@ -24,7 +23,7 @@ import java.util.Date;
 
 public class MainMenu extends JFrame
 {
-    // Main variables for the FUI
+    // Main variables for the GUI
     private Container c;
     private JLabel menuTitle;
     private JButton exit;
@@ -37,6 +36,8 @@ public class MainMenu extends JFrame
     private JButton purchaserView;
     private JButton itemMenu;
     private JButton accountantView;
+    private JButton itemProfits;
+    private JButton nonPaying;
     private static User currentUser = null;
 
     // Variable to store the date
@@ -44,7 +45,7 @@ public class MainMenu extends JFrame
 
     public MainMenu()
     {
-        setTitle("MainMenu");
+        setTitle("Main Menu");
         setBounds(300, 90, 900, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -63,7 +64,7 @@ public class MainMenu extends JFrame
         exit.setSize(150, 30);
         exit.setLocation(340, 350);
         exit.addActionListener(new ActionListener() {
-            // Test button closes the menu
+            // Closes the menu
             @Override
             public void actionPerformed(ActionEvent e) {
                 MainMenu.super.dispose();
@@ -140,8 +141,9 @@ public class MainMenu extends JFrame
         logout = new JButton("Log Out");
         logout.setSize(150, 30);
         logout.setLocation(700, 20);
-        logout.addActionListener(new ActionListener() {
-            // Test button closes the menu
+        logout.addActionListener(new ActionListener()
+        {
+            // Logs the user out and sends them to the login screen
             @Override
             public void actionPerformed(ActionEvent e)
             {
@@ -209,12 +211,13 @@ public class MainMenu extends JFrame
 
         if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner || HoldCurrentLoginType.getLoggedInUser() instanceof Accountant)
         {
-            // Button that sends the user to the purchaser view
+            // Button that sends the user to the accountant view
             accountantView = new JButton("Accountant Actions");
             accountantView.setSize(150, 30);
             accountantView.setLocation(600, 250);
-            accountantView.addActionListener(new ActionListener() {
-                // Open the purchaser view
+            accountantView.addActionListener(new ActionListener()
+            {
+                // Open the accountant view
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
@@ -224,6 +227,51 @@ public class MainMenu extends JFrame
                 }
             });
             c.add(accountantView);
+        }
+
+        if (HoldCurrentLoginType.getLoggedInUser() instanceof Owner)
+        {
+            // Button that exits the program
+            itemProfits = new JButton("Item Profits");
+            itemProfits.setSize(150, 30);
+            itemProfits.setLocation(600, 350);
+            itemProfits.addActionListener(new ActionListener() {
+                // Test button closes the menu
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    if (CustomerInvoiceArray.customerInvoices.length == 0)
+                        JOptionPane.showMessageDialog(null, "There Are No Invoices to Track Profits With");
+                    else
+                    {
+                        new FindItemProfits();
+                        MainMenu.super.dispose();
+                    }
+                }
+            });
+            c.add(itemProfits);
+
+            // Button that sends the user to see all the baaaad customers
+            nonPaying = new JButton("Non-Paying Customers");
+            nonPaying.setSize(200, 30);
+            nonPaying.setLocation(600, 150);
+            nonPaying.addActionListener(new ActionListener()
+            {
+                // Open the list of shame
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    if (CustomerInvoiceArray.customerInvoices.length == 0)
+                        JOptionPane.showMessageDialog(null, "There Are No Invoices to See Who Hasn't Paid");
+                    else
+                    {
+                        HoldPagesVisited.incrementPagesVisited();
+                        new FindNonPayingCustomers();
+                        MainMenu.super.dispose();
+                    }
+                }
+            });
+            c.add(nonPaying);
         }
 
         setVisible(true);

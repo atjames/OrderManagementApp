@@ -179,7 +179,7 @@ public class UserEditPage extends JFrame
                     UserEditPage.super.dispose();
                 }
                 else
-                    menuTitle.setText("Select a User from the ID list first");
+                    JOptionPane.showMessageDialog(null, "Select a User from the ID list first");
             }
         });
         c.add(deleteUser);
