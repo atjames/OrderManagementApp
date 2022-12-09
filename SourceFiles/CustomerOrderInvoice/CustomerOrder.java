@@ -111,7 +111,7 @@ private String[] items = new String[5];
         //set total
         items2 = getItems.get_items();
         for(int i = 0; i < 5; i++){
-            this.total = items2.get(i).getSellingPrice() * this.quantity[i];
+            this.total += items2.get(i).getSellingPrice() * this.quantity[i];
         }
     }
 

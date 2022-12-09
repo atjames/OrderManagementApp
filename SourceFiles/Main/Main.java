@@ -46,6 +46,7 @@ public class Main
             custitems[i] = items.get(i).getItemName();
             quantity[i] = rn.nextInt((9+1))+1;
         }
+        //Added Customer values
         CustomerOrder co1 = new CustomerOrder(0, "Harry", 0.0,"12/9/2022","12/7/2022",quantity,custitems);
         co1.setTotal();
         CustomerOrderArray.addCustomerOrder(co1);
