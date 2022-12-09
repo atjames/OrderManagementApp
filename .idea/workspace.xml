@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="Corrected Customer Order Total, added method to calculate total">
-      <change beforePath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerOrder.java" afterDir="false" />
+    <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added some comments to the code and fixed a bug with read/write.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/GUI/PurchaserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceFiles/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/ItemPurchaseOrderStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderCreatorGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderItemInfoGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderMenuGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/GUI/PurchaseOrderTableGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/getItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/ItemProfile/writeCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/PurchaseOrderCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/getPurchaseOrders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles1/PurchaseOrder/writePurchaseOrders.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +41,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/master" />
+    <option name="BRANCH" value="AndyFinalTouches" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="andyfinal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,12 +69,6 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jdatepicker-2.0.3.jar" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -117,19 +132,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="SourceFiles" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="SourceFiles" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.GUI.Main" />
       <item itemvalue="Application.Main" />
@@ -139,9 +141,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.GUI.Main" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GUI.Main" />
         <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
@@ -351,56 +353,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670478009185</updated>
     </task>
-    <task id="LOCAL-00029" summary="Finished more of feature 8. Only two things left there to go. Fixed a non-bug bug.">
-      <created>1670555836628</created>
+    <task id="LOCAL-00029" summary="added some comments to the code and fixed a bug with read/write.">
+      <created>1670596879429</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1670555836629</updated>
+      <updated>1670596879429</updated>
     </task>
-    <task id="LOCAL-00030" summary="Finished the entirety of feature 8. Only thing left to do is string checks.">
-      <created>1670563032116</created>
+    <task id="LOCAL-00030" summary="added some comments to the code and fixed a bug with read/write.">
+      <created>1670596944311</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1670563032116</updated>
+      <updated>1670596944311</updated>
     </task>
-    <task id="LOCAL-00031" summary="Added proper user deletion page. Got rid of redundant method in UserAccountArray. Going to post more commits more frequently due to power outages in my area.">
-      <created>1670608965576</created>
+    <task id="LOCAL-00031" summary="added some comments to the code and fixed a bug with read/write.">
+      <created>1670596999696</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1670608965576</updated>
+      <updated>1670596999696</updated>
     </task>
-    <task id="LOCAL-00032" summary="Updated the password change mechanism to check for the old password. Also differentiated the page for users who first log in and users opening the page from the menu.">
-      <created>1670610417022</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1670610417022</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Finished all of Feature 1. Added checks to make sure that all input is valid for the program.">
-      <created>1670611826734</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1670611826734</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Merge my branch with master.">
-      <created>1670614660741</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1670614660741</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Corrected Customer Order Total, added method to calculate total">
-      <created>1670615682497</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1670615682497</updated>
-    </task>
-    <option name="localTasksCounter" value="36" />
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,34 +398,7 @@
     <MESSAGE value="Added writing and reading Vendors to and from a CSV file" />
     <MESSAGE value="Merge remote-tracking branch 'origin/AustinsBranch' into AustinsBranch&#10;&#10;# Conflicts:&#10;#&#9;Resources/vendors.csv" />
     <MESSAGE value="created PurchaseOrder" />
-    <MESSAGE value="Finished more of feature 8. Only two things left there to go. Fixed a non-bug bug." />
-    <MESSAGE value="Finished the entirety of feature 8. Only thing left to do is string checks." />
-    <MESSAGE value="Added proper user deletion page. Got rid of redundant method in UserAccountArray. Going to post more commits more frequently due to power outages in my area." />
-    <MESSAGE value="Updated the password change mechanism to check for the old password. Also differentiated the page for users who first log in and users opening the page from the menu." />
-    <MESSAGE value="Finished all of Feature 1. Added checks to make sure that all input is valid for the program." />
-    <MESSAGE value="Merge my branch with master." />
-    <MESSAGE value="Corrected Customer Order Total, added method to calculate total" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected Customer Order Total, added method to calculate total" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerInvoice.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/SourceFiles/CustomerOrderInvoice/CustomerOrder.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/SourceFiles/Main/Main.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="added some comments to the code and fixed a bug with read/write." />
+    <option name="LAST_COMMIT_MESSAGE" value="added some comments to the code and fixed a bug with read/write." />
   </component>
 </project>
