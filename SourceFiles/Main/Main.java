@@ -23,17 +23,6 @@ import static PurchaseOrder.writePurchaseOrders.write_items;
 
 public class Main
 {
-    //Final touches hehe xd
-
-    /*
-     To-DO:
-
-        Attempt to fix CSV read/write for purchase orders
-        Put button on main menu for purchase order for purchaser users
-        Move some of the clunky stuff to their own classes
-
-
-     */
 
     public static ArrayList<ItemProfile> items = new ArrayList<>();
     public static ArrayList<ItemPurchaseOrderStore> ItemPurchaseOrderStorage = new ArrayList<>();
