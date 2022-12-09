@@ -25,6 +25,11 @@ public class CustomerInvoice
         CustomerInvoice.invoiceid = invoiceid;
     }
 
+    public static int getInvoiceID()
+    {
+        return invoiceid;
+    }
+
     public String getInvoiceDate() {
         return formatter.format(invoiceDate);
     }

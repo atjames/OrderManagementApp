@@ -81,13 +81,13 @@ public class FindNonPayingCustomers extends JFrame
         });
         c.add(logout);
 
-        // Button that exits to the main meny
+        // Button that exits to the main menu
         exit = new JButton("Exit to Main Menu");
         exit.setSize(150, 30);
         exit.setLocation(340, 450);
         exit.addActionListener(new ActionListener()
         {
-            // Sneds user to main meny
+            // Sends user to main menu
             @Override
             public void actionPerformed(ActionEvent e)
             {
@@ -123,7 +123,6 @@ public class FindNonPayingCustomers extends JFrame
                         // If the customer has not already been added, add them to the array
                         if (!(nonPayingNames.contains(customerOrder.custName)))
                         {
-                            System.out.println("I am here");
                             nonPayingNames.add(customerOrder.custName);
                             uncooperativeCustomers.append(customerOrder.custName + "\n");
                         }

@@ -1,5 +1,7 @@
 package GUI;
 
+import CustomerOrderInvoice.CustomerInvoice;
+import CustomerOrderInvoice.CustomerInvoiceArray;
 import CustomerOrderInvoice.CustomerOrder;
 import CustomerOrderInvoice.CustomerOrderArray;
 import Login.HoldCurrentLoginType;
@@ -13,9 +15,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
-public class CustomerOrdersToCustomer extends JFrame
+public class CustomerInvoicesToCustomer extends JFrame
 {
     // JFrame variables
     private Container c;
@@ -28,10 +34,10 @@ public class CustomerOrdersToCustomer extends JFrame
     // List to store all names with orders
     private ArrayList<String> customersToChoose = new ArrayList<>();
 
-    public CustomerOrdersToCustomer()
+    public CustomerInvoicesToCustomer()
     {
-        initializeValidCustomers();
-        setTitle("Customers with Customer Orders");
+        initializeInvoiceList();
+        setTitle("Customers with Customer Invoices");
         setBounds(300, 90, 900, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -40,7 +46,7 @@ public class CustomerOrdersToCustomer extends JFrame
         c.setLayout(null);
 
         // Menu title
-        menuTitle = new JLabel("Customers with Orders");
+        menuTitle = new JLabel("Customers with Invoices");
         menuTitle.setSize(400, 30);
         menuTitle.setLocation(400, 30);
         c.add(menuTitle);
@@ -71,7 +77,7 @@ public class CustomerOrdersToCustomer extends JFrame
                     vendor.hasNotUpdated = true;
 
                 new LoginMenu();
-                CustomerOrdersToCustomer.super.dispose();
+                CustomerInvoicesToCustomer.super.dispose();
             }
         });
         c.add(logout);
@@ -87,24 +93,28 @@ public class CustomerOrdersToCustomer extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 new MainMenu();
-                CustomerOrdersToCustomer.super.dispose();
+                CustomerInvoicesToCustomer.super.dispose();
             }
         });
         c.add(exit);
 
-        // Button that exits the program
+        // Button that sends the user to see all invoices for that customer
         select = new JButton("Select User");
         select.setSize(150, 30);
         select.setLocation(340, 350);
         select.addActionListener(new ActionListener()
         {
-            // Closes the menu
+            // Sends user to see all invoices for that customer
             @Override
             public void actionPerformed(ActionEvent e)
             {
                 String customerName = (String)choosableCustomers.getSelectedItem();
-                new CustomerOrderList(customerName);
-                CustomerOrdersToCustomer.super.dispose();
+                try {
+                    new CustomerInvoiceList(customerName);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                CustomerInvoicesToCustomer.super.dispose();
             }
         });
         c.add(select);
@@ -112,12 +122,21 @@ public class CustomerOrdersToCustomer extends JFrame
         setVisible(true);
     }
 
-    private void initializeValidCustomers()
+    // Method initializes the list of non-paying customers
+    private void initializeInvoiceList()
     {
-        for (CustomerOrder customerOrder : CustomerOrderArray.customerorders)
-            if (!(customersToChoose.contains(customerOrder.custName)))
-            {
-                customersToChoose.add(customerOrder.custName);
-            }
+        // For every customer invoice...
+        for (CustomerInvoice invoice : CustomerInvoiceArray.customerInvoices)
+        {
+            // Find the customer name...
+            for (CustomerOrder customerOrder : CustomerOrderArray.customerorders)
+                // ... by comparing customer order id's to the invoice's customer order id
+                if (customerOrder.id == invoice.getCustOrdernumber())
+                    // If the customer has not already been added, add them to the array
+                    if (!(customersToChoose.contains(customerOrder.custName)))
+                    {
+                        customersToChoose.add(customerOrder.custName);
+                    }
+        }
     }
 }
