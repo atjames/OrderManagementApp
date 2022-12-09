@@ -3,29 +3,38 @@ package Main;
 import CustomerOrderInvoice.CustomerOrder;
 import CustomerOrderInvoice.CustomerOrderArray;
 import GUI.ItemPurchaseOrderStore;
-import PurchaseOrder.getPurchaseOrders;
+import GUI.PurchaseOrderMenuGUI;
 import ItemProfile.ItemProfile;
 import Login.LoginMenu;
 import ProfileUsers.*;
 import PurchaseOrder.PurchaseOrder;
+import PurchaseOrder.getPurchaseOrders;
 import UserClasses.GetUsersFromCSV;
 import ItemProfile.getItems;
+import UserClasses.UserAccountArray;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static PurchaseOrder.writePurchaseOrders.write_items;
+
 public class Main
 {
-    //Final touches hehe xd
+
     public static ArrayList<ItemProfile> items = new ArrayList<>();
     public static ArrayList<ItemPurchaseOrderStore> ItemPurchaseOrderStorage = new ArrayList<>();
     public static ArrayList<PurchaseOrder> PurchaseOrders = new ArrayList<>();
 
-    public static void main(java.lang.String[] args) throws IOException, ParseException
-    {
+    public static void main(java.lang.String[] args) throws IOException, ParseException {
+
+
+        VendorAccountArray.init();
         items = getItems.get_items();
         PurchaseOrders = getPurchaseOrders.get_orders();
+        UserAccountArray.testAccount();
 
         //Enter fake values for customer to work with and fake customer orders
         try {
@@ -46,15 +55,13 @@ public class Main
             custitems[i] = items.get(i).getItemName();
             quantity[i] = rn.nextInt((9+1))+1;
         }
-        CustomerOrder co1 = new CustomerOrder(0, "Harry", 0.0,"12/9/2022","12/7/2022",quantity,custitems);
-        co1.setTotal();
+        CustomerOrder co1 = new CustomerOrder(0,0.0,"12/9/2022","12/7/2022",quantity,custitems);
         CustomerOrderArray.addCustomerOrder(co1);
         for(int i=0;i<5;i++){
             custitems[i] = items.get(i).getItemName();
             quantity2[i] = rn.nextInt((9+1))+1;
         }
-        CustomerOrder co2 = new CustomerOrder(1,"Joe", 0.0,"12/9/2022","12/7/2022",quantity2,custitems);
-        co2.setTotal();
+        CustomerOrder co2 = new CustomerOrder(1,0.0,"12/9/2022","12/7/2022",quantity2,custitems);
         CustomerOrderArray.addCustomerOrder(co2);
 
 
@@ -64,5 +71,6 @@ public class Main
         //new AccountantView();
         //UserAccountArray.testAccount();
         new LoginMenu();
+
     }
 }
