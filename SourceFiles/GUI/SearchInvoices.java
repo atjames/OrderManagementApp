@@ -9,7 +9,9 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-
+/*
+@author Austin Jeffery
+ */
 public class SearchInvoices extends JFrame{
     private JPanel SearchInvoices;
     private JTextField InvoiceId;
@@ -28,7 +30,7 @@ public class SearchInvoices extends JFrame{
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-
+        //Search for invoices for the given Customer order
         searchInvoicesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

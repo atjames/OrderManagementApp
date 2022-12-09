@@ -11,7 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 /*
-This is used to set a max value for JTextFields
+Search Vendors class
 @author Austin Jeffery
 
  */
@@ -36,7 +36,6 @@ public class SearchVendors extends JFrame{
     private JLabel nL;
 
     SearchVendors(){
-
         setContentPane(SearchPane);
         setTitle("Search Form");
         setSize(900, 600);
@@ -48,7 +47,6 @@ public class SearchVendors extends JFrame{
                 int i;
                 if(IDTextfield.getText().matches(".*[a-z].*")) {
                     JOptionPane.showMessageDialog(null, "Please enter Vendor name or ID");
-
                     return;
                 }
                 if(IDTextfield.getText().equals("") && NameTextField.getText().equals("")){

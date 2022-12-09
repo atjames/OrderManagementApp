@@ -11,7 +11,6 @@ import java.awt.event.ActionListener;
 This is the class for Listing Vendors
 @author Austin
 
-
  */
 public class ListVendors extends JFrame{
     private JPanel Panel1;
@@ -34,7 +33,6 @@ public class ListVendors extends JFrame{
             ListVendors.super.dispose();
         }
         //so far just list first profile in array.
-
         for(int i = 0; i < VendorAccountArray.arraySize; i++) {
             String name = VendorAccountArray.vendors[i].getFullName();
             if(name.equals(null)){

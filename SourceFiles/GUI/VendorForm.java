@@ -61,10 +61,12 @@ public class VendorForm  extends JFrame{
         for(int i = 0;i<50;i++){
             StateList.insertItemAt(states[i],i);
         }
+
         Submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Vendor v = null;
+                //If any user input is invalid, valid = valid +1, at end if valid does not equal zero it will not go through
                 try{
                    int valid = 0;
                     String fullname = FullName.getText();
@@ -83,8 +85,11 @@ public class VendorForm  extends JFrame{
                     String lastDate = formatter.format(new Date(lastorderdate));
                     String seasDate = formatter.format(new Date(seasonaldate));
                     int num = VendorAccountArray.arraySize;
+                    //Use factory builder to return vendor object
                     v = (Vendor) vendorBuilder.makeProfile("Vendor");
+                    //set Vendor attributes
                     v.setAttributes(num,fullname,street,city,state,phone,lastorder,seasonal);
+                    //Add vendor to Vendor Account Array
                     VendorAccountArray.addVendor(v);
                     if(valid > 0){
                         new VendorForm();
@@ -94,7 +99,6 @@ public class VendorForm  extends JFrame{
                     new PurchaserView();
                     VendorForm.super.dispose();
                     VendorAccountArray.write();
-
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Enter Valid Dates MM/DD/YYYY");
                     ex.printStackTrace();
@@ -111,6 +115,7 @@ public class VendorForm  extends JFrame{
             }
         });
     }
+    //method to check phone input from user
     public int checkPhone(String phone){
         String temp;
         String dash = String.valueOf(phone.charAt(3));
@@ -123,6 +128,7 @@ public class VendorForm  extends JFrame{
         }
         return 0;
     }
+    //method to check is name is valid or already in use by other vendors
     public int checkName(String name){
         String temp;
         for(int i =0; i <VendorAccountArray.arraySize; i++){
@@ -134,6 +140,7 @@ public class VendorForm  extends JFrame{
         }
         return 0;
     }
+    //method to check address to see if other vendors have duplicate address
     public int checkAddress(String street, String city, String state){
         String tempStreet, tempCity, tempState;
         for(int i =0; i <VendorAccountArray.arraySize; i++){
