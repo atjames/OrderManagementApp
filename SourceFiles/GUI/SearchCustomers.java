@@ -17,7 +17,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
-
+/*
+@Author Austin Jeffery
+Form for searching through the customer array list
+ */
 public class SearchCustomers extends JFrame {
     private JButton searchCustomerButton;
     private JPanel SearchCustomerPanel;
@@ -38,6 +41,8 @@ public class SearchCustomers extends JFrame {
         final CustomerOrder[] coarray = new CustomerOrder[500000];
         final String[] inp = new String[1];
 
+        //Once search button is clicked finds the input from text field
+        //set the label to display customer order information
         searchCustomerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,6 +65,7 @@ public class SearchCustomers extends JFrame {
                 coarray[id] = co;
             }
         });
+
         createInvoiceButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -1,8 +1,4 @@
 package CustomerOrderInvoice;
-
-
-
-
 /*
 Class for Array of customer invoices to be used across the project
 @author Austin Jeffery
@@ -33,6 +29,7 @@ public class CustomerInvoiceArray {
             customerInvoices[i] = temporaryHold[i];
         }
     }
+
     public static CustomerInvoice searchForOrder(int id)
     {
         CustomerInvoice toBeFound = null;

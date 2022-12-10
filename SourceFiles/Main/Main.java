@@ -56,8 +56,6 @@ public class Main
         CustomerOrder co2 = new CustomerOrder(1,"Joe", 0.0,"12/9/2022","12/7/2022",quantity2,custitems);
         co2.setTotal();
         CustomerOrderArray.addCustomerOrder(co2);
-
-
         GetUsersFromCSV.getUsersFromCSV();
         VendorAccountArray.init();
         //new PurchaserView();

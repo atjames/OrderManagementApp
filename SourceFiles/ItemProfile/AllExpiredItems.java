@@ -22,7 +22,6 @@ import java.util.Date;
 public class AllExpiredItems extends JFrame
 {
     private JTable itemTable;
-    private JButton logout;
     private JButton editItems;
     private JButton deleteItems;
 
@@ -113,25 +112,6 @@ public class AllExpiredItems extends JFrame
     {
         JPanel panel = new JPanel();
 
-        // Button that logs the user out
-        logout = new JButton("Log Out");
-        logout.setSize(150, 30);
-        logout.setLocation(700, 20);
-        logout.addActionListener(new ActionListener() {
-            // Logs the user out and sends them to the login screen
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                HoldCurrentLoginType.updateUser(null);
-                HoldPagesVisited.resetNumberOfPagesVisited();
-
-                new LoginMenu();
-                AllExpiredItems.super.dispose();
-
-            }
-        });
-        panel.add(logout);
-
         // Button that sends the user to the Update Items page
         editItems = new JButton("Update Items Page");
         editItems.setSize(150, 30);
@@ -142,8 +122,7 @@ public class AllExpiredItems extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                JFrame CreateUpdateFrame = new UpdateItemSelectorGUI("Update Item");
-                CreateUpdateFrame.setVisible(true);
+                new UpdateItemSelectorGUI("Update Item");
                 AllExpiredItems.super.dispose();
             }
         });
@@ -159,8 +138,7 @@ public class AllExpiredItems extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                JFrame DeleteItemFrame = new DeleteItemGUI("Delete Item");
-                DeleteItemFrame.setVisible(true);
+                new DeleteItemGUI("Delete Item");
                 AllExpiredItems.super.dispose();
             }
         });
