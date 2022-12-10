@@ -50,7 +50,7 @@ public class ItemMenuGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame CreateSearchFrame = new  JFrame("Show Items");
-                CreateSearchFrame.setSize(10,10);
+                CreateSearchFrame.setSize(700,500);
                 CreateSearchFrame.add(new ItemTableGUI().panel1);
                 CreateSearchFrame.setVisible(true);
                 CreateSearchFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

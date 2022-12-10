@@ -5,6 +5,7 @@
 package ItemProfile;
 
 import GUI.DeleteItemGUI;
+import GUI.ItemMenuGUI;
 import GUI.UpdateItemSelectorGUI;
 import Login.HoldCurrentLoginType;
 import Login.HoldPagesVisited;
@@ -126,6 +127,7 @@ public class AllExpiredItems extends JFrame
 
                 new LoginMenu();
                 AllExpiredItems.super.dispose();
+
             }
         });
         panel.add(logout);
@@ -140,7 +142,8 @@ public class AllExpiredItems extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                new UpdateItemSelectorGUI("Update Item");
+                JFrame CreateUpdateFrame = new UpdateItemSelectorGUI("Update Item");
+                CreateUpdateFrame.setVisible(true);
                 AllExpiredItems.super.dispose();
             }
         });
@@ -156,7 +159,8 @@ public class AllExpiredItems extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                new DeleteItemGUI("Delete Item");
+                JFrame DeleteItemFrame = new DeleteItemGUI("Delete Item");
+                DeleteItemFrame.setVisible(true);
                 AllExpiredItems.super.dispose();
             }
         });
