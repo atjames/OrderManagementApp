@@ -5,61 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50cad50f-e46c-40b0-bb8c-2f1c17f20e29" name="Changes" comment="added some comments to the code and fixed a bug with read/write.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/users.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceFiles/ItemProfile/AllExpiredItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/ItemProfile/AllExpiredItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceFiles/SourceFiles.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoiceArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerInvoiceArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/CustomerOrderInvoice/CustomerOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/DeleteVendor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ListVendors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ListVendors$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ListVendors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/ListVendors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaseOrderMenuGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/PurchaserView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchCustomers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchInvoices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchInvoices$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchInvoices$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchInvoices$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchInvoices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchInvoices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchVendors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchVendors$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchVendors$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchVendors$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchVendors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/SearchVendors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/VendorForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/VendorForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/VendorForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/VendorForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/GUI/VendorForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/GUI/VendorForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/AllExpiredItems$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/AllExpiredItems$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/AllExpiredItems$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/AllExpiredItems$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/AllExpiredItems$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/AllExpiredItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/ItemProfile/AllExpiredItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/Main/MainMenu$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/Main/MainMenu$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/Main/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/Main/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/SourceFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/SourceFiles.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserCreationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserCreationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserDeletionPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserDeletionPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserEditPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserEditPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserSearchPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserSearchPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserSearchPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserSearchPage$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserSearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SourceFiles/UserClasses/UserSearchPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

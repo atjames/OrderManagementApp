@@ -122,7 +122,8 @@ public class AllExpiredItems extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                new UpdateItemSelectorGUI("Update Item");
+                JFrame CreateUpdateFrame = new UpdateItemSelectorGUI("Update Item");
+                CreateUpdateFrame.setVisible(true);
                 AllExpiredItems.super.dispose();
             }
         });
@@ -138,7 +139,8 @@ public class AllExpiredItems extends JFrame
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                new DeleteItemGUI("Delete Item");
+                JFrame DeleteItemFrame = new DeleteItemGUI("Delete Item");
+                DeleteItemFrame.setVisible(true);
                 AllExpiredItems.super.dispose();
             }
         });
